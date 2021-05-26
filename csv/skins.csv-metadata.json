@@ -31,9 +31,16 @@
               "name": "equipment_id",
                 "titles": "equipment_id",
                 "dc:description": "Foreign key for equipment.",
-                "datatype": "integer",
+                "datatype": "string",
                 "required": true
-            }
+            },
+            {
+                "name": "owner",
+                "titles": "owner",
+                "dc:description": "Foreign key for the owner of the skin.",
+                "datatype": "string",
+                "required": true
+              }
         ],
         "primaryKey": "skin_id"
     }

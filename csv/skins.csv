@@ -1,7 +1,7 @@
-skin_id,skinname,condition,equipment_id
-1,"Nomad | Fade",0.33,1
-2,"Beenade",0.45,2
-3,"Sparkles",0.99,3
-4,"Pink Defuser",0.68,4
-5,"Reflex Vest",0.13,5
-6,"M4A1-S | Prinstream",0.38,6
+skin_id,skinname,condition,equipment_id,owner
+1,"Nomad | Fade",0.33,weapon_knife,gaben
+2,"Beenade",0.45,weapon_hegrenade,gaben
+3,"Sparkles",0.99,weapon_c4,gaben
+4,"Pink Defuser",0.68,defuser,a1b2c3
+5,"Reflex Vest",0.13,item_kevlar,gaben
+6,"M4A1-S | Prinstream",0.38,weapon_m4a1_silencer,gaben
