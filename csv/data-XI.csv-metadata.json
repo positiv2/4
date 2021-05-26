@@ -2,7 +2,7 @@
   "@context": "http://www.w3.org/ns/csvw",
   "@type": "Table",
   "@id": "https://example.org/data-XI.csv-metadata.json",
-  "url": "skins.csv",
+  "url": "data-XI.csv",
   "tableSchema": {
     "columns": [
       {

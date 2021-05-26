@@ -35,15 +35,6 @@
                 "required": true
             }
         ],
-        "primaryKey": "skin_id",
-        "foreignKeys": [
-            {
-                "columnReference": "equipment_id",
-                "reference": {
-                    "resource": "equipment.csv",
-                    "columnReference": "item_id"
-                }
-            }
-        ]
+        "primaryKey": "skin_id"
     }
 }

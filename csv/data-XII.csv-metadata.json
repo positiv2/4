@@ -2,7 +2,7 @@
   "@context": "http://www.w3.org/ns/csvw",
   "@type": "Table",
   "@id": "https://example.org/data-XII.csv-metadata.json",
-  "url": "skins.csv",
+  "url": "data-XII.csv",
   "tableSchema": {
     "columns": [
       {
@@ -22,6 +22,7 @@
         "required": true
       },
       {
+        "name": "MapID",
         "titles": "MapID",
         "dc:description": "Map that the match was played on.",
         "datatype": "string",
@@ -34,161 +35,72 @@
         "titles": "Player_1",
         "dc:description": "Player 1 in the match.",
         "valueUrl": "http://example.org/users/{Player_1}",
-        "datatype": "string",
-        "required": true
+        "datatype": "string"
       },
       {
         "name": "Player_2",
         "titles": "Player_2",
         "dc:description": "Player 2 in the match.",
         "valueUrl": "http://example.org/users/{Player_2}",
-        "datatype": "string",
-        "required": true
+        "datatype": "string"
       },
       {
         "name": "Player_3",
         "titles": "Player_3",
         "dc:description": "Player 3 in the match.",
         "valueUrl": "http://example.org/users/{Player_3}",
-        "datatype": "string",
-        "required": true
+        "datatype": "string"
       },
       {
         "name": "Player_4",
         "titles": "Player_4",
         "dc:description": "Player 4 in the match.",
         "valueUrl": "http://example.org/users/{Player_4}",
-        "datatype": "string",
-        "required": true
+        "datatype": "string"
       },
       {
         "name": "Player_5",
         "titles": "Player_5",
         "dc:description": "Player 5 in the match.",
         "valueUrl": "http://example.org/users/{Player_5}",
-        "datatype": "string",
-        "required": true
+        "datatype": "string"
       },
       {
         "name": "Player_6",
         "titles": "Player_6",
         "dc:description": "Player 6 in the match.",
         "valueUrl": "http://example.org/users/{Player_6}",
-        "datatype": "string",
-        "required": true
+        "datatype": "string"
       },
       {
         "name": "Player_7",
         "titles": "Player_7",
         "dc:description": "Player 7 in the match.",
         "valueUrl": "http://example.org/users/{Player_7}",
-        "datatype": "string",
-        "required": true
+        "datatype": "string"
       },
       {
         "name": "Player_8",
         "titles": "Player_8",
         "dc:description": "Player 8 in the match.",
         "valueUrl": "http://example.org/users/{Player_8}",
-        "datatype": "string",
-        "required": true
+        "datatype": "string"
       },
       {
         "name": "Player_9",
         "titles": "Player_9",
         "dc:description": "Player 9 in the match.",
         "valueUrl": "http://example.org/users/{Player_9}",
-        "datatype": "string",
-        "required": true
+        "datatype": "string"
       },
       {
         "name": "Player_10",
         "titles": "Player_10",
         "dc:description": "Player 10 in the match.",
         "valueUrl": "http://example.org/users/{Player_10}",
-        "datatype": "string",
-        "required": true
+        "datatype": "string"
       }
     ],
-    "primaryKey": "MatchID",
-    "foreignKeys": [
-      {
-        "columnReference": "MapID",
-        "reference": {
-          "resource": "data-XI.csv",
-          "columnReference": "MapID"
-        }
-      },
-      {
-        "columnReference": "Player_1",
-        "reference": {
-          "resource": "data-XV.csv",
-          "columnReference": "UserID"
-        }
-      },
-      {
-        "columnReference": "Player_2",
-        "reference": {
-          "resource": "data-XV.csv",
-          "columnReference": "UserID"
-        }
-      },
-      {
-        "columnReference": "Player_3",
-        "reference": {
-          "resource": "data-XV.csv",
-          "columnReference": "UserID"
-        }
-      },
-      {
-        "columnReference": "Player_4",
-        "reference": {
-          "resource": "data-XV.csv",
-          "columnReference": "UserID"
-        }
-      },
-      {
-        "columnReference": "Player_5",
-        "reference": {
-          "resource": "data-XV.csv",
-          "columnReference": "UserID"
-        }
-      },
-      {
-        "columnReference": "Player_6",
-        "reference": {
-          "resource": "data-XV.csv",
-          "columnReference": "UserID"
-        }
-      },
-      {
-        "columnReference": "Player_7",
-        "reference": {
-          "resource": "data-XV.csv",
-          "columnReference": "UserID"
-        }
-      },
-      {
-        "columnReference": "Player_8",
-        "reference": {
-          "resource": "data-XV.csv",
-          "columnReference": "UserID"
-        }
-      },
-      {
-        "columnReference": "Player_9",
-        "reference": {
-          "resource": "data-XV.csv",
-          "columnReference": "UserID"
-        }
-      },
-      {
-        "columnReference": "Player_10",
-        "reference": {
-          "resource": "data-XV.csv",
-          "columnReference": "UserID"
-        }
-      }
-    ]
+    "primaryKey": "MatchID"
   }
 }
