@@ -1,0 +1,49 @@
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "@type": "Table",
+    "url": "skins.csv",
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "skin_id",
+                "titles": "skin_id",
+                "dc:description": "An identifier for the skin.",
+                "datatype": "integer",
+                "required": true,
+                "propertyUrl": "schema:url",
+                "valueUrl": "http://example.org/skins/{skin_id}"
+            },
+            {
+                "titles": "skinname",
+                "dc:description": "Name of the skin.",
+                "datatype": "string",
+                "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+                "lang": "en",
+                "required": true
+            },
+            {
+                "titles": "condition",
+                "dc:description": "Condition (wear) of the skin.",
+                "datatype": "float",
+                "required": true
+            },
+            {
+              "name": "equipment_id",
+                "titles": "equipment_id",
+                "dc:description": "Foreign key for equipment.",
+                "datatype": "integer",
+                "required": true
+            }
+        ],
+        "primaryKey": "skin_id",
+        "foreignKeys": [
+            {
+                "columnReference": "equipment_id",
+                "reference": {
+                    "resource": "equipment.csv",
+                    "columnReference": "item_id"
+                }
+            }
+        ]
+    }
+}

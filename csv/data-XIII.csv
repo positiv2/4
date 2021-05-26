@@ -1,0 +1,5 @@
+PlayerID,UserID,Username,IsBot,HadKD,TeamID
+123456-1,a1b2c3,Albert,false,1.67,123456-T
+123456-2,jimmy,FaZe Jimmy,false,0.3,123456-CT
+234567-1,jimmy,FaZe Jimmy,false,0.6,234567-T
+111111-3,gaben,GabeN,false,19,111111-T

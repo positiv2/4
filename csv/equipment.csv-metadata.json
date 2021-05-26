@@ -1,0 +1,30 @@
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "@type": "Table",
+    "url": "equipment.csv",
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "item_id",
+                "titles": "item_id",
+                "dc:description": "An identifier for the equipment.",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "titles": "cost",
+                "dc:description": "Price of the equipment.",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "titles": "name",
+                "dc:description": "Name of the equipment.",
+                "datatype": "string",
+                "lang": "en",
+                "required": true
+            }
+        ],
+        "primaryKey": "item_id"
+    }
+}

@@ -1,0 +1,58 @@
+{
+    "@context": {
+        "csvw": "http://www.w3.org/ns/csvw",
+        "csgo": "http://example.org/vocabulary/",
+        "url": "??",
+        "tableSchema": "csvw:tableSchema",
+        "name": "csvw:name",
+        "titles": "csvw:titles",
+        "datatype": "csvw:datatype",
+        "required": "csvw:required",
+        "primaryKey": "csvw:primaryKey",
+        "foreignKeys": "csvw:foreignKeys",
+        "columnReference": "csvw:columnReference",
+        "reference": "csvw:reference",
+        "resource": "csvw:resource"
+    },
+    "@type": "Table",
+    "url": "https://example.org/bombs.csv",
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "id",
+                "titles": "id",
+                "dc:description": "An unique identifier for the bomb.",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "titles": "item_id",
+                "dc:description": "Foreign key to the equipment.",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "titles": "aoe",
+                "dc:description": "AOE damage multiplier.",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "titles": "damage",
+                "dc:description": "Damage dealt by this quipment.",
+                "datatype": "integer",
+                "required": true
+            }
+        ],
+        "primaryKey": "id",
+        "foreignKeys": [
+            {
+                "columnReference": "item_id",
+                "reference": {
+                    "resource": "https://example.org/equipment.csv",
+                    "columnReference": "item_id"
+                }
+            }
+        ]
+    }
+}

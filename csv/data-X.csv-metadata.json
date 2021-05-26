@@ -1,0 +1,57 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "@type": "Table",
+  "@id": "https://example.org/data-X.csv-metadata.json",
+  "url": "data-X.csv",
+  "tableSchema": {
+    "columns": [
+        {
+          "name": "LocationID",
+          "titles": "LocationID",
+          "dc:description": "ID of the location.",
+          "datatype": "integer",
+          "required": true
+        },
+        {
+          "titles": "X1",
+          "dc:description": "X value of one of the corners.",
+          "datatype": "integer",
+          "lang": "en",
+          "required": true
+        },
+        {
+          "titles": "X2",
+          "dc:description": "X value of one of the corners.",
+          "datatype": "integer",
+          "required": true
+        },
+        {
+          "titles": "Y1",
+          "dc:description": "Y value of one of the corners.",
+          "datatype": "integer",
+          "lang": "en",
+          "required": true
+        },
+        {
+          "titles": "Y2",
+          "dc:description": "Y value of one of the corners.",
+          "datatype": "integer",
+          "required": true
+        },
+        {
+          "titles": "Z1",
+          "dc:description": "Z value of one of the corners.",
+          "datatype": "integer",
+          "lang": "en",
+          "required": true
+        },
+        {
+          "titles": "Z2",
+          "dc:description": "Z value of one of the corners.",
+          "datatype": "integer",
+          "required": true
+        }
+    ],
+    "primaryKey": "LocationID"
+  }
+}

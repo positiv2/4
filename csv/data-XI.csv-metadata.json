@@ -1,0 +1,84 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "@type": "Table",
+  "@id": "https://example.org/data-XI.csv-metadata.json",
+  "url": "skins.csv",
+  "tableSchema": {
+    "columns": [
+      {
+        "name": "MapID",
+        "titles": "MapID",
+        "dc:description": "An identifier for the map.",
+        "datatype": "string",
+        "aboutUrl": "https://example.org/maps/{MapID}",
+        "required": true
+      },
+      {
+        "titles": "MapName",
+        "dc:description": "Name of the map.",
+        "datatype": "string",
+        "lang": "en",
+        "required": true
+      },
+      {
+        "name": "PlantLocationA",
+        "titles": "PlantLocationA",
+        "dc:description": "Location A for bomb-planting.",
+        "datatype": "integer",
+        "required": true
+      },
+      {
+        "name": "PlantLocationB",
+        "titles": "PlantLocationB",
+        "dc:description": "Location B for bomb-planting.",
+        "datatype": "integer",
+        "required": true
+      },
+      {
+        "name": "SpawnLocationT",
+        "titles": "SpawnLocationT",
+        "dc:description": "Spawn location for the T team.",
+        "datatype": "integer",
+        "required": true
+      },
+      {
+        "name": "SpawnLocationCT",
+        "titles": "SpawnLocationCT",
+        "dc:description": "Spawn location for the CT team.",
+        "datatype": "integer",
+        "required": true
+      }
+    ],
+    "primaryKey": "MapID",
+    "foreignKeys": [
+      {
+        "columnReference": "PlantLocationA",
+        "reference": {
+          "resource": "data-X.csv",
+          "columnReference": "LocationID"
+        }
+      },
+      {
+        "columnReference": "PlantLocationB",
+        "reference": {
+          "resource": "data-X.csv",
+          "columnReference": "LocationID"
+        }
+      },
+      {
+        "columnReference": "SpawnLocationT",
+        "reference": {
+          "resource": "data-X.csv",
+          "columnReference": "LocationID"
+        }
+      },
+      {
+        "columnReference": "SpawnLocationCT",
+        "reference": {
+          "resource": "data-X.csv",
+          "columnReference": "LocationID"
+        }
+      }
+    ]
+  }
+}

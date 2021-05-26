@@ -1,0 +1,4 @@
+MapID,MapName,PlantLocationA,PlantLocationB,SpawnLocationT,SpawnLocationCT
+de_inferno,Inferno,1,2,3,4
+de_nuke,Nuke,2,1,4,3
+de_dust,Dust,3,1,2,4
