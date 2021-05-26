@@ -1,4 +1,2 @@
-id,item_id,primary,damage,firerate
-1,6,true,33,600
-2,7,true,17,1200
-2,8,false,17,300
+id,primary,damage,firerate
+m4a1,true,33,600

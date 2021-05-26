@@ -1,31 +1,26 @@
 {
     "@context": "http://www.w3.org/ns/csvw",
     "@type": "Table",
-    "url": "https://example.org/firearms.csv",
+    "@id": "https://example.org/firearms.csv-metadata.json",
+    "url": "firearms.csv",
     "tableSchema": {
         "columns": [
             {
                 "name": "id",
                 "titles": "id",
                 "dc:description": "An identifier for the firearm.",
-                "datatype": "integer",
-                "required": true
-            },
-            {
-                "titles": "item_id",
-                "dc:description": "Foreign key to the equipment.",
-                "datatype": "integer",
+                "datatype": "string",
                 "required": true
             },
             {
                 "titles": "primary",
-                "dc:description": "Sign whether the weapon is primary.",
+                "dc:description": "Declare whether the weapon is primary.",
                 "datatype": "boolean",
                 "required": true
             },
             {
                 "titles": "damage",
-                "dc:description": "Damage dealt with each bullet.",
+                "dc:description": "Base damage dealt with each bullet.",
                 "datatype": "integer",
                 "required": true
             },
@@ -36,15 +31,6 @@
                 "required": true
             }
         ],
-        "primaryKey": "id",
-        "foreignKeys": [
-            {
-                "columnReference": "item_id",
-                "reference": {
-                    "resource": "https://example.org/equipment.csv",
-                    "columnReference": "item_id"
-                }
-            }
-        ]
+        "primaryKey": "id"
     }
 }

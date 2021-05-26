@@ -1,0 +1,25 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "@type": "Table",
+  "@id": "https://example.org/data-XVI.csv-metadata.json",
+  "url": "data-XVI.csv",
+  "tableSchema": {
+    "columns": [
+        {
+          "name": "UserID",
+          "titles": "UserID",
+          "dc:description": "ID of the user.",
+          "datatype": "string",
+          "required": true
+        },
+        {
+          "name": "Username",
+          "titles": "Username",
+          "dc:description": "A username that the user used.",
+          "datatype": "string",
+          "required": true
+        }
+    ],
+    "primaryKey": ["UserID", "Username"]
+  }
+}
