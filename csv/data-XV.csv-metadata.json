@@ -1,0 +1,30 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "@type": "Table",
+  "@id": "https://example.org/data-XV.csv-metadata.json",
+  "url": "data-XV.csv",
+  "tableSchema": {
+    "columns": [
+        {
+          "name": "UserID",
+          "titles": "UserID",
+          "dc:description": "ID of the user.",
+          "datatype": "string",
+          "required": true
+        },
+        {
+          "titles": "EmailAddress",
+          "dc:description": "Email address of the user.",
+          "datatype": "anyURI",
+          "required": true
+        },
+        {
+          "titles": "CreationDate",
+          "dc:description": "The date and time the account was created.",
+          "datatype": "dateTime",
+          "required": true
+        }
+    ],
+    "primaryKey": "UserID"
+  }
+}
