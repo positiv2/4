@@ -1,0 +1,49 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "@type": "Table",
+  "@id": "https://example.org/data-XIII.csv-metadata.json",
+  "url": "data-XIII.csv",
+  "tableSchema": {
+    "columns": [
+      {
+        "name": "PlayerID",
+        "titles": "PlayerID",
+        "dc:description": "An identifier for the player character.",
+        "datatype": "string",
+        "valueUrl": "http://example.org/players/{MatchID}",
+        "required": true
+      },
+      {
+        "name": "UserID", 
+        "titles": "UserID",
+        "dc:description": "User that controlled the player character.",
+        "datatype": "string",
+        "required": true
+      },
+      {
+        "name": "Username",
+        "titles": "Username",
+        "dc:description": "Username that the player used.",
+        "datatype": "string",
+        "required": true
+      },
+      {
+        "titles": "IsBot",
+        "dc:description": "Whether player was replaced as the bot.",
+        "datatype": "boolean"
+      },
+      {
+        "titles": "HadKD",
+        "dc:description": "The KD of the player at the end of the match.",
+        "datatype": "float"
+      },
+      {
+        "name": "TeamID",
+        "titles": "TeamID",
+        "dc:description": "The ID of the team that the player was on.",
+        "datatype": "string"
+      }
+    ],
+    "primaryKey": "PlayerID"
+  }
+}

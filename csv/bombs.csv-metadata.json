@@ -1,21 +1,8 @@
 {
-    "@context": {
-        "csvw": "http://www.w3.org/ns/csvw",
-        "csgo": "http://example.org/vocabulary/",
-        "url": "??",
-        "tableSchema": "csvw:tableSchema",
-        "name": "csvw:name",
-        "titles": "csvw:titles",
-        "datatype": "csvw:datatype",
-        "required": "csvw:required",
-        "primaryKey": "csvw:primaryKey",
-        "foreignKeys": "csvw:foreignKeys",
-        "columnReference": "csvw:columnReference",
-        "reference": "csvw:reference",
-        "resource": "csvw:resource"
-    },
+    "@context": "http://www.w3.org/ns/csvw",
+    "@id": "https://example.org/bombs.csv-metadata.json",
     "@type": "Table",
-    "url": "https://example.org/bombs.csv",
+    "url": "bombs.csv",
     "tableSchema": {
         "columns": [
             {
@@ -44,15 +31,6 @@
                 "required": true
             }
         ],
-        "primaryKey": "id",
-        "foreignKeys": [
-            {
-                "columnReference": "item_id",
-                "reference": {
-                    "resource": "https://example.org/equipment.csv",
-                    "columnReference": "item_id"
-                }
-            }
-        ]
+        "primaryKey": "id"
     }
 }
