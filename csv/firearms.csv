@@ -1,2 +1,4 @@
 id,primary,damage,firerate
 weapon_m4a1_silencer,true,33,600
+weapon_mp5sd,true,27,750
+weapon_hkp2000,false,35,352
