@@ -1,0 +1,25 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "@type": "Table",
+  "@id": "https://example.org/data-XIV.csv-metadata.json",
+  "url": "data-XIV.csv",
+  "tableSchema": {
+    "columns": [
+        {
+          "name": "TeamID",
+          "titles": "TeamID",
+          "dc:description": "ID of the team.",
+          "datatype": "string",
+          "required": true
+        },
+        {
+          "titles": "TeamName",
+          "dc:description": "Starting name of the team.",
+          "datatype": "string",
+          "lang": "en",
+          "required": true
+        }
+    ],
+    "primaryKey": "TeamID"
+  }
+}

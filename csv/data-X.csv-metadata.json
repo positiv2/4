@@ -16,7 +16,6 @@
           "titles": "X1",
           "dc:description": "X value of one of the corners.",
           "datatype": "integer",
-          "lang": "en",
           "required": true
         },
         {
