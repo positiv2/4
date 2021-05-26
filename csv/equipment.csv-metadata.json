@@ -8,7 +8,7 @@
                 "name": "item_id",
                 "titles": "item_id",
                 "dc:description": "An identifier for the equipment.",
-                "datatype": "integer",
+                "datatype": "string",
                 "required": true
             },
             {

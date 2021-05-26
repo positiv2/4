@@ -1,0 +1,36 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "@id": "https://example.org/throwable.csv-metadata.json",
+  "@type": "Table",
+  "url": "throwable.csv",
+  "tableSchema": {
+    "columns": [
+      {
+        "name": "ID",
+        "titles": "ID",
+        "dc:description": "A unique identifier for the item.",
+        "datatype": "string",
+        "required": true
+      },
+      {
+        "titles": "AoE",
+        "dc:description": "Area of Effect of the explosion and/or a subsequent effect.",
+        "datatype": "integer",
+        "required": true
+      },
+      {
+        "titles": "Damage",
+        "dc:description": "Damage dealt by the explosion. Can be 0.",
+        "datatype": "integer",
+        "required": true
+      },
+      {
+        "titles": "ThrowableCount",
+        "dc:description": "Limit of throwables of this type carriable at any given moment.",
+        "datatype": "integer",
+        "required": true
+      }
+    ],
+    "primaryKey": "ID"
+  }
+}

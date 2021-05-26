@@ -1,0 +1,24 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "@id": "https://example.org/utility.csv-metadata.json",
+  "@type": "Table",
+  "url": "utility.csv",
+  "tableSchema": {
+    "columns": [
+      {
+        "name": "ID",
+        "titles": "ID",
+        "dc:description": "A unique identifier for the item.",
+        "datatype": "string",
+        "required": true
+      },
+      {
+        "titles": "UtilityType",
+        "dc:description": "Type of the utility.",
+        "datatype": "string",
+        "required": true
+      }
+    ],
+    "primaryKey": "ID"
+  }
+}
