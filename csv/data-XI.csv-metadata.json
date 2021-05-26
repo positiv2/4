@@ -49,15 +49,6 @@
         "required": true
       }
     ],
-    "primaryKey": "MapID",
-    "foreignKeys": [
-      {
-        "columnReference": "PlantLocationA",
-        "reference": {
-          "resource": "data-X.csv",
-          "columnReference": "LocationID"
-        }
-      }
-    ]
+    "primaryKey": "MapID"
   }
 }
