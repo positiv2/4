@@ -57,27 +57,6 @@
           "resource": "data-X.csv",
           "columnReference": "LocationID"
         }
-      },
-      {
-        "columnReference": "PlantLocationB",
-        "reference": {
-          "resource": "data-X.csv",
-          "columnReference": "LocationID"
-        }
-      },
-      {
-        "columnReference": "SpawnLocationT",
-        "reference": {
-          "resource": "data-X.csv",
-          "columnReference": "LocationID"
-        }
-      },
-      {
-        "columnReference": "SpawnLocationCT",
-        "reference": {
-          "resource": "data-X.csv",
-          "columnReference": "LocationID"
-        }
       }
     ]
   }
