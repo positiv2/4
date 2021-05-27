@@ -16,18 +16,21 @@
           "required": true
         },
         {
+          "name": "X1",
           "titles": "X1",
           "dc:description": "X value of one of the corners.",
           "datatype": "integer",
           "required": true
         },
         {
+          "name": "X2",
           "titles": "X2",
           "dc:description": "X value of one of the corners.",
           "datatype": "integer",
           "required": true
         },
         {
+          "name": "Y1",
           "titles": "Y1",
           "dc:description": "Y value of one of the corners.",
           "datatype": "integer",
@@ -35,12 +38,14 @@
           "required": true
         },
         {
+          "name": "Y2",
           "titles": "Y2",
           "dc:description": "Y value of one of the corners.",
           "datatype": "integer",
           "required": true
         },
         {
+          "name": "Z1",
           "titles": "Z1",
           "dc:description": "Z value of one of the corners.",
           "datatype": "integer",
@@ -48,10 +53,17 @@
           "required": true
         },
         {
+          "name": "Z2",
           "titles": "Z2",
           "dc:description": "Z value of one of the corners.",
           "datatype": "integer",
           "required": true
+        },
+        {
+          "virtual": true,
+          "aboutUrl": "https://example.org/areas/{LocationID}",
+          "propertyUrl": "schema:box",
+          "valueUrl": "{X1},{Y1},{Z1} {X2},{Y2},{Z2}"
         }
     ],
     "primaryKey": "LocationID"
