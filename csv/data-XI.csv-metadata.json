@@ -11,12 +11,16 @@
         "dc:description": "An identifier for the map.",
         "datatype": "string",
         "aboutUrl": "https://example.org/maps/{MapID}",
+        "propertyUrl": "rdf:type",
+        "valueUrl": "http://vocab.linkeddata.es/vgo#PlayingArea",
         "required": true
       },
       {
         "titles": "MapName",
         "dc:description": "Name of the map.",
         "datatype": "string",
+        "aboutUrl": "https://example.org/maps/{MapID}",
+        "propertyUrl": "https://example.org/vocabulary/mapName",
         "lang": "en",
         "required": true
       },
@@ -24,6 +28,9 @@
         "name": "PlantLocationA",
         "titles": "PlantLocationA",
         "dc:description": "Location A for bomb-planting.",
+        "aboutUrl": "https://example.org/maps/{MapID}",
+        "propertyUrl": "https://example.org/vocabulary/plantArea",
+        "valueUrl": "https://example.org/areas/{PlantLocationA}",
         "datatype": "integer",
         "required": true
       },
@@ -31,6 +38,9 @@
         "name": "PlantLocationB",
         "titles": "PlantLocationB",
         "dc:description": "Location B for bomb-planting.",
+        "aboutUrl": "https://example.org/maps/{MapID}",
+        "propertyUrl": "https://example.org/vocabulary/plantArea",
+        "valueUrl": "https://example.org/areas/{PlantLocationB}",
         "datatype": "integer",
         "required": true
       },
@@ -38,6 +48,9 @@
         "name": "SpawnLocationT",
         "titles": "SpawnLocationT",
         "dc:description": "Spawn location for the T team.",
+        "aboutUrl": "https://example.org/maps/{MapID}",
+        "propertyUrl": "https://example.org/vocabulary/spawnLocation",
+        "valueUrl": "https://example.org/areas/{SpawnLocationT}",
         "datatype": "integer",
         "required": true
       },
@@ -45,6 +58,9 @@
         "name": "SpawnLocationCT",
         "titles": "SpawnLocationCT",
         "dc:description": "Spawn location for the CT team.",
+        "aboutUrl": "https://example.org/maps/{MapID}",
+        "propertyUrl": "https://example.org/vocabulary/spawnLocation",
+        "valueUrl": "https://example.org/areas/{SpawnLocationCT}",
         "datatype": "integer",
         "required": true
       }
