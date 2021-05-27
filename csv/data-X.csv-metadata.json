@@ -9,6 +9,9 @@
           "name": "LocationID",
           "titles": "LocationID",
           "dc:description": "ID of the location.",
+          "aboutUrl": "https://example.org/areas/{LocationID}",
+          "propertyUrl": "rdf:type",
+          "valueUrl": "schema:GeoShape",
           "datatype": "integer",
           "required": true
         },
