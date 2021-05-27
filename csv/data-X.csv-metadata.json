@@ -58,12 +58,6 @@
           "dc:description": "Z value of one of the corners.",
           "datatype": "integer",
           "required": true
-        },
-        {
-          "virtual": true,
-          "aboutUrl": "https://example.org/areas/{LocationID}",
-          "propertyUrl": "schema:box",
-          "valueUrl": "{X1},{Y1},{Z1} {X2},{Y2},{Z2}"
         }
     ],
     "primaryKey": "LocationID"
