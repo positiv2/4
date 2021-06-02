@@ -1,0 +1,180 @@
+{
+    "@context": {
+        "csgo": "http://example.org/vocabulary/",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "vcard": "http://www.w3.org/2006/vcard/ns#",
+        "dcterms": "http://purl.org/dc/terms/",
+        "vgo": "http://vocab.linkeddata.es/vgo/#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "schema": "http://schema.org/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "@language": "en",
+        "mapid": "rdfs:label",
+        "mapname": "rdfs:label",
+        "matchid": "rdfs:label",
+        "startdate": "vgo:startTime",
+        "x": "xsd:integer",
+        "y": "xsd:integer",
+        "z": "xsd:integer",
+        "x1": "xsd:integer",
+        "x2": "xsd:integer",
+        "y1": "xsd:integer",
+        "y2": "xsd:integer",
+        "z1": "xsd:integer",
+        "z2": "xsd:integer",
+        "maps": {
+            "@id": "vgo:PlayingArea",
+            "@container": "@set"
+        },
+        "spawnlocations": {
+            "@id": "csgo:spawnLocation",
+            "@container": "@set"
+        },
+        "plantlocations": {
+            "@id": "csgo:plantLocation",
+            "@container": "@set"
+        }
+    },
+    "maps": [
+        {
+            "mapid": "de_inferno",
+            "mapname": "Inferno",
+            "spawnlocations": [
+                {
+                    "x1": 300,
+                    "x2": 310,
+                    "y1": 100,
+                    "y2": 94,
+                    "z1": 10,
+                    "z2": 10
+                },
+                {
+                    "x1": 60,
+                    "x2": 66,
+                    "y1": 120,
+                    "y2": 126,
+                    "z1": 10,
+                    "z2": 10
+                }
+            ],
+            "plantlocations": [
+                {
+                    "x1": 302,
+                    "x2": 312,
+                    "y1": 10,
+                    "y2": 25,
+                    "z1": 5,
+                    "z2": 25
+                },
+                {
+                    "x1": 124,
+                    "x2": 134,
+                    "y1": 125,
+                    "y2": 115,
+                    "z1": 10,
+                    "z2": 20
+                }
+            ],
+            "matches": [
+                {
+                    "matchid": 123456,
+                    "startdate": "2020-05-02T15:55:55Z"
+                }
+            ]
+        },
+        {
+            "mapid": "de_nuke",
+            "mapname": "Nuke",
+            "spawnlocations": [
+                {
+                    "x1": 300,
+                    "x2": 310,
+                    "y1": 100,
+                    "y2": 94,
+                    "z1": 10,
+                    "z2": 10
+                },
+                {
+                    "x1": 60,
+                    "x2": 66,
+                    "y1": 120,
+                    "y2": 126,
+                    "z1": 10,
+                    "z2": 10
+                }
+            ],
+            "plantlocations": [
+                {
+                    "x1": 302,
+                    "x2": 312,
+                    "y1": 10,
+                    "y2": 25,
+                    "z1": 5,
+                    "z2": 25
+                },
+                {
+                    "x1": 124,
+                    "x2": 134,
+                    "y1": 125,
+                    "y2": 115,
+                    "z1": 10,
+                    "z2": 20
+                }
+            ],
+            "matches": [
+                {
+                    "matchid": 234567,
+                    "startdate": "2020-05-02T15:55:55Z"
+                }
+            ]
+        },
+        {
+            "mapid": "de_dust",
+            "mapname": "Dust",
+            "spawnlocations": [
+                {
+                    "x1": 300,
+                    "x2": 310,
+                    "y1": 100,
+                    "y2": 94,
+                    "z1": 10,
+                    "z2": 10
+                },
+                {
+                    "x1": 60,
+                    "x2": 66,
+                    "y1": 120,
+                    "y2": 126,
+                    "z1": 10,
+                    "z2": 10
+                }
+            ],
+            "plantlocations": [
+                {
+                    "x1": 302,
+                    "x2": 312,
+                    "y1": 10,
+                    "y2": 25,
+                    "z1": 5,
+                    "z2": 25
+                },
+                {
+                    "x1": 124,
+                    "x2": 134,
+                    "y1": 125,
+                    "y2": 115,
+                    "z1": 10,
+                    "z2": 20
+                }
+            ],
+            "matches": [
+                {
+                    "matchid": 111111,
+                    "startdate": "2018-03-06T13:06:59Z"
+                }
+            ]
+        }
+    ]
+}
