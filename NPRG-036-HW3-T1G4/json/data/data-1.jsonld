@@ -1,167 +1,196 @@
 {
-  "@context": {
-    "csgo": "http://example.org/vocabulary/",
-    "foaf": "http://xmlns.com/foaf/0.1/",
-    "vcard": "http://www.w3.org/2006/vcard/ns#",
-    "dcterms": "http://purl.org/dc/terms/",
-    "vgo": "http://vocab.linkeddata.es/vgo/",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "owl": "http://www.w3.org/2002/07/owl#",
-    "schema": "http://schema.org/#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "users": {
-      "@id": "vgo:Player",
-      "@container": "@list"
+    "@context": {
+        "csgo": "http://example.org/vocabulary/",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "vcard": "http://www.w3.org/2006/vcard/ns#",
+        "dcterms": "http://purl.org/dc/terms/",
+        "vgo": "http://vocab.linkeddata.es/vgo/#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "schema": "http://schema.org/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "@language": "en",
+        "color": "schema:color",
+        "teamname": "rdfs:label",
+        "matchid": "rdfs:label",
+        "userid": "rdfs:label",
+        "characterid": "rdfs:label",
+        "startdate": "vgo:startTime",
+        "created": "dcterms:created",
+        "team": "csgo:Team",
+        "kd": "xsd:float",
+        "isbot": "csgo:isbot",
+        "email": "schema:email",
+        "skinid": "rdfs:label",
+        "skinname": "rdfs:label",
+        "condition": "xsd:double",
+        "users": {
+            "@id": "vgo:User",
+            "@container": "@set"
+        },
+        "usernames": {
+            "@id": "vgo:username",
+            "@container": "@set"
+        },
+        "players": {
+            "@id": "vgo:Character",
+            "@container": "@set"
+        },
+        "matches": {
+            "@id": "vgo:Session",
+            "@container": "@set"
+        },
+        "skins": {
+            "@id": "csgo:skin",
+            "@container": "@set"
+        }
     },
-    "userid": "foaf:accountName",
-    "usernames": {
-      "@id": "vcard:nickname",
-      "@container": "@list"
+    "$defs": {
+        "skin": {
+            "$id": "#skin",
+            "type": "object",
+            "properties": {
+                "skinid": {
+                    "type": "rdfs:label"
+                },
+                "skinname": {
+                    "type": "rdfs:label"
+                },
+                "condition": {
+                    "type": "xsd:double"
+                }
+            },
+            "required": [
+                "skinid",
+                "skinname",
+                "condition"
+            ]
+        }
     },
-    "emailaddress": "vcard:hasEmail",
-    "creationdate": "dcterms:created",
-    "players": {
-      "@id": "vgo:ownsCharacter",
-      "@container": "@list"
-    },
-    "isbot": "csgo:isBot",
-    "kd": "csgo:hadKD",
-    "team": {
-      "@id": "csgo:isOnTeam",
-      "@type": "csgo:Team"
-    },
-    "teamname": "rdfs:label",
-    "matches": {
-      "@id": "vgo:isPlayerInSession",
-      "@container": "@list"
-    },
-    "date": "vgo:startTime",
-    "skins": {
-      "@id": "vgo:ownsItem",
-      "@container": "@list"
-    },
-    "skin": "csgo:Skin",
-    "skinname": "rdfs:label",
-    "condition": "csgo:condition"
-  },
-  "users":[
-    {
-      "userid": "jimmy",
-      "usernames": [
-        "Faze Jimmy"
-      ],
-      "emailaddress": "jimmer@tfwno.gf",
-      "creationdate": "2021-05-07",
-      "players":[
+    "users": [
         {
-          "characterid": "123456-1",
-          "username": "FaZe Jimmy",
-          "color": "Orange",
-          "isbot": true,
-          "kd": 0.3,
-          "team": {
-            "teamid": "123456-T",
-            "teamname": "Counter-Terrorists"
-          }
-        }
-      ],
-      "matches":[
+            "userid": "jimmy",
+            "usernames": [
+                "FaZe Jimmy"
+            ],
+            "email": "jimmer@tfwno.gf",
+            "created": "2020-04-20T12:00:00Z",
+            "players": [
+                {
+                    "characterid": "234567-2",
+                    "vgo:username": "FaZe Jimmy",
+                    "color": "Orange",
+                    "isbot": true,
+                    "kd": 0.3,
+                    "team": {
+                        "teamid": "234567-CT",
+                        "teamname": "Terrorists"
+                    }
+                }
+            ],
+            "matches": [
+                {
+                    "matchid": 222,
+                    "startdate": "2018-03-07T21:00:44Z"
+                }
+            ]
+        },
         {
-          "matchid": "123456",
-          "date": "2020-05-02T15:55:55"
-        }
-      ],
-      "skins": []
-    },
-    {
-      "userid": "a1b2c3",
-      "usernames": [
-        "Albert"
-      ],
-      "emailaddress": "cheese@gmail.com",
-      "creationdate": "2020-04-21",
-      "players": {
-        "player": {
-          "characterid": "234567-2",
-          "username": "Albert",
-          "color": "Orange",
-          "isbot": "false",
-          "kd": "1.67",
-          "team": {
-            "teamid": "234567-CT",
-            "teamname": "Counter-Terrorists"
-          }
-        }
-      },
-      "matches": [
+            "userid": "a1b2c3",
+            "usernames": [
+                "Albert"
+            ],
+            "email": "cheese@gmail.com",
+            "created": "2020-04-21T12:00:00Z",
+            "players": [
+                {
+                    "characterid": "238767-3",
+                    "vgo:username": "Albert",
+                    "color": "Orange",
+                    "isbot": false,
+                    "kd": 1.67,
+                    "team": {
+                        "teamid": "235867-CT",
+                        "teamname": "Counter-Terrorists"
+                    }
+                }
+            ],
+            "matches": [
+                {
+                    "matchid": 333,
+                    "startdate": "2018-03-08T15:07:01"
+                }
+            ]
+        },
         {
-          "matchid": "234567",
-          "date": "2020-05-02T15:55:55"
+            "userid": "gaben",
+            "usernames": [
+                "GabeN"
+            ],
+            "email": "gaben@valvesoftware.com",
+            "created": "2003-11-12T12:00:00Z",
+            "players": [
+                {
+                    "characterid": "111111-3",
+                    "vgo:username": "GabeN",
+                    "color": "Black",
+                    "isbot": false,
+                    "kd": 19,
+                    "team": {
+                        "teamid": "111111-T",
+                        "teamname": "Terrorists"
+                    }
+                },
+                {
+                    "vgo:username": "GabeN2",
+                    "color": "Yellow",
+                    "isbot": false,
+                    "kd": 20,
+                    "team": {
+                        "teamid": "111111-CT",
+                        "teamname": "CTs"
+                    }
+                }
+            ],
+            "matches": [
+                {
+                    "matchid": 11111,
+                    "startdate": "2018-03-06T13:06:59Z"
+                }
+            ],
+            "skins": [
+                {
+                    "skinid": "730_2_14091390121",
+                    "skinname": "M4A1-S | Prinstream",
+                    "condition": 0.38
+                },
+                {
+                    "skinid": "730_2_14091390122",
+                    "skinname": "Sparkles",
+                    "condition": 0.99
+                },
+                {
+                    "skinid": "730_2_14091390123",
+                    "skinname": "Beenade",
+                    "condition": 0.45
+                },
+                {
+                    "skinid": "730_2_14091390124",
+                    "skinname": "Nomad | Fade",
+                    "condition": 0.33
+                },
+                {
+                    "skinid": "730_2_14091390125",
+                    "skinname": "Pink Defuser",
+                    "condition": 0.68
+                },
+                {
+                    "skinid": "730_2_14091390126",
+                    "skinname": "Reflex Vest",
+                    "condition": 0.13
+                }
+            ]
         }
-      ],
-      "skins": []
-    },
-    {
-      "userid": "gaben",
-      "usernames": [
-        "GabeN"
-      ],
-      "emailaddress": "gaben@valvesoftware.com",
-      "creationdate": "2003-11-12",
-      "players": {
-        "player": {
-          "characterid": "111111-3",
-          "username": "GabeN",
-          "color": "Black",
-          "isbot": "false",
-          "kd": "19",
-          "team": {
-            "teamid": "111111-T",
-            "teamname": "Terrorists"
-          }
-        }
-      },
-      "matches": [
-        {
-          "matchid": "111111",
-          "date": "2018-03-06T13:06:59"
-        }
-      ],
-      "skins": {
-        "skin": [
-          {
-            "skinid": "730_2_14091390121",
-            "skinname": "M4A1-S | Prinstream",
-            "condition": "0.38"
-          },
-          {
-            "skinid": "730_2_14091390122",
-            "skinname": "Sparkles",
-            "condition": "0.99"
-          },
-          {
-            "skinid": "730_2_14091390123",
-            "skinname": "Beenade",
-            "condition": "0.45"
-          },
-          {
-            "skinid": "730_2_14091390124",
-            "skinname": "Nomad | Fade",
-            "condition": "0.33"
-          },
-          {
-            "skinid": "730_2_14091390125",
-            "skinname": "Pink Defuser",
-            "condition": "0.68"
-          },
-          {
-            "skinid": "730_2_14091390126",
-            "skinname": "Reflex Vest",
-            "condition": "0.13"
-          }
-        ]
-      }
-    }
-  ]
+    ]
 }

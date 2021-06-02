@@ -1,0 +1,170 @@
+{
+    "@context": {
+        "csgo": "http://example.org/vocabulary/",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "vcard": "http://www.w3.org/2006/vcard/ns#",
+        "dcterms": "http://purl.org/dc/terms/",
+        "vgo": "http://vocab.linkeddata.es/vgo/#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "schema": "http://schema.org/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "@language": "en",
+        "itemid": "xsd:integer",
+        "itemname": "rdfs:label",
+        "damage": "csgo:damage",
+        "cost": "csgo:cost",
+        "aoe": "csgo:aoe",
+        "throwablecount": "csgo:throwablecount",
+        "utilitytype": "csgo:utilitytype",
+        "durability": "csgo:durability",
+        "primary": "csgo:isPrimary",
+        "firerate": "csgo:firerate",
+        "items": "csgo:item",
+        "skinid": "rdfs:label",
+        "skinname": "rdfs:label",
+        "condition": "xsd:double",
+        "knives": {
+            "@id": "csgo:Knife",
+            "@container": "@set"
+        },
+        "throwables": {
+            "@id": "csgo:Throwable",
+            "@container": "@set"
+        },
+        "bombs": {
+            "@id": "csgo:Bomb",
+            "@container": "@set"
+        },
+        "utilities": {
+            "@id": "csgo:Utility",
+            "@container": "@set"
+        },
+        "armors": {
+            "@id": "csgo:Armor",
+            "@container": "@set"
+        },
+        "firearms": {
+            "@id": "csgo:Firearm",
+            "@container": "@set"
+        },
+        "skins": {
+            "@id": "csgo:skin",
+            "@container": "@set"
+        }
+    },
+    "items": {
+        "knives": [
+            {
+                "item_id": 1,
+                "itemname": "Combat knife",
+                "damage": 55,
+                "cost": 0,
+                "skins": [
+                    {
+                        "skinid": 1,
+                        "skinname": "Nomad | Fade",
+                        "condition": 0.33
+                    }
+                ]
+            }
+        ],
+        "throwables": [
+            {
+                "item_id": 2,
+                "itemname": "HE Grenade",
+                "aoe": 15,
+                "damage": 98,
+                "throwablecount": 1,
+                "cost": 300,
+                "skins": [
+                    {
+                        "skinid": 2,
+                        "skinname": "Beenade",
+                        "condition": 0.45
+                    }
+                ]
+            }
+        ],
+        "bombs": [
+            {
+                "item_id": 3,
+                "itemname": "The Bomb",
+                "aoe": 2,
+                "damage": 15,
+                "cost": 0,
+                "skins": [
+                    {
+                        "skinid": 3,
+                        "skinname": "Sparkles",
+                        "condition": 0.99
+                    }
+                ]
+            }
+        ],
+        "utilities": [
+            {
+                "item_id": 4,
+                "itemname": "Defuse Kit",
+                "utilitytype": "Equipment",
+                "cost": 400,
+                "skins": [
+                    {
+                        "skinid": 4,
+                        "skinname": "Pink Defuser",
+                        "condition": 0.68
+                    }
+                ]
+            }
+        ],
+        "armors": [
+            {
+                "item_id": 5,
+                "itemname": "Kevlar Vest",
+                "durability": 70,
+                "cost": 650,
+                "skins": [
+                    {
+                        "skinid": 5,
+                        "skinname": "Reflex Vest",
+                        "condition": 0.13
+                    }
+                ]
+            }
+        ],
+        "firearms": [
+            {
+                "item_id": 6,
+                "itemname": "M4A1-S",
+                "primary": true,
+                "damage": 33,
+                "firerate": 600,
+                "cost": 2900,
+                "skins": [
+                    {
+                        "skinid": 6,
+                        "skinname": "M4A1-S | Prinstream",
+                        "condition": 0.38
+                    }
+                ]
+            },
+            {
+                "item_id": 7,
+                "itemname": "MP5",
+                "primary": true,
+                "damage": 17,
+                "firerate": 1200,
+                "cost": 1450
+            },
+            {
+                "item_id": 8,
+                "itemname": "P2000",
+                "primary": false,
+                "damage": 17,
+                "firerate": 300,
+                "cost": 200
+            }
+        ]
+    }
+}

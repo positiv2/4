@@ -1,0 +1,18 @@
+@prefix ns0: <http://vocab.linkeddata.es/vgo/#> .
+@prefix ns1: <http://example.org/vocabulary/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+[] ns0:PlayingArea [
+    ns1:plantLocation [ xsd:integer 302, 312, 10, 25, 5 ], [ xsd:integer 124, 134, 125, 115, 10, 20 ] ;
+    ns1:spawnLocation [ xsd:integer 300, 310, 100, 94, 10 ], [ xsd:integer 60, 66, 120, 126, 10 ] ;
+    rdfs:label "de_inferno"@en, "Inferno"@en
+  ], [
+    ns1:plantLocation [ xsd:integer 302, 312, 10, 25, 5 ], [ xsd:integer 124, 134, 125, 115, 10, 20 ] ;
+    ns1:spawnLocation [ xsd:integer 300, 310, 100, 94, 10 ], [ xsd:integer 60, 66, 120, 126, 10 ] ;
+    rdfs:label "de_nuke"@en, "Nuke"@en
+  ], [
+    ns1:plantLocation [ xsd:integer 302, 312, 10, 25, 5 ], [ xsd:integer 124, 134, 125, 115, 10, 20 ] ;
+    ns1:spawnLocation [ xsd:integer 300, 310, 100, 94, 10 ], [ xsd:integer 60, 66, 120, 126, 10 ] ;
+    rdfs:label "de_dust"@en, "Dust"@en
+  ] .
