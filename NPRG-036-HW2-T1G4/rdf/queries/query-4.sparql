@@ -1,0 +1,23 @@
+PREFIX cs: <http://purl.org/vocab/changeset/schema#>
+prefix csgo: <http://example.org/vocabulary/>
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+prefix vcard: <http://www.w3.org/2006/vcard/ns#>
+prefix dcterms: <http://purl.org/dc/terms/>
+prefix vgo: <http://vocab.linkeddata.es/vgo/>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix schema: <http://schema.org/#>
+prefix csgousers: <http://example.org/profile/>
+prefix csgodb: <http://example.org/info/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?label (xsd:integer(?rpm)*xsd:integer(?damage) as ?dpm)
+WHERE {
+  ?firearm a csgo:Firearm ;
+           rdfs:label ?label ;
+           csgo:damage ?damage ;
+           csgo:firerate ?rpm
+}
+ORDER BY ?dpm
+# Calculates the damage per minute for each gun and orders them by it (ignoring reload times)

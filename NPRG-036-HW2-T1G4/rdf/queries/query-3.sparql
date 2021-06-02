@@ -1,0 +1,26 @@
+prefix csgo: <http://example.org/vocabulary/>
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+prefix vcard: <http://www.w3.org/2006/vcard/ns#>
+prefix dcterms: <http://purl.org/dc/terms/>
+prefix vgo: <http://vocab.linkeddata.es/vgo/>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix schema: <http://schema.org/#>
+prefix csgousers: <http://example.org/profile/>
+prefix csgodb: <http://example.org/info/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?user
+  				(MAX(?kd) as ?topkd)
+WHERE {
+  SELECT ?user ?kd
+  WHERE {
+    ?user vgo:ownsCharacter ?character.
+  	?character csgo:hadKD ?kd
+  }
+}
+GROUP BY ?user
+ORDER BY DESC(?topkd)
+LIMIT 10
+# Finds the top ten highest KD achieved (max one for each player)

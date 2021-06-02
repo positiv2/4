@@ -1,0 +1,20 @@
+prefix csgo: <http://example.org/vocabulary/>
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+prefix vcard: <http://www.w3.org/2006/vcard/ns#>
+prefix dcterms: <http://purl.org/dc/terms/>
+prefix vgo: <http://vocab.linkeddata.es/vgo/>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix schema: <http://schema.org/#>
+prefix csgousers: <http://example.org/profile/>
+prefix csgodb: <http://example.org/info/>
+
+ASK 
+WHERE {
+  csgousers:a1b2c3 vgo:ownsCharacter ?char .
+  ?char csgo:hadKD ?kd .
+}
+HAVING (?kd > "1.0")
+
+# Finds whether there were any matches in which Albert had more kills than deaths
