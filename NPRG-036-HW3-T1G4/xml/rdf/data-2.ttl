@@ -1,0 +1,41 @@
+csgodb:skin-730_2_14091390124 csgo:skinFor csgodb:item-weapon_knife.
+csgodb:skin-730_2_14091390123 csgo:skinFor csgodb:item-weapon_hegrenade.
+csgodb:skin-730_2_14091390122 csgo:skinFor csgodb:item-weapon_c4.
+csgodb:skin-730_2_14091390125 csgo:skinFor csgodb:item-defuser.
+csgodb:skin-730_2_14091390126 csgo:skinFor csgodb:item-item_kevlar.
+csgodb:skin-730_2_14091390121 csgo:skinFor csgodb:item-weapon_m4a1_silencer.
+csgodb:item-weapon_knife
+    a csgo:Knife;
+    csgo:cost "0"^^xsd:integer ;
+    rdfs:label "Combat knife"@en ;
+    csgo:damage "55"^^xsd:integer.
+csgodb:item-weapon_m4a1_silencer
+    a csgo:Firearm;
+    csgo:cost "2900"^^xsd:integer ;
+    rdfs:label "M4A1-S"@en ;
+    csgo:damage "33"^^xsd:integer;
+    csgo:firerate "600"^^xsd:integer;
+    csgo:isPrimary "true".
+csgodb:item-defuser
+    a csgo:Utility;
+    csgo:cost "400"^^xsd:integer ;
+    rdfs:label "Defuse Kit"@en ;
+    csgo:utilityType "Equipment".
+csgodb:item-item_kevlar
+    a csgo:Armor;
+    csgo:cost "650"^^xsd:integer ;
+    rdfs:label "Kevlar Vest"@en ;
+    csgo:durability "70"^^xsd:integer.
+csgodb:item-weapon_hegrenade
+    a csgo:Throwable;
+    csgo:cost "300"^^xsd:integer ;
+    rdfs:label "HE Grenade"@en ;
+    csgo:damage "98"^^xsd:integer;
+    csgo:aoe "15"^^xsd:integer;
+    csgo:throwableCount "1"^^xsd:integer.
+csgodb:item-weapon_c4
+    a csgo:Bomb;
+    csgo:cost "0"^^xsd:integer ;
+    rdfs:label "The Bomb"@en ;
+    csgo:damage "15"^^xsd:integer;
+    csgo:aoe "2"^^xsd:integer.

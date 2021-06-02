@@ -1,0 +1,167 @@
+{
+  "@context": {
+    "csgo": "http://example.org/vocabulary/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "vgo": "http://vocab.linkeddata.es/vgo/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "schema": "http://schema.org/#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "users": {
+      "@id": "vgo:Player",
+      "@container": "@list"
+    },
+    "userid": "foaf:accountName",
+    "usernames": {
+      "@id": "vcard:nickname",
+      "@container": "@list"
+    },
+    "emailaddress": "vcard:hasEmail",
+    "creationdate": "dcterms:created",
+    "players": {
+      "@id": "vgo:ownsCharacter",
+      "@container": "@list"
+    },
+    "isbot": "csgo:isBot",
+    "kd": "csgo:hadKD",
+    "team": {
+      "@id": "csgo:isOnTeam",
+      "@type": "csgo:Team"
+    },
+    "teamname": "rdfs:label",
+    "matches": {
+      "@id": "vgo:isPlayerInSession",
+      "@container": "@list"
+    },
+    "date": "vgo:startTime",
+    "skins": {
+      "@id": "vgo:ownsItem",
+      "@container": "@list"
+    },
+    "skin": "csgo:Skin",
+    "skinname": "rdfs:label",
+    "condition": "csgo:condition"
+  },
+  "users":[
+    {
+      "userid": "jimmy",
+      "usernames": [
+        "Faze Jimmy"
+      ],
+      "emailaddress": "jimmer@tfwno.gf",
+      "creationdate": "2021-05-07",
+      "players":[
+        {
+          "characterid": "123456-1",
+          "username": "FaZe Jimmy",
+          "color": "Orange",
+          "isbot": true,
+          "kd": 0.3,
+          "team": {
+            "teamid": "123456-T",
+            "teamname": "Counter-Terrorists"
+          }
+        }
+      ],
+      "matches":[
+        {
+          "matchid": "123456",
+          "date": "2020-05-02T15:55:55"
+        }
+      ],
+      "skins": []
+    },
+    {
+      "userid": "a1b2c3",
+      "usernames": [
+        "Albert"
+      ],
+      "emailaddress": "cheese@gmail.com",
+      "creationdate": "2020-04-21",
+      "players": {
+        "player": {
+          "characterid": "234567-2",
+          "username": "Albert",
+          "color": "Orange",
+          "isbot": "false",
+          "kd": "1.67",
+          "team": {
+            "teamid": "234567-CT",
+            "teamname": "Counter-Terrorists"
+          }
+        }
+      },
+      "matches": [
+        {
+          "matchid": "234567",
+          "date": "2020-05-02T15:55:55"
+        }
+      ],
+      "skins": []
+    },
+    {
+      "userid": "gaben",
+      "usernames": [
+        "GabeN"
+      ],
+      "emailaddress": "gaben@valvesoftware.com",
+      "creationdate": "2003-11-12",
+      "players": {
+        "player": {
+          "characterid": "111111-3",
+          "username": "GabeN",
+          "color": "Black",
+          "isbot": "false",
+          "kd": "19",
+          "team": {
+            "teamid": "111111-T",
+            "teamname": "Terrorists"
+          }
+        }
+      },
+      "matches": [
+        {
+          "matchid": "111111",
+          "date": "2018-03-06T13:06:59"
+        }
+      ],
+      "skins": {
+        "skin": [
+          {
+            "skinid": "730_2_14091390121",
+            "skinname": "M4A1-S | Prinstream",
+            "condition": "0.38"
+          },
+          {
+            "skinid": "730_2_14091390122",
+            "skinname": "Sparkles",
+            "condition": "0.99"
+          },
+          {
+            "skinid": "730_2_14091390123",
+            "skinname": "Beenade",
+            "condition": "0.45"
+          },
+          {
+            "skinid": "730_2_14091390124",
+            "skinname": "Nomad | Fade",
+            "condition": "0.33"
+          },
+          {
+            "skinid": "730_2_14091390125",
+            "skinname": "Pink Defuser",
+            "condition": "0.68"
+          },
+          {
+            "skinid": "730_2_14091390126",
+            "skinname": "Reflex Vest",
+            "condition": "0.13"
+          }
+        ]
+      }
+    }
+  ]
+}

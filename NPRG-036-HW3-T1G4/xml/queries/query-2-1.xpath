@@ -1,0 +1,2 @@
+for $p in //items/firearm return (concat('Firearm ', $p/name/text(), ' has ', number($p/damage/text()) * number($p/firerate/text()),  ' damage per minute'))
+(: Calculates the DPM for each firearm :)

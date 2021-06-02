@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xml:lang="en">
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace"
+        schemaLocation="https://www.w3.org/2009/01/xml.xsd" />
+  <!-- Leaf nodes -->
+  <xs:element name="x1" type="xs:integer" />
+  <xs:element name="x2" type="xs:integer" />
+  <xs:element name="y1" type="xs:integer" />
+  <xs:element name="y2" type="xs:integer" />
+  <xs:element name="z1" type="xs:integer" />
+  <xs:element name="z2" type="xs:integer" />
+  <xs:element name="mapname" type="xs:string" />
+  
+  <!-- Attributes -->
+  <xs:attribute name="mapid" type="xs:string" />
+  <xs:attribute name="matchid" type="xs:integer" />
+  <xs:attribute name="date" type="xs:dateTime" />
+  
+  <!-- Inner nodes -->
+  <xs:element name="match">
+    <xs:complexType>
+      <xs:attribute ref="matchid" use="required"/>
+      <xs:attribute ref="date"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="matches">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="match" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="x">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="x1" />
+        <xs:element ref="x2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="y">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="y1" />
+        <xs:element ref="y2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="z">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="z1" />
+        <xs:element ref="z2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="spawnlocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="x" />
+        <xs:element ref="y" />
+        <xs:element ref="z" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="plantlocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="x" />
+        <xs:element ref="y" />
+        <xs:element ref="z" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="map">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mapname" />
+        <xs:element ref="spawnlocation" minOccurs="2" maxOccurs="2" />
+        <xs:element ref="plantlocation" minOccurs="2" maxOccurs="2" />
+        <xs:element ref="matches" />
+      </xs:sequence>
+      <xs:attribute ref="mapid" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="maps">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="map" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute ref="xml:lang" use="optional" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

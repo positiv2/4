@@ -1,0 +1,9 @@
+for $map in /maps/map
+return(
+for $plant in $map/plantlocation
+return
+concat('The area for one of the plant zones on ', $map/mapname, ' is ', (abs(number($plant/x/x1/text()) - number($plant/x/x2/text())) * 
+abs(number($plant/y/y1/text()) - number($plant/y/y2/text())) * 
+abs(number($plant/z/z1/text()) - number($plant/z/z2/text())))))
+
+(: Calculates the volumes for all (usually 2) plant zones; note that we have used the same plant zones for all maps :)
