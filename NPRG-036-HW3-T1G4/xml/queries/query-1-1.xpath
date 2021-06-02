@@ -1,0 +1,2 @@
+for $p in //users/user return (concat('Player ', $p/usernames/username/text(), ' is a member for ', (((xs:date(current-date()) - (xs:date($p/creationdate)))))))
+(: Says how long the players have been members for :)

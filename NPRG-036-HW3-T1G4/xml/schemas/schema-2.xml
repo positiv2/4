@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xml:lang="en">
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace"
+        schemaLocation="https://www.w3.org/2009/01/xml.xsd" />
+
+  <!-- Leaf nodes -->
+  <xs:element name="durability" type="xs:integer" />
+  <xs:element name="name" type="xs:string" />
+  <xs:element name="cost" type="xs:integer" />
+  <xs:element name="aoe" type="xs:integer" />
+  <xs:element name="firerate" type="xs:integer" />
+  <xs:element name="damage" type="xs:integer" />
+  <xs:element name="throwablecount" type="xs:integer" />
+  <xs:element name="utilitytype" type="xs:string" />
+  <xs:element name="condition" type="xs:decimal" />
+  <xs:element name="skinname" type="xs:string" />
+  
+  <!-- Attributes -->
+  <xs:attribute name="skinid" type="xs:string" />
+  <xs:attribute name="armorid" type="xs:string" />
+  <xs:attribute name="weaponid" type="xs:string" />
+  <xs:attribute name="utilityid" type="xs:string" />
+  <xs:attribute name="primary" type="xs:boolean" />
+  
+  <!-- Inner nodes -->
+  <xs:element name="skin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="skinname" />
+        <xs:element ref="condition"/>
+      </xs:sequence>
+      <xs:attribute ref="skinid" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="skins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="skin" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="armor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="durability" />
+        <xs:element ref="name" />
+        <xs:element ref="cost" />
+        <xs:element ref="skins" />
+      </xs:sequence>
+      <xs:attribute ref="armorid" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="knife">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name" />
+        <xs:element ref="damage" />
+        <xs:element ref="cost" />
+        <xs:element ref="skins" />
+      </xs:sequence>
+      <xs:attribute ref="weaponid" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="bomb">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="aoe" />
+        <xs:element ref="damage" />
+        <xs:element ref="cost" />
+        <xs:element ref="name" />
+        <xs:element ref="skins" />
+      </xs:sequence>
+      <xs:attribute ref="weaponid" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="firearm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="damage" />
+        <xs:element ref="firerate" />
+        <xs:element ref="cost" />
+        <xs:element ref="name" />
+        <xs:element ref="skins" />
+      </xs:sequence>
+      <xs:attribute ref="weaponid" use="required"/>
+      <xs:attribute ref="primary" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="throwable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="aoe" />
+        <xs:element ref="damage" />
+        <xs:element ref="throwablecount" />
+        <xs:element ref="utilitytype" />
+        <xs:element ref="cost" />
+        <xs:element ref="name" />
+        <xs:element ref="skins" />
+      </xs:sequence>
+      <xs:attribute ref="utilityid" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="utility">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="utilitytype" />
+        <xs:element ref="name" />
+        <xs:element ref="cost" />
+        <xs:element ref="skins" />
+      </xs:sequence>
+      <xs:attribute ref="utilityid" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="items">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="bomb" />
+          <xs:element ref="throwable" />
+          <xs:element ref="firearm" />
+          <xs:element ref="knife" />
+          <xs:element ref="utility" />
+          <xs:element ref="armor" />
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute ref="xml:lang" use="optional" />
+    </xs:complexType>
+  </xs:element>
+  
+</xs:schema>

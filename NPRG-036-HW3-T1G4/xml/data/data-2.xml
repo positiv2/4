@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<items xml:lang="en">
+  <knife weaponid="weapon_knife">
+    <name>Combat knife</name>
+    <damage>55</damage>
+    <cost>0</cost>
+    <skins>
+      <skin skinid="730_2_14091390124">
+        <skinname>Nomad | Fade</skinname>
+        <condition>0.33</condition>
+      </skin>
+    </skins>
+  </knife>
+  <throwable utilityid="weapon_hegrenade">
+    <aoe>15</aoe>
+    <damage>98</damage>
+    <throwablecount>1</throwablecount>
+    <utilitytype>Grenade</utilitytype>
+    <cost>300</cost>
+    <name>HE Grenade</name>
+    <skins>
+      <skin skinid="730_2_14091390123">
+        <skinname>Beenade</skinname>
+        <condition>0.45</condition>
+      </skin>
+    </skins>
+  </throwable>
+  <bomb weaponid="weapon_c4">
+    <aoe>2</aoe>
+    <damage>15</damage>
+    <cost>0</cost>
+    <name>The Bomb</name>
+    <skins>
+      <skin skinid="730_2_14091390122">
+        <skinname>Sparkles</skinname>
+        <condition>0.99</condition>
+      </skin>
+    </skins>
+  </bomb>
+  <utility utilityid="defuser">
+    <utilitytype>Equipment</utilitytype>
+    <name>Defuse Kit</name>
+    <cost>400</cost>
+    <skins>
+      <skin skinid="730_2_14091390125">
+        <skinname>Pink Defuser</skinname>
+        <condition>0.68</condition>	
+      </skin>
+    </skins>
+  </utility>
+  <armor armorid="item_kevlar" >
+    <durability>70</durability>
+    <name>Kevlar Vest</name>
+    <cost>650</cost>
+    <skins>
+      <skin skinid="730_2_14091390126">
+        <skinname>Reflex Vest</skinname>
+        <condition>0.13</condition>
+      </skin>
+    </skins>
+  </armor>
+  <firearm weaponid="weapon_m4a1_silencer" primary="true">
+    <damage>33</damage>
+    <firerate>600</firerate>
+    <cost>2900</cost>
+    <name>M4A1-S</name>
+    <skins>
+      <skin skinid="730_2_14091390121">
+        <skinname>M4A1-S | Prinstream</skinname>
+        <condition>0.38</condition>	
+      </skin>
+    </skins>
+  </firearm>
+</items>

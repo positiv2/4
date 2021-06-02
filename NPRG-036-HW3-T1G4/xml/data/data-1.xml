@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<users xml:lang="en">
+  <user userid="jimmy">
+    <usernames>
+      <username>FaZe Jimmy</username>
+    </usernames>
+    <emailaddress>jimmer@tfwno.gf</emailaddress>
+    <creationdate>2020-04-20</creationdate>
+    <players>
+      <player characterid="123456-1">
+        <username>FaZe Jimmy</username>
+        <color>Orange</color>
+        <isbot>false</isbot>
+        <kd>0.3</kd>
+        <team teamid="123456-T">
+          <teamname>Terrorists</teamname>
+        </team>
+      </player>
+    </players>
+    <matches>
+      <match matchid="123456" date="2020-05-02T15:55:55"/>
+    </matches>
+    <skins></skins>
+  </user>
+  <user userid="a1b2c3">
+    <usernames>
+      <username>Albert</username>
+    </usernames>
+    <emailaddress>cheese@gmail.com</emailaddress>
+    <creationdate>2020-04-21</creationdate>
+    <players>
+      <player characterid="234567-2">
+        <username>Albert</username>
+        <color>Orange</color>
+        <isbot>false</isbot>
+        <kd>1.67</kd>
+        <team teamid="234567-CT">
+          <teamname>Counter-Terrorists</teamname>
+        </team>
+      </player>
+    </players>
+    <matches>
+      <match matchid="234567" date="2020-05-02T15:55:55" />
+    </matches>
+    <skins></skins>
+  </user>
+  <user userid="gaben">
+    <usernames>
+      <username>GabeN</username>
+    </usernames>
+    <emailaddress>gaben@valvesoftware.com</emailaddress>
+    <creationdate>2003-11-12</creationdate>
+    <players>
+      <player characterid="111111-3">
+        <username>GabeN</username>
+        <color>Black</color>
+        <isbot>false</isbot>
+        <kd>19</kd>
+        <team teamid="111111-T">
+          <teamname>Terrorists</teamname>
+        </team>	
+      </player>
+    </players>
+    <matches>
+      <match matchid="111111" date="2018-03-06T13:06:59" />
+    </matches>
+		<skins>
+      <skin skinid="730_2_14091390121">
+        <skinname>M4A1-S | Prinstream</skinname>
+        <condition>0.38</condition>	
+      </skin>			
+      <skin skinid="730_2_14091390122">
+        <skinname>Sparkles</skinname>
+        <condition>0.99</condition>
+      </skin>
+      <skin skinid="730_2_14091390123">
+        <skinname>Beenade</skinname>
+        <condition>0.45</condition>
+      </skin>
+      <skin skinid="730_2_14091390124">
+        <skinname>Nomad | Fade</skinname>
+        <condition>0.33</condition>
+      </skin>
+      <skin skinid="730_2_14091390125">
+        <skinname>Pink Defuser</skinname>
+        <condition>0.68</condition>	
+      </skin>
+      <skin skinid="730_2_14091390126">
+        <skinname>Reflex Vest</skinname>
+        <condition>0.13</condition>
+      </skin>
+    </skins>
+  </user>			
+</users>

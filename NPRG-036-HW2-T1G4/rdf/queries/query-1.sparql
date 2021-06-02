@@ -1,0 +1,15 @@
+prefix vgo: <http://vocab.linkeddata.es/vgo/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?username ?answer
+WHERE 
+{
+  ?user a vgo:Player ;
+          foaf:accountName ?username ;
+          dcterms:created ?ConfirmationDate .
+  BIND ((IF (?ConfirmationDate < "2015-01-01", "Is a veteran","Is a newbie")) AS ?answer)
+}
+
+# Finds whether each used is a veteran or a newbie

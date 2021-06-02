@@ -1,0 +1,24 @@
+csgodb:map-de_inferno a vgo:PlayingArea;
+csgo:spawnLocation "300 100 10, 310 94 10";
+csgo:spawnLocation "60 120 10, 66 126 10";
+csgo:plantArea "302 10 5, 312 25 25";
+csgo:plantArea "124 125 10, 134 115 20";
+csgo:mapName "Inferno";
+    csgo:mapId "de_inferno".
+csgodb:match-123456 csgo:playedOn csgodb:map-de_inferno.
+csgodb:map-de_nuke a vgo:PlayingArea;
+csgo:spawnLocation "300 100 10, 310 94 10";
+csgo:spawnLocation "60 120 10, 66 126 10";
+csgo:plantArea "302 10 5, 312 25 25";
+csgo:plantArea "124 125 10, 134 115 20";
+csgo:mapName "Nuke";
+    csgo:mapId "de_nuke".
+csgodb:match-234567 csgo:playedOn csgodb:map-de_nuke.
+csgodb:map-de_dust a vgo:PlayingArea;
+csgo:spawnLocation "300 100 10, 310 94 10";
+csgo:spawnLocation "60 120 10, 66 126 10";
+csgo:plantArea "302 10 5, 312 25 25";
+csgo:plantArea "124 125 10, 134 115 20";
+csgo:mapName "Dust";
+    csgo:mapId "de_dust".
+csgodb:match-111111 csgo:playedOn csgodb:map-de_dust.

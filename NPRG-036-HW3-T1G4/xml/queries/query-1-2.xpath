@@ -1,0 +1,2 @@
+for $p in //players/player return if ($p/isbot[text()='true']) then (concat('Player ', $p/username/text(), ' (id:', $p/@characterid, ')', ' is a bot')) else (concat('Player ', $p/username/text(), ' (id:', $p/@characterid, ')', ' is not a bot'))
+(: Finds the bot status for each player :)

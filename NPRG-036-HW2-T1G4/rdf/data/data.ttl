@@ -1,0 +1,353 @@
+# prefix : csgo
+
+@prefix csgo: <http://example.org/vocabulary/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vgo: <http://vocab.linkeddata.es/vgo/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix schema: <http://schema.org/#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+csgo:Skin
+  a owl:Class ;
+  rdfs:subClassOf vgo:GameProduct ;
+  rdfs:comment "An in-game object that modifies the visual style of an Item."@en .
+
+csgo:skinFor
+  a rdf:Property ;
+  rdfs:domain csgo:Skin ;
+  rdfs:range vgo:Item ;
+  rdfs:comment "The item for which the skin is equippable."@en .
+
+csgo:condition
+  a rdf:Property ;
+  rdfs:domain csgo:Skin ;
+  rdfs:range xsd:float ; # represented as a number between 0 and 1
+  rdfs:comment "Each skin has an assigned condition to it, e.g. Well-Worn."@en .
+
+csgo:cost
+  a rdf:Property ;
+  rdfs:domain vgo:Item ;
+  rdfs:range xsd:integer ;
+  rdfs:comment "Most items have an assigned cost when being purchased at the start of a round"@en .
+
+csgo:Knife
+  a owl:Class ;
+  rdfs:subClassOf vgo:Item ;
+  rdfs:comment "A weapon to be used in a melee range."@en .
+
+csgo:Utility
+  a owl:Class ;
+  rdfs:subClassOf vgo:Item ;
+  rdfs:comment "A set of items whose purpose is utility during a match, such a defusal kit."@en .
+
+csgo:utilityType
+  a rdf:Property ;
+  rdfs:domain csgo:Utility ;
+  rdfs:range rdfs:Resource ;
+  rdfs:comment "The type of the utility, ranging from passive bonuses (rescue kit, defuse kit) to deployable bonuses (ammunition pile, grenade box)."@en .
+
+csgo:Throwable
+  a owl:Class ;
+  rdfs:subClassOf csgo:Utility ;
+  rdfs:comment "Throwable items, such as grenades or decoys."@en .
+
+csgo:throwableCount
+  a rdf:Property ;
+  rdfs:domain csgo:Throwable ;
+  rdfs:range xsd:integer ;
+  rdfs:comment "The maximum number of the throwable equippable at the same time."@en .
+
+csgo:aoe
+  a rdf:Property ;
+  rdfs:domain vgo:Item ;
+  rdfs:range xsd:integer ;
+  rdfs:comment "The area of effect of a throwable."@en .
+
+csgo:Bomb
+  a owl:Class ;
+  rdfs:subClassOf vgo:Item ;
+  rdfs:comment "The bomb used to win the game."@en .
+
+csgo:Firearm
+  a owl:Class ;
+  rdfs:subClassOf vgo:Item ;
+  rdfs:comment "A bullet-firing weapon" .
+
+csgo:firerate
+  a rdf:Property ;
+  rdfs:domain csgo:Firearm ;
+  rdfs:range xsd:integer ;
+  rdfs:comment "The rounds per minute fired by the firearm."@en .
+
+csgo:isPrimary
+  a rdf:Property ;
+  rdfs:domain csgo:Firearm ;
+  rdfs:range schema:Boolean ;
+  rdfs:comment "Decides whether the firearm is in the primary or secondary slot."@en .
+
+csgo:Armor
+  a owl:Class ;
+  rdfs:subClassOf vgo:Item ;
+  rdfs:comment "Purchasable item that reduces damage taken."@en .
+
+csgo:durability
+  a rdf:Property ;
+  rdfs:domain csgo:Armor ;
+  rdfs:range xsd:integer ;
+  rdfs:comment "The base amount of extra health the armour type provides."@en .
+
+csgo:Team
+  a owl:Class ;
+  rdfs:domain vgo:Session ;
+  rdfs:range vgo:Character ;
+  rdfs:comment "A group of characters playing a game session. " .
+
+csgo:damage
+  a rdfs:Property ;
+  rdfs:domain vgo:Item ;
+  rdfs:range xsd:integer ;
+  rdfs:comment "How much health an item takes from a game object (e.g. player) when successfully applied"@en .
+
+csgo:mapName
+  a rdfs:Property ;
+  rdfs:domain vgo:PlayingArea ;
+  rdfs:subClassOf rdfs:label ;
+  rdfs:comment "The name of a map as shown in the matchmaking map selection menu, such as Dust."@en .
+
+csgo:mapId
+  a rdfs:Property ;
+  rdfs:domain vgo:PlayingArea ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subClassOf rdfs:label ;
+  rdfs:comment "The identification of a map within gamefiles, such as de_dust."@en .
+
+csgo:spawnLocation
+  a rdfs:Property ;
+  rdfs:domain vgo:PlayingArea ;
+  rdfs:subClassOf schema:GeoShape ;
+  rdfs:comment "The locations where the players appear at the start of a round."@en .
+  
+csgo:plantArea
+  a rdf:Property ;
+  rdfs:domain vgo:PlayingArea ;
+  rdfs:range schema:GeoShape ;
+  rdfs:comment "The zone in which the bomb can be planted."@en .
+
+csgo:isBot
+  a rdfs:Property ;
+  rdfs:domain vgo:Character ;
+  rdfs:subClassOf schema:Boolean ;
+  rdfs:comment "Integer saying whether a character is computer-controlled."@en .
+
+csgo:hadKD
+  a rdfs:Property ;
+  rdfs:domain vgo:Character ;
+  rdfs:range xsd:float ;
+  rdfs:comment "The KD ratio the player had at the end of the match."@en .
+
+csgo:playedOn
+  a rdfs:Property ;
+  rdfs:domain vgo:Session ;
+  rdfs:range vgo:PlayingArea ;
+  rdfs:comment "Says which map a match is being played on."@en .
+
+csgo:includesCharacters
+  a rdfs:Property ;
+  rdfs:domain vgo:Session ;
+  rdfs:range vgo:Character ;
+  rdfs:comment "Lists the characters that are bound to the current sessions."@en .
+
+csgo:isOnTeam
+  a rdfs:Property ;
+  rdfs:domain vgo:Character ;
+  rdfs:range csgo:Team ;
+  rdfs:comment "Says which team the character is on."@en .
+
+csgo:hasTeams
+  a rdfs:Property ;
+  rdfs:domain vgo:Session ;
+  rdfs:range csgo:Team ;
+  rdfs:comment "Provides information about the two teams in a given session."@en .
+
+
+################################################################################
+
+
+@prefix csgousers: <http://example.org/profile/> .
+@prefix csgodb: <http://example.org/info/> .
+
+csgousers:jimmy
+  a vgo:Player;
+  foaf:accountName "jimmy";
+  vcard:nickname "FaZe Jimmy";
+  vcard:hasEmail "mailto:jimmer@tfwno.gf";
+  dcterms:created "2020-04-20"^^xsd:date;
+  vgo:isPlayerInSession csgodb:match-123456;
+  vgo:ownsCharacter csgodb:player-123456-1 .
+  
+csgodb:match-123456
+  a vgo:Session;
+  rdfs:label "Match #123456";
+  vgo:startTime "2020-05-02T15:55:55"^^xsd:dateTime;
+  csgo:includesCharacters csgodb:player-123456-1;
+  csgo:includesCharacters csgodb:player-123456-2;
+  csgo:hasTeams csgodb:team-123456-T;
+  csgo:hasTeams csgodb:team-123456-CT;
+  csgo:playedOn csgodb:map-de_inferno .
+
+csgodb:player-123456-1
+  a vgo:Character;
+  vcard:nickname "FaZe Jimmy";
+  csgo:isBot "false";
+  csgo:hadKD "0.3"^^xsd:float;
+  csgo:isOnTeam csgodb:team-123456-T .
+
+csgodb:player-123456-2
+  a vgo:Character;
+  vcard:nickname "Albert";
+  csgo:isBot "false";
+  csgo:hadKD "1.67"^^xsd:float;
+  csgo:isOnTeam csgodb:team-123456-CT .
+  
+csgousers:a1b2c3
+  a vgo:Player;
+  foaf:accountName "a1b2c3";
+  vcard:nickname "Albert";
+  vcard:hasEmail "mailto:cheese@gmail.com";
+  dcterms:created "2020-04-21"^^xsd:date;
+  vgo:isPlayerInSession csgodb:match-234567;
+  vgo:isPlayerInSession csgodb:match-123456;
+  vgo:ownsCharacter csgodb:player-234567-1;
+  vgo:ownsCharacter csgodb:player-123456-2 .
+  
+csgodb:match-234567
+  a vgo:Session;
+  rdfs:label "Match #234567";
+  vgo:startTime "2021-04-11T14:44:44"^^xsd:dateTime;
+  csgo:hasTeams csgodb:team-234567-T;
+  csgo:playedOn csgodb:map-de_nuke .
+  
+csgodb:player-234567-1
+  a vgo:Character;
+  vcard:nickname "Albert";
+  csgo:isBot "false";
+  csgo:hadKD "1.33"^^xsd:float;
+  csgo:isOnTeam csgodb:team-234567-T .
+
+csgousers:gaben
+  a vgo:Player;
+  foaf:accountName "GabeN";
+  vcard:nickname "GabeN";
+  vcard:hasEmail "mailto:gaben@valvesoftware.com";
+  dcterms:created "2003-11-12"^^xsd:date;
+  vgo:ownsItem csgodb:skin-fade-000231;
+  vgo:ownsItem csgodb:skin-neo-noir-001256;
+  vgo:ownsItem csgodb:skin-snow-leopard-002357 .
+  
+csgodb:match-111111
+  a vgo:session;
+  rdfs:label "Match #111111";
+  vgo:startTime "2019-12-30T22:22:22"^^xsd:dateTime;
+  csgo:playedOn csgodb:map-de_dust .
+  
+csgodb:skin-fade-000231
+  a csgo:Skin;
+  csgo:condition "0.9"^^xsd:float;
+  rdfs:label "Fade"@en;
+  csgo:skinFor csgodb:weapon-knife .
+
+csgodb:skin-neo-noir-001256
+  a csgo:Skin;
+  csgo:condition "0.74"^^xsd:float;
+  rdfs:label "Glock-18 | Neo-Noir"@en;
+  csgo:skinFor csgodb:weapon-glock-18 .
+  
+csgodb:skin-snow-leopard-002357
+  a csgo:Skin;
+  csgo:condition "0.16"^^xsd:float;
+  rdfs:label "Driver Gloves | Snow Leopard"@en;
+  csgo:skinFor csgodb:item-gloves .
+  
+csgodb:weapon-knife
+  a csgo:Knife;
+  csgo:cost "0"^^xsd:integer ;
+  rdfs:label "Knife"@en;
+  csgo:damage "50"^^xsd:integer .
+  
+csgodb:weapon-glock-18
+  a csgo:Firearm;
+  csgo:damage "30"^^xsd:integer ;
+  csgo:cost "200"^^xsd:integer ;
+  csgo:firerate "1200"^^xsd:integer ;
+  rdfs:label "Glock 18"@en;
+  csgo:isPrimary "false" .
+  
+csgodb:item-gloves
+  a csgo:Utility;
+  csgo:cost "0"^^xsd:integer ;
+  rdfs:label "Gloves"@en ;
+  csgo:utilityType "Gloves" .
+  
+csgo:item-body-armor
+  a csgo:Armor;
+  csgo:cost "650"^^xsd:integer ;
+  rdfs:label "Kevlar Vest"@en ;
+  csgo:durability "70"^^xsd:integer .
+  
+csgodb:item-flashbang
+  a csgo:Throwable;
+  csgo:cost "200"^^xsd:integer ;
+  csgo:aoe "15"^^xsd:integer ;
+  csgo:damage "0"^^xsd:integer ;
+  rdfs:label "Flashbang"@en ;
+  csgo:throwableCount "2"^^xsd:integer .
+  
+csgodb:item-bomb
+  a csgo:Bomb;
+  csgo:cost "0"^^xsd:integer ;
+  csgo:aoe "40"^^xsd:integer ;
+  rdfs:label "Bomb"@en ;
+  csgo:damage "300"^^xsd:integer .
+  
+csgodb:map-de_dust
+  a vgo:PlayingArea;
+  csgo:mapName "Dust";
+  csgo:mapId "de_dust";
+  csgo:plantArea "124 125 10, 134 115 20"; # just arbitrary locations, will use the same in the following maps
+  csgo:plantArea "302 10 15, 312 25 25";
+  csgo:spawnLocation "60 120 10, 66 126 10";
+  csgo:spawnLocation "300 100 10, 310 94 10" .
+  
+csgodb:map-de_inferno
+  a vgo:PlayingArea;
+  csgo:mapName "Inferno";
+  csgo:mapId "de_inferno";
+  csgo:plantArea "124 125 10, 134 115 20";
+  csgo:plantArea "302 10 15, 312 25 25";
+  csgo:spawnLocation "60 120 10, 66 126 10";
+  csgo:spawnLocation "300 100 10, 310 94 10" .
+  
+csgodb:map-de_nuke
+  a vgo:PlayingArea;
+  csgo:mapName "Nuke";
+  csgo:mapId "de_nuke";
+  csgo:plantArea "124 125 10, 134 115 20";
+  csgo:plantArea "302 10 15, 312 25 25";
+  csgo:spawnLocation "60 120 10, 66 126 10";
+  csgo:spawnLocation "300 100 10, 310 94 10" .
+  
+csgo:team-123456-T
+  a csgo:Team;
+  rdfs:label "Team starting as T in match #123456".
+
+csgo:team-123456-CT
+  a csgo:Team;
+  rdfs:label "Team starting as CT in match #123456".
+  
+csgo:team-234567-T
+  a csgo:Team;
+  rdfs:label "Team starting as T in match #234567".
