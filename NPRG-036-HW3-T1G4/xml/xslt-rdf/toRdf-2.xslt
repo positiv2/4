@@ -6,16 +6,21 @@
   
   <xsl:output method="text" indent="yes" encoding="UTF-8"/>
 
-  <!-- Nejsem si jistý zadáním; druhý a třetí soubor
-       píšu tak, že výsledné rdf nejsou korektní, a jsou
-       určeny k tomu aby byly připojeny k prvnímu.
-       Pokud to tak nemá být, tak stačí první xsl:text z prvního
-       xslt zařadit na začátky prvních templatů druhého a třetího
-       souboru.
-       S přáním pěkného dne,
-       Matěj Heczko -->
-
   <xsl:template match="/items">
+    <xsl:text disable-output-escaping="yes">
+      @prefix csgo: &lt;http://example.org/vocabulary/&gt; .
+      @prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+      @prefix vcard: &lt;http://www.w3.org/2006/vcard/ns#&gt; .
+      @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+      @prefix vgo: &lt;http://vocab.linkeddata.es/vgo/&gt; .
+      @prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+      @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+      @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+      @prefix schema: &lt;http://schema.org/#&gt; .
+      @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+      @prefix csgousers: &lt;http://example.org/profile/&gt; .
+      @prefix csgodb: &lt;http://example.org/info/&gt; .&#xa;
+    </xsl:text>
     <xsl:apply-templates select="//skins/skin"/>
     <xsl:apply-templates select="knife"/>
     <xsl:apply-templates select="firearm"/>

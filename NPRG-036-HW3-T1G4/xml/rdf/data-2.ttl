@@ -1,4 +1,18 @@
-csgodb:skin-730_2_14091390124 csgo:skinFor csgodb:item-weapon_knife.
+
+    @prefix csgo: <http://example.org/vocabulary/> .
+    @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+    @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+    @prefix dcterms: <http://purl.org/dc/terms/> .
+    @prefix vgo: <http://vocab.linkeddata.es/vgo/> .
+    @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+    @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix owl: <http://www.w3.org/2002/07/owl#> .
+    @prefix schema: <http://schema.org/#> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+    @prefix csgousers: <http://example.org/profile/> .
+    @prefix csgodb: <http://example.org/info/> .
+
+  csgodb:skin-730_2_14091390124 csgo:skinFor csgodb:item-weapon_knife.
 csgodb:skin-730_2_14091390123 csgo:skinFor csgodb:item-weapon_hegrenade.
 csgodb:skin-730_2_14091390122 csgo:skinFor csgodb:item-weapon_c4.
 csgodb:skin-730_2_14091390125 csgo:skinFor csgodb:item-defuser.

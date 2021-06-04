@@ -178,7 +178,7 @@
     a vgo:Player;
     foaf:accountName "jimmy";
 vcard:nickname "FaZe Jimmy";
-vcard:hasEmail "mailto:jimmer@tfwno.gf";
+vcard:hasEmail <jimmer@tfwno.gf>;
 vgo:isPlayerInSession csgodb:match-123456;
 vgo:ownsCharacter csgodb:player-123456-1;
 dcterms:created "2020-04-20"^^xsd:date.
@@ -186,7 +186,7 @@ csgousers:a1b2c3
     a vgo:Player;
     foaf:accountName "a1b2c3";
 vcard:nickname "Albert";
-vcard:hasEmail "mailto:cheese@gmail.com";
+vcard:hasEmail <cheese@gmail.com>;
 vgo:isPlayerInSession csgodb:match-234567;
 vgo:ownsCharacter csgodb:player-234567-2;
 dcterms:created "2020-04-21"^^xsd:date.
@@ -194,7 +194,7 @@ csgousers:gaben
     a vgo:Player;
     foaf:accountName "gaben";
 vcard:nickname "GabeN";
-vcard:hasEmail "mailto:gaben@valvesoftware.com";
+vcard:hasEmail <gaben@valvesoftware.com>;
 vgo:isPlayerInSession csgodb:match-111111;
 vgo:ownsCharacter csgodb:player-111111-3;
 vgo:ownsItem csgodb:skin-730_2_14091390121;

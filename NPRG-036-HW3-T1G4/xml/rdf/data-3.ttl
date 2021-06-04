@@ -1,4 +1,18 @@
-csgodb:map-de_inferno a vgo:PlayingArea;
+
+    @prefix csgo: <http://example.org/vocabulary/> .
+    @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+    @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+    @prefix dcterms: <http://purl.org/dc/terms/> .
+    @prefix vgo: <http://vocab.linkeddata.es/vgo/> .
+    @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+    @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix owl: <http://www.w3.org/2002/07/owl#> .
+    @prefix schema: <http://schema.org/#> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+    @prefix csgousers: <http://example.org/profile/> .
+    @prefix csgodb: <http://example.org/info/> .
+
+  csgodb:map-de_inferno a vgo:PlayingArea;
 csgo:spawnLocation "300 100 10, 310 94 10";
 csgo:spawnLocation "60 120 10, 66 126 10";
 csgo:plantArea "302 10 5, 312 25 25";

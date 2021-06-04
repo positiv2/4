@@ -197,9 +197,9 @@
       foaf:accountName "</xsl:text>
     <xsl:value-of select="@userid"/><xsl:text>";&#xa;</xsl:text>
     <xsl:apply-templates select="usernames/username"/>
-    <xsl:text>vcard:hasEmail "mailto:</xsl:text>
+    <xsl:text disable-output-escaping="yes">vcard:hasEmail &lt;</xsl:text>
     <xsl:value-of select="emailaddress"/>
-    <xsl:text>";&#xa;</xsl:text>
+    <xsl:text disable-output-escaping="yes">&gt;;&#xa;</xsl:text>
     <xsl:for-each select="matches/match">
       <xsl:text>  vgo:isPlayerInSession csgodb:match-</xsl:text>
       <xsl:value-of select="@matchid"/>
