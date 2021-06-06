@@ -1,77 +1,83 @@
 @prefix ns0: <http://example.org/vocabulary/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ns1: <http://vocab.linkeddata.es/vgo/#> .
 
-[] ns0:item [
-    ns0:Armor [
-      ns0:cost 650 ;
-      ns0:durability 70 ;
-      ns0:skin [
-        rdfs:label 5, "Reflex Vest"@en ;
-        xsd:double 1.300000e-1
-      ] ;
-      rdfs:label "Kevlar Vest"@en
-    ] ;
-    ns0:Bomb [
-      ns0:aoe 2 ;
-      ns0:cost 0 ;
-      ns0:damage 15 ;
-      ns0:skin [
-        rdfs:label 3, "Sparkles"@en ;
-        xsd:double 9.900000e-1
-      ] ;
-      rdfs:label "The Bomb"@en
-    ] ;
-    ns0:Firearm [
-      ns0:cost 2900 ;
-      ns0:damage 33 ;
-      ns0:firerate 600 ;
-      ns0:isPrimary true ;
-      ns0:skin [
-        rdfs:label 6, "M4A1-S | Prinstream"@en ;
-        xsd:double 3.800000e-1
-      ] ;
-      rdfs:label "M4A1-S"@en
-    ], [
-      ns0:cost 1450 ;
-      ns0:damage 17 ;
-      ns0:firerate 1200 ;
-      ns0:isPrimary true ;
-      rdfs:label "MP5"@en
-    ], [
-      ns0:cost 200 ;
-      ns0:damage 17 ;
-      ns0:firerate 300 ;
-      ns0:isPrimary false ;
-      rdfs:label "P2000"@en
-    ] ;
-    ns0:Knife [
-      ns0:cost 0 ;
-      ns0:damage 55 ;
-      ns0:skin [
-        rdfs:label 1, "Nomad | Fade"@en ;
-        xsd:double 3.300000e-1
-      ] ;
-      rdfs:label "Combat knife"@en
-    ] ;
-    ns0:Throwable [
-      ns0:aoe 15 ;
-      ns0:cost 300 ;
-      ns0:damage 98 ;
-      ns0:skin [
-        rdfs:label 2, "Beenade"@en ;
-        xsd:double 4.500000e-1
-      ] ;
-      ns0:throwablecount 1 ;
-      rdfs:label "HE Grenade"@en
-    ] ;
-    ns0:Utility [
-      ns0:cost 400 ;
-      ns0:skin [
-        rdfs:label 4, "Pink Defuser"@en ;
-        xsd:double 6.800000e-1
-      ] ;
-      ns0:utilitytype "Equipment"@en ;
-      rdfs:label "Defuse Kit"@en
-    ]
-  ] .
+<http://example.org/vocabulary/knife_01>
+  a <http://example.org/vocabulary/Knife> ;
+  ns0:cost 0 ;
+  ns0:damage 55 ;
+  ns0:skin ns0:skin_01 ;
+  rdfs:label "Combat knife"@en .
+
+ns0:skin_01
+  a ns0:Skin ;
+  ns0:condition 3.300000e-1 ;
+  rdfs:label "Nomad | Fade"@en .
+
+ns0:bomb
+  a ns0:Bomb ;
+  ns0:aoe 2 ;
+  ns0:cost 0 ;
+  ns0:damage 15 ;
+  ns0:skin ns0:skin_03 ;
+  rdfs:label "The Bomb"@en .
+
+ns0:skin_03
+  a ns0:Skin ;
+  ns0:condition 9.900000e-1 ;
+  rdfs:label "Sparkles"@en .
+
+ns0:defuseKit
+  a ns0:Utility ;
+  ns0:cost 400 ;
+  ns0:skin ns0:skin_04 ;
+  rdfs:label "Defuse Kit"@en, "Equipment"@en .
+
+ns0:skin_04
+  a ns0:Skin ;
+  ns0:condition 6.800000e-1 ;
+  rdfs:label "Pink Defuser"@en .
+
+ns0:kevlarVest
+  a ns0:Armor ;
+  ns0:cost 650 ;
+  ns0:durability 70 ;
+  ns0:skin ns0:skin_05 ;
+  rdfs:label "Kevlar Vest"@en .
+
+ns0:skin_05
+  a ns0:Skin ;
+  ns0:condition 1.300000e-1 ;
+  rdfs:label "Reflex Vest"@en .
+
+ns0:M4A1-S
+  a ns0:Firearm ;
+  ns0:cost 2900 ;
+  ns0:damage 33 ;
+  ns0:firerate 600 ;
+  ns0:isPrimary true ;
+  ns0:skin ns0:skin_06 ;
+  rdfs:label "M4A1-S"@en .
+
+ns0:skin_06
+  a ns0:Skin ;
+  ns0:condition 3.800000e-1 ;
+  rdfs:label "M4A1-S | Prinstream"@en .
+
+ns0:MP5
+  a ns0:Firearm ;
+  ns0:cost 1450 ;
+  ns0:damage 17 ;
+  ns0:firerate 1200 ;
+  ns0:isPrimary true ;
+  rdfs:label "MP5"@en .
+
+ns0:P2000
+  a ns0:Firearm ;
+  ns0:cost 200 ;
+  ns0:damage 17 ;
+  ns0:firerate 300 ;
+  ns0:isPrimary false ;
+  rdfs:label "P2000"@en .
+
+[] ns1:Item ns0:knife_01, ns0:bomb, ns0:defuseKit, ns0:kevlarVest, ns0:M4A1-S, ns0:MP5, ns0:P2000 .
