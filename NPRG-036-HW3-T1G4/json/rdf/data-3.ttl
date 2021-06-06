@@ -1,18 +1,27 @@
-@prefix ns0: <http://vocab.linkeddata.es/vgo/#> .
-@prefix ns1: <http://example.org/vocabulary/> .
+@prefix ns0: <http://example.org/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ns1: <http://vocab.linkeddata.es/vgo/#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-[] ns0:PlayingArea [
-    ns1:plantLocation [ xsd:integer 302, 312, 10, 25, 5 ], [ xsd:integer 124, 134, 125, 115, 10, 20 ] ;
-    ns1:spawnLocation [ xsd:integer 300, 310, 100, 94, 10 ], [ xsd:integer 60, 66, 120, 126, 10 ] ;
-    rdfs:label "de_inferno"@en, "Inferno"@en
-  ], [
-    ns1:plantLocation [ xsd:integer 302, 312, 10, 25, 5 ], [ xsd:integer 124, 134, 125, 115, 10, 20 ] ;
-    ns1:spawnLocation [ xsd:integer 300, 310, 100, 94, 10 ], [ xsd:integer 60, 66, 120, 126, 10 ] ;
-    rdfs:label "de_nuke"@en, "Nuke"@en
-  ], [
-    ns1:plantLocation [ xsd:integer 302, 312, 10, 25, 5 ], [ xsd:integer 124, 134, 125, 115, 10, 20 ] ;
-    ns1:spawnLocation [ xsd:integer 300, 310, 100, 94, 10 ], [ xsd:integer 60, 66, 120, 126, 10 ] ;
-    rdfs:label "de_dust"@en, "Dust"@en
-  ] .
+<http://example.org/vocabulary/maps/Inferno>
+  ns0:plantLocation [ xsd:integer 302, 312, 10, 25, 5 ], [ xsd:integer 124, 134, 125, 115, 10, 20 ] ;
+  ns0:spawnLocation [ xsd:integer 300, 310, 100, 94, 10 ], [ xsd:integer 60, 66, 120, 126, 10 ] ;
+  ns1:Session <http://example.org/vocabulary/matches/123456> ;
+  rdfs:label "Inferno"@en .
+
+<http://example.org/vocabulary/matches/123456> ns1:startTime "2020-05-02T15:55:55Z"^^xsd:dateTime .
+<http://example.org/vocabulary/maps/Nuke>
+  ns0:plantLocation [ xsd:integer 302, 312, 10, 25, 5 ], [ xsd:integer 124, 134, 125, 115, 10, 20 ] ;
+  ns0:spawnLocation [ xsd:integer 300, 310, 100, 94, 10 ], [ xsd:integer 60, 66, 120, 126, 10 ] ;
+  ns1:Session <http://example.org/vocabulary/matches/234567> ;
+  rdfs:label "Nuke"@en .
+
+<http://example.org/vocabulary/matches/234567> ns1:startTime "2020-05-02T15:55:55Z"^^xsd:dateTime .
+<http://example.org/vocabulary/maps/Dust>
+  ns0:plantLocation [ xsd:integer 302, 312, 10, 25, 5 ], [ xsd:integer 124, 134, 125, 115, 10, 20 ] ;
+  ns0:spawnLocation [ xsd:integer 300, 310, 100, 94, 10 ], [ xsd:integer 60, 66, 120, 126, 10 ] ;
+  ns1:Session <http://example.org/vocabulary/matches/111111> ;
+  rdfs:label "Dust"@en .
+
+<http://example.org/vocabulary/matches/111111> ns1:startTime "2018-03-06T13:06:59Z"^^xsd:dateTime .
+[] ns1:PlayingArea <http://example.org/vocabulary/maps/Inferno>, <http://example.org/vocabulary/maps/Nuke>, <http://example.org/vocabulary/maps/Dust> .

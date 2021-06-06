@@ -11,10 +11,11 @@
         "schema": "http://schema.org/",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "@language": "en",
-        "mapid": "rdfs:label",
         "mapname": "rdfs:label",
-        "matchid": "rdfs:label",
-        "startdate": "vgo:startTime",
+        "startdate": {
+            "@id": "vgo:startTime",
+            "@type": "xsd:dateTime"
+        },
         "x": "xsd:integer",
         "y": "xsd:integer",
         "z": "xsd:integer",
@@ -28,6 +29,10 @@
             "@id": "vgo:PlayingArea",
             "@container": "@set"
         },
+        "matches": {
+            "@id": "vgo:Session",
+            "@container": "@set"
+        },
         "spawnlocations": {
             "@id": "csgo:spawnLocation",
             "@container": "@set"
@@ -39,7 +44,7 @@
     },
     "maps": [
         {
-            "mapid": "de_inferno",
+            "@id": "csgo:maps/Inferno",
             "mapname": "Inferno",
             "spawnlocations": [
                 {
@@ -79,13 +84,13 @@
             ],
             "matches": [
                 {
-                    "matchid": 123456,
+                    "@id": "csgo:matches/123456",
                     "startdate": "2020-05-02T15:55:55Z"
                 }
             ]
         },
         {
-            "mapid": "de_nuke",
+            "@id": "csgo:maps/Nuke",
             "mapname": "Nuke",
             "spawnlocations": [
                 {
@@ -125,13 +130,13 @@
             ],
             "matches": [
                 {
-                    "matchid": 234567,
+                    "@id": "csgo:matches/234567",
                     "startdate": "2020-05-02T15:55:55Z"
                 }
             ]
         },
         {
-            "mapid": "de_dust",
+            "@id": "csgo:maps/Dust",
             "mapname": "Dust",
             "spawnlocations": [
                 {
@@ -171,7 +176,7 @@
             ],
             "matches": [
                 {
-                    "matchid": 111111,
+                    "@id": "csgo:matches/111111",
                     "startdate": "2018-03-06T13:06:59Z"
                 }
             ]
