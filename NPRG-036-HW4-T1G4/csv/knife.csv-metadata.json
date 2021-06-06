@@ -9,16 +9,30 @@
         "name": "ID",
         "titles": "ID",
         "dc:description": "A unique identifier for the item.",
+        "aboutUrl": "http://example.org/info/{ID}",
+        "propertyUrl": "rdf:type",
+        "valueUrl": "http://example.org/vocabulary/Knife",
         "datatype": "string",
         "required": true
       },
       {
         "titles": "Damage",
         "dc:description": "Damage dealt by this quipment.",
+        "aboutUrl": "http://example.org/info/{ID}",
+        "propertyUrl": "http://example.org/vocabulary/damage",
         "datatype": "integer",
         "required": true
       }
     ],
-    "primaryKey": "ID"
+    "primaryKey": "ID",
+    "foreignKeys": [
+      {
+        "columnReference": "ID",
+        "reference": {
+          "resource": "equipment.csv",
+          "columnReference": "item_id"
+        }
+      }
+    ]
   }
 }

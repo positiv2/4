@@ -9,18 +9,25 @@
           "name": "UserID",
           "titles": "UserID",
           "dc:description": "ID of the user.",
+          "aboutUrl": "http://example.org/players/{UserID}",
+          "propertyUrl": "rdf:type",
+          "valueUrl": "http://vocab.linkeddata.es/vgo/#Player",
           "datatype": "string",
           "required": true
         },
         {
           "titles": "EmailAddress",
           "dc:description": "Email address of the user.",
+          "aboutUrl": "http://example.org/players/{UserID}",
+          "propertyUrl": "vcard:hasEmail",
           "datatype": "anyURI",
           "required": true
         },
         {
           "titles": "CreationDate",
           "dc:description": "The date and time the account was created.",
+          "aboutUrl": "http://example.org/players/{UserID}",
+          "propertyUrl": "dc:created",
           "datatype": "dateTime",
           "required": true
         }

@@ -9,6 +9,9 @@
           "name": "UserID",
           "titles": "UserID",
           "dc:description": "ID of the user.",
+          "aboutUrl": "https://example.org/players/{UserID}",
+          "propertyUrl": "rdf:type",
+          "valueUrl": "http://vocab.linkeddata.es/vgo/#PlayingArea",  
           "datatype": "string",
           "required": true
         },
@@ -16,10 +19,21 @@
           "name": "Username",
           "titles": "Username",
           "dc:description": "A username that the user used.",
+          "aboutUrl": "https://example.org/players/{UserID}",
+          "propertyUrl": "vcard:nickname",  
           "datatype": "string",
           "required": true
         }
     ],
-    "primaryKey": ["UserID", "Username"]
+    "primaryKey": ["UserID", "Username"],
+    "foreignKeys": [
+      {
+        "columnReference": "UserID",
+        "reference": {
+          "resource": "data-XV.csv",
+          "columnReference": "UserID"
+        }
+      }
+    ]
   }
 }

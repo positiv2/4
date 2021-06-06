@@ -12,7 +12,7 @@
         "datatype": "string",
         "aboutUrl": "https://example.org/maps/{MapID}",
         "propertyUrl": "rdf:type",
-        "valueUrl": "http://vocab.linkeddata.es/vgo#PlayingArea",
+        "valueUrl": "http://vocab.linkeddata.es/vgo/#PlayingArea",
         "required": true
       },
       {
@@ -69,6 +69,27 @@
     "foreignKeys": [
       {
         "columnReference": "PlantLocationA",
+        "reference": {
+          "resource": "data-X.csv",
+          "columnReference": "LocationID"
+        }
+      },
+      {
+        "columnReference": "PlantLocationB",
+        "reference": {
+          "resource": "data-X.csv",
+          "columnReference": "LocationID"
+        }
+      },
+      {
+        "columnReference": "SpawnLocationT",
+        "reference": {
+          "resource": "data-X.csv",
+          "columnReference": "LocationID"
+        }
+      },
+      {
+        "columnReference": "SpawnLocationCT",
         "reference": {
           "resource": "data-X.csv",
           "columnReference": "LocationID"

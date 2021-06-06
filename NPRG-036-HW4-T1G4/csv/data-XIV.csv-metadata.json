@@ -9,6 +9,9 @@
           "name": "TeamID",
           "titles": "TeamID",
           "dc:description": "ID of the team.",
+          "aboutUrl": "http://example.org/info/{TeamID}",
+          "propertyUrl": "rdf:type",
+          "valueUrl": "http://example.org/vocabulary/Team",
           "datatype": "string",
           "required": true
         },
@@ -16,6 +19,8 @@
           "titles": "TeamName",
           "dc:description": "Starting name of the team.",
           "datatype": "string",
+          "aboutUrl": "http://example.org/info/{TeamID}",
+          "propertyUrl": "rdfs:label",
           "lang": "en",
           "required": true
         }

@@ -1,47 +1,66 @@
 {
-    "@context": "http://www.w3.org/ns/csvw",
-    "@type": "Table",
-    "url": "skins.csv",
-    "tableSchema": {
-        "columns": [
-            {
-                "name": "skin_id",
-                "titles": "skin_id",
-                "dc:description": "An identifier for the skin.",
-                "datatype": "integer",
-                "required": true,
-                "propertyUrl": "schema:url",
-                "valueUrl": "http://example.org/skins/{skin_id}"
-            },
-            {
-                "titles": "skinname",
-                "dc:description": "Name of the skin.",
-                "datatype": "string",
-                "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
-                "lang": "en",
-                "required": true
-            },
-            {
-                "titles": "condition",
-                "dc:description": "Condition (wear) of the skin.",
-                "datatype": "float",
-                "required": true
-            },
-            {
-              "name": "equipment_id",
-                "titles": "equipment_id",
-                "dc:description": "Foreign key for equipment.",
-                "datatype": "string",
-                "required": true
-            },
-            {
-                "name": "owner",
-                "titles": "owner",
-                "dc:description": "Foreign key for the owner of the skin.",
-                "datatype": "string",
-                "required": true
-              }
-        ],
-        "primaryKey": "skin_id"
-    }
+  "@context": "http://www.w3.org/ns/csvw",
+  "@type": "Table",
+  "url": "skins.csv",
+  "tableSchema": {
+    "columns": [
+      {
+        "name": "skin_id",
+        "titles": "skin_id",
+        "dc:description": "An identifier for the skin.",
+        "aboutUrl": "http://example.org/info/{skin_id}",
+        "propertyUrl": "rdf:type",
+        "valueUrl": "http://example.org/vocabulary/Skin",
+        "datatype": "integer",
+        "required": true
+      },
+      {
+        "titles": "skinname",
+        "dc:description": "Name of the skin.",
+        "datatype": "string",
+        "aboutUrl": "http://example.org/info/{skin_id}",
+        "propertyUrl": "rdfs:label",
+        "lang": "en",
+        "required": true
+      },
+      {
+        "titles": "condition",
+        "dc:description": "Condition (wear) of the skin.",
+        "aboutUrl": "http://example.org/info/{skin_id}",
+        "propertyUrl": "http://example.org/vocabulary/condition",
+        "datatype": "float",
+        "required": true
+      },
+      {
+        "name": "equipment_id",
+        "titles": "equipment_id",
+        "aboutUrl": "http://example.org/info/{skin_id}",
+        "propertyUrl": "http://example.org/vocabulary/skinFor",
+        "valueUrl": "http://example.org/info/{equipment_id}",
+        "dc:description": "Foreign key for equipment.",
+        "datatype": "string",
+        "required": true
+      },
+      {
+        "name": "owner",
+        "titles": "owner",
+        "dc:description": "Foreign key for the owner of the skin.",
+        "aboutUrl": "http://example.org/players/{owner}",
+        "propertyUrl": "http://vocab.linkeddata.es/vgo/#ownsItem",
+        "valueUrl": "http://example.org/info/{skin_id}",
+        "datatype": "string",
+        "required": true
+      }
+    ],
+    "primaryKey": "skin_id",
+    "foreignKeys": [
+      {
+        "columnReference": "equipment_id",
+        "reference": {
+          "resource": "equipment.csv",
+          "columnReference": "item_id"
+        }
+      }
+    ]
+  }
 }

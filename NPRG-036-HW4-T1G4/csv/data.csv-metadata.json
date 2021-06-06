@@ -1,0 +1,943 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/csvw",
+    {
+      "@language": "cs"
+    }
+  ],
+  "@id": "https://example.org/data.csv-metadata.json",
+  "@type": "TableGroup",
+  "notes": {
+    "Note 1": "Použití schema:GeoShape se retrospektivně jeví jako špatně zvolený datový typ; oblast je schopný popisovat pouze dvojrozměrně. W3C validátoru to ovšem v HW2 nevadilo 🤷‍",
+    "Note 2": "Zadefinujme si 'csgo:Cuboid a owl:Class; rdfs:comment \"A cuboid section of a map.\"@en.' a (imaginárně—koneckonců jinak to nejde) ho přidejme do http://example.org/vocabulary/.",
+    "Note 3": "Stejně si zadefinujme 'csgo:location a rdf:Property; rdfs:domain csgo:Cuboid; rdfs:range rdfs:Literal; rdfs:comment \"Comma-separated list of coordinates in the order X, Y, Z.\"@en'.",
+    "Note 4": "Nepodařilo se mi to nechat v několika souborech; gem crashoval s nicneříkající chybovou hláškou i při použití gitu na hosting."
+  },
+  "tables": [
+    {
+      "@id": "https://example.org/data-1.csv-metadata.json",
+      "@type": "Table",
+      "url": "data-1.csv",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "ID",
+            "@type": "Column",
+            "titles": "ID",
+            "dc:description": "A unique identifier for the item.",
+            "datatype": "string",
+            "aboutUrl": "http://example.org/info/{ID}",
+            "propertyUrl": "rdf:type",
+            "valueUrl": "http://example.org/vocabulary/Armor",
+            "required": true
+          },
+          {
+            "@type": "Column",
+            "titles": "Durability",
+            "dc:description": "Amount of damage the item can soak before breaking.",
+            "datatype": "integer",
+            "aboutUrl": "http://example.org/info/{ID}",
+            "propertyUrl": "http://example.org/vocabulary/durability",
+            "required": true
+          }
+        ],
+        "primaryKey": "ID",
+        "foreignKeys": [
+          {
+            "columnReference": "ID",
+            "reference": {
+              "resource": "data-3.csv",
+              "columnReference": "item_id"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "https://example.org/data-2.csv-metadata.json",
+      "@type": "Table",
+      "url": "data-2.csv",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "ID",
+            "@type": "Column",
+            "titles": "ID",
+            "dc:description": "A unique identifier for the item.",
+            "datatype": "string",
+            "aboutUrl": "http://example.org/info/{ID}",
+            "propertyUrl": "rdf:type",
+            "valueUrl": "http://example.org/vocabulary/Bomb",
+            "required": true
+          },
+          {
+            "@type": "Column",
+            "titles": "aoe",
+            "dc:description": "Area of Effect of the explosion.",
+            "aboutUrl": "http://example.org/info/{ID}",
+            "propertyUrl": "http://example.org/vocabulary/aoe",
+            "datatype": "integer",
+            "required": true
+          },
+          {
+            "@type": "Column",
+            "titles": "damage",
+            "dc:description": "Damage dealt by this quipment.",
+            "aboutUrl": "http://example.org/info/{ID}",
+            "propertyUrl": "http://example.org/vocabulary/damage",
+            "datatype": "integer",
+            "required": true
+          }
+        ],
+        "primaryKey": "ID",
+        "foreignKeys": [
+          {
+            "columnReference": "ID",
+            "reference": {
+              "resource": "data-3.csv",
+              "columnReference": "item_id"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Table",
+      "@id": "https://example.org/data-10.csv-metadata.json",
+      "url": "data-10.csv",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "LocationID",
+            "@type": "Column",
+            "titles": "LocationID",
+            "dc:description": "ID of the location.",
+            "aboutUrl": "https://example.org/areas/{LocationID}",
+            "propertyUrl": "rdf:type",
+            "valueUrl": "https://example.org/vocabulary/Cuboid",
+            "datatype": "integer",
+            "required": true
+          },
+          {
+            "name": "Cuboid",
+            "@type": "Column",
+            "titles": "Cuboid",
+            "dc:description": "ID of the location.",
+            "aboutUrl": "https://example.org/areas/{LocationID}",
+            "propertyUrl": "https://example.org/vocabulary/location",
+            "datatype": "string",
+            "required": true
+          }
+        ],
+        "primaryKey": "LocationID"
+      }
+    },
+    {
+      "@type": "Table",
+      "@id": "https://example.org/data-11.csv-metadata.json",
+      "url": "data-11.csv",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "MapID",
+            "@type": "Column",
+            "titles": "MapID",
+            "dc:description": "An identifier for the map.",
+            "datatype": "string",
+            "aboutUrl": "https://example.org/maps/{MapID}",
+            "propertyUrl": "rdf:type",
+            "valueUrl": "http://vocab.linkeddata.es/vgo#PlayingArea",
+            "required": true
+          },
+          {
+            "@type": "Column",
+            "titles": "MapName",
+            "dc:description": "Name of the map.",
+            "datatype": "string",
+            "aboutUrl": "https://example.org/maps/{MapID}",
+            "propertyUrl": "https://example.org/vocabulary/mapName",
+            "lang": "en",
+            "required": true
+          },
+          {
+            "name": "PlantLocationA",
+            "@type": "Column",
+            "titles": "PlantLocationA",
+            "dc:description": "Location A for bomb-planting.",
+            "aboutUrl": "https://example.org/maps/{MapID}",
+            "propertyUrl": "https://example.org/vocabulary/plantArea",
+            "valueUrl": "https://example.org/areas/{PlantLocationA}",
+            "datatype": "integer",
+            "required": true
+          },
+          {
+            "name": "PlantLocationB",
+            "@type": "Column",
+            "titles": "PlantLocationB",
+            "dc:description": "Location B for bomb-planting.",
+            "aboutUrl": "https://example.org/maps/{MapID}",
+            "propertyUrl": "https://example.org/vocabulary/plantArea",
+            "valueUrl": "https://example.org/areas/{PlantLocationB}",
+            "datatype": "integer",
+            "required": true
+          },
+          {
+            "name": "SpawnLocationT",
+            "@type": "Column",
+            "titles": "SpawnLocationT",
+            "dc:description": "Spawn location for the T team.",
+            "aboutUrl": "https://example.org/maps/{MapID}",
+            "propertyUrl": "https://example.org/vocabulary/spawnLocation",
+            "valueUrl": "https://example.org/areas/{SpawnLocationT}",
+            "datatype": "integer",
+            "required": true
+          },
+          {
+            "name": "SpawnLocationCT",
+            "@type": "Column",
+            "titles": "SpawnLocationCT",
+            "dc:description": "Spawn location for the CT team.",
+            "aboutUrl": "https://example.org/maps/{MapID}",
+            "propertyUrl": "https://example.org/vocabulary/spawnLocation",
+            "valueUrl": "https://example.org/areas/{SpawnLocationCT}",
+            "datatype": "integer",
+            "required": true
+          }
+        ],
+        "primaryKey": "MapID",
+        "foreignKeys": [
+          {
+            "columnReference": "PlantLocationA",
+            "reference": {
+              "resource": "data-10.csv",
+              "columnReference": "LocationID"
+            }
+          },
+          {
+            "columnReference": "PlantLocationB",
+            "reference": {
+              "resource": "data-10.csv",
+              "columnReference": "LocationID"
+            }
+          },
+          {
+            "columnReference": "SpawnLocationT",
+            "reference": {
+              "resource": "data-10.csv",
+              "columnReference": "LocationID"
+            }
+          },
+          {
+            "columnReference": "SpawnLocationCT",
+            "reference": {
+              "resource": "data-10.csv",
+              "columnReference": "LocationID"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Table",
+      "@id": "https://example.org/data-12.csv-metadata.json",
+      "url": "data-12.csv",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "MatchID",
+            "@type": "Column",
+            "titles": "MatchID",
+            "dc:description": "An identifier for the match.",
+            "datatype": "integer",
+            "aboutUrl": "http://example.org/matches/{MatchID}",
+            "propertyUrl": "rdf:type",
+            "valueUrl": "http://vocab.linkeddata.es/vgo#Session",
+            "required": true
+          },
+          {
+            "@type": "Column",
+            "titles": "Date",
+            "dc:description": "Date and time of the match start.",
+            "datatype": "dateTime",
+            "aboutUrl": "http://example.org/matches/{MatchID}",
+            "propertyUrl": "http://vocab.linkeddata.es/vgo/#startTime",
+            "required": true
+          },
+          {
+            "name": "MapID",
+            "@type": "Column",
+            "titles": "MapID",
+            "dc:description": "Map that the match was played on.",
+            "datatype": "string",
+            "aboutUrl": "http://example.org/matches/{MatchID}",
+            "propertyUrl": "http://example.org/vocabulary/playedOn",
+            "valueUrl": "http://example.org/maps/{MapID}",
+            "required": true
+          },
+          {
+            "name": "Player_1",
+            "@type": "Column",
+            "titles": "Player_1",
+            "dc:description": "Player 1 in the match.",
+            "aboutUrl": "http://example.org/users/{Player_1}",
+            "propertyUrl": "http://vocab.linkeddata.es/vgo/#isPlayerInSession",
+            "valueUrl": "http://example.org/matches/{MatchID}",
+            "datatype": "string"
+          },
+          {
+            "name": "Player_2",
+            "@type": "Column",
+            "titles": "Player_2",
+            "dc:description": "Player 2 in the match.",
+            "aboutUrl": "http://example.org/users/{Player_2}",
+            "propertyUrl": "http://vocab.linkeddata.es/vgo/#isPlayerInSession",
+            "valueUrl": "http://example.org/matches/{MatchID}",
+            "datatype": "string"
+          },
+          {
+            "name": "Player_3",
+            "@type": "Column",
+            "titles": "Player_3",
+            "dc:description": "Player 3 in the match.",
+            "aboutUrl": "http://example.org/users/{Player_3}",
+            "propertyUrl": "http://vocab.linkeddata.es/vgo/#isPlayerInSession",
+            "valueUrl": "http://example.org/matches/{MatchID}",
+            "datatype": "string"
+          },
+          {
+            "name": "Player_4",
+            "@type": "Column",
+            "titles": "Player_4",
+            "dc:description": "Player 4 in the match.",
+            "aboutUrl": "http://example.org/users/{Player_4}",
+            "propertyUrl": "http://vocab.linkeddata.es/vgo/#isPlayerInSession",
+            "valueUrl": "http://example.org/matches/{MatchID}",
+            "datatype": "string"
+          },
+          {
+            "name": "Player_5",
+            "@type": "Column",
+            "titles": "Player_5",
+            "dc:description": "Player 5 in the match.",
+            "aboutUrl": "http://example.org/users/{Player_5}",
+            "propertyUrl": "http://vocab.linkeddata.es/vgo/#isPlayerInSession",
+            "valueUrl": "http://example.org/matches/{MatchID}",
+            "datatype": "string"
+          },
+          {
+            "name": "Player_6",
+            "@type": "Column",
+            "titles": "Player_6",
+            "dc:description": "Player 6 in the match.",
+            "aboutUrl": "http://example.org/users/{Player_6}",
+            "propertyUrl": "http://vocab.linkeddata.es/vgo/#isPlayerInSession",
+            "valueUrl": "http://example.org/matches/{MatchID}",
+            "datatype": "string"
+          },
+          {
+            "name": "Player_7",
+            "@type": "Column",
+            "titles": "Player_7",
+            "dc:description": "Player 7 in the match.",
+            "aboutUrl": "http://example.org/users/{Player_7}",
+            "propertyUrl": "http://vocab.linkeddata.es/vgo/#isPlayerInSession",
+            "valueUrl": "http://example.org/matches/{MatchID}",
+            "datatype": "string"
+          },
+          {
+            "name": "Player_8",
+            "@type": "Column",
+            "titles": "Player_8",
+            "dc:description": "Player 8 in the match.",
+            "aboutUrl": "http://example.org/users/{Player_8}",
+            "propertyUrl": "http://vocab.linkeddata.es/vgo/#isPlayerInSession",
+            "valueUrl": "http://example.org/matches/{MatchID}",
+            "datatype": "string"
+          },
+          {
+            "name": "Player_9",
+            "@type": "Column",
+            "titles": "Player_9",
+            "dc:description": "Player 9 in the match.",
+            "aboutUrl": "http://example.org/users/{Player_9}",
+            "propertyUrl": "http://vocab.linkeddata.es/vgo/#isPlayerInSession",
+            "valueUrl": "http://example.org/matches/{MatchID}",
+            "datatype": "string"
+          },
+          {
+            "name": "Player_10",
+            "@type": "Column",
+            "titles": "Player_10",
+            "dc:description": "Player 10 in the match.",
+            "aboutUrl": "http://example.org/users/{Player_10}",
+            "propertyUrl": "http://vocab.linkeddata.es/vgo/#isPlayerInSession",
+            "valueUrl": "http://example.org/matches/{MatchID}",
+            "datatype": "string"
+          }
+        ],
+        "primaryKey": "MatchID",
+        "foreignKeys": [
+          {
+            "columnReference": "Player_1",
+            "reference": {
+              "resource": "data-15.csv",
+              "columnReference": "UserID"
+            }
+          },
+          {
+            "columnReference": "Player_2",
+            "reference": {
+              "resource": "data-15.csv",
+              "columnReference": "UserID"
+            }
+          },
+          {
+            "columnReference": "Player_3",
+            "reference": {
+              "resource": "data-15.csv",
+              "columnReference": "UserID"
+            }
+          },
+          {
+            "columnReference": "Player_4",
+            "reference": {
+              "resource": "data-15.csv",
+              "columnReference": "UserID"
+            }
+          },
+          {
+            "columnReference": "Player_5",
+            "reference": {
+              "resource": "data-15.csv",
+              "columnReference": "UserID"
+            }
+          },
+          {
+            "columnReference": "Player_6",
+            "reference": {
+              "resource": "data-15.csv",
+              "columnReference": "UserID"
+            }
+          },
+          {
+            "columnReference": "Player_7",
+            "reference": {
+              "resource": "data-15.csv",
+              "columnReference": "UserID"
+            }
+          },
+          {
+            "columnReference": "Player_8",
+            "reference": {
+              "resource": "data-15.csv",
+              "columnReference": "UserID"
+            }
+          },
+          {
+            "columnReference": "Player_9",
+            "reference": {
+              "resource": "data-15.csv",
+              "columnReference": "UserID"
+            }
+          },
+          {
+            "columnReference": "Player_10",
+            "reference": {
+              "resource": "data-15.csv",
+              "columnReference": "UserID"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Table",
+      "@id": "https://example.org/data-13.csv-metadata.json",
+      "url": "data-13.csv",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "PlayerID",
+            "@type": "Column",
+            "titles": "PlayerID",
+            "dc:description": "An identifier for the player character.",
+            "datatype": "string",
+            "aboutUrl": "http://example.org/players/{PlayerID}",
+            "propertyUrl": "rdf:type",
+            "valueUrl": "http://vocab.linkeddata.es/vgo/#Character",
+            "required": true
+          },
+          {
+            "name": "UserID", 
+            "@type": "Column",
+            "titles": "UserID",
+            "dc:description": "User that controlled the player character.",
+            "aboutUrl": "http://example.org/users/{UserID}",
+            "propertyUrl": "http://vocab.linkeddata.es/vgo/#ownsCharacter",
+            "valueUrl": "http://example.org/players/{PlayerID}",
+            "datatype": "string",
+            "required": true
+          },
+          {
+            "name": "Username",
+            "@type": "Column",
+            "titles": "Username",
+            "dc:description": "Username that the player used.",
+            "aboutUrl": "http://example.org/players/{PlayerID}",
+            "propertyUrl": "http://vocab.linkeddata.es/vgo/#ownsCharacter",
+            "datatype": "string",
+            "required": true
+          },
+          {
+            "@type": "Column",
+            "titles": "IsBot",
+            "dc:description": "Whether player was replaced as the bot.",
+            "aboutUrl": "http://example.org/players/{PlayerID}",
+            "propertyUrl": "http://example.org/vocabulary/isBot",
+            "datatype": "boolean"
+          },
+          {
+            "@type": "Column",
+            "titles": "HadKD",
+            "dc:description": "The KD of the player at the end of the match.",
+            "aboutUrl": "http://example.org/players/{PlayerID}",
+            "propertyUrl": "http://example.org/vocabulary/hadKD",
+            "datatype": "float"
+          },
+          {
+            "name": "TeamID",
+            "@type": "Column",
+            "titles": "TeamID",
+            "dc:description": "The ID of the team that the player was on.",
+            "aboutUrl": "http://example.org/players/{PlayerID}",
+            "propertyUrl": "http://example.org/vocabulary/#isOnTeam",
+            "valueUrl": "http://example.org/info/{TeamID}",
+            "datatype": "string"
+          }
+        ],
+        "primaryKey": "PlayerID",
+        "foreignKeys": [
+          {
+            "columnReference": "TeamID",
+            "reference": {
+              "resource": "data-14.csv",
+              "columnReference": "TeamID"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Table",
+      "@id": "https://example.org/data-14.csv-metadata.json",
+      "url": "data-14.csv",
+      "tableSchema": {
+        "columns": [
+            {
+              "name": "TeamID",
+              "@type": "Column",
+            "titles": "TeamID",
+              "dc:description": "ID of the team.",
+              "aboutUrl": "http://example.org/info/{TeamID}",
+              "propertyUrl": "rdf:type",
+              "valueUrl": "http://example.org/vocabulary/Team",
+              "datatype": "string",
+              "required": true
+            },
+            {
+              "@type": "Column",
+            "titles": "TeamName",
+              "dc:description": "Starting name of the team.",
+              "datatype": "string",
+              "aboutUrl": "http://example.org/info/{TeamID}",
+              "propertyUrl": "rdfs:label",
+              "lang": "en",
+              "required": true
+            }
+        ],
+        "primaryKey": "TeamID"
+      }
+    },
+    {
+      "@type": "Table",
+      "@id": "https://example.org/data-15.csv-metadata.json",
+      "url": "data-15.csv",
+      "tableSchema": {
+        "columns": [
+            {
+              "name": "UserID",
+              "@type": "Column",
+            "titles": "UserID",
+              "dc:description": "ID of the user.",
+              "aboutUrl": "http://example.org/players/{UserID}",
+              "propertyUrl": "rdf:type",
+              "valueUrl": "http://vocab.linkeddata.es/vgo/#Player",
+              "datatype": "string",
+              "required": true
+            },
+            {
+              "@type": "Column",
+            "titles": "EmailAddress",
+              "dc:description": "Email address of the user.",
+              "aboutUrl": "http://example.org/players/{UserID}",
+              "propertyUrl": "vcard:hasEmail",
+              "datatype": "anyURI",
+              "required": true
+            },
+            {
+              "@type": "Column",
+            "titles": "CreationDate",
+              "dc:description": "The date and time the account was created.",
+              "aboutUrl": "http://example.org/players/{UserID}",
+              "propertyUrl": "dc:created",
+              "datatype": "dateTime",
+              "required": true
+            }
+        ],
+        "primaryKey": "UserID"
+      }
+    },
+    {
+      "@type": "Table",
+      "@id": "https://example.org/data-9.csv-metadata.json",
+      "url": "data-9.csv",
+      "tableSchema": {
+        "columns": [
+            {
+              "name": "UserID",
+              "@type": "Column",
+            "titles": "UserID",
+              "dc:description": "ID of the user.",
+              "aboutUrl": "https://example.org/players/{UserID}",
+              "propertyUrl": "rdf:type",
+              "valueUrl": "http://vocab.linkeddata.es/vgo/#PlayingArea",  
+              "datatype": "string",
+              "required": true
+            },
+            {
+              "name": "Username",
+              "@type": "Column",
+            "titles": "Username",
+              "dc:description": "A username that the user used.",
+              "aboutUrl": "https://example.org/players/{UserID}",
+              "propertyUrl": "vcard:nickname",  
+              "datatype": "string",
+              "required": true
+            }
+        ],
+        "primaryKey": ["UserID", "Username"],
+        "foreignKeys": [
+          {
+            "columnReference": "UserID",
+            "reference": {
+              "resource": "data-15.csv",
+              "columnReference": "UserID"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Table",
+      "url": "data-3.csv",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "item_id",
+            "@type": "Column",
+            "titles": "item_id",
+            "dc:description": "An identifier for the equipment.",
+            "aboutUrl": "http://example.org/info/{item_id}",
+            "propertyUrl": "rdf:type",
+            "valueUrl": "http://vocab.linkeddata.es/vgo/#Item",
+            "datatype": "string",
+            "required": true
+          },
+          {
+            "@type": "Column",
+            "titles": "cost",
+            "dc:description": "Price of the equipment.",
+            "aboutUrl": "http://example.org/info/{item_id}",
+            "propertyUrl": "http://example.org/vocabulary/cost",
+            "datatype": "integer",
+            "required": true
+          },
+          {
+            "@type": "Column",
+            "titles": "name",
+            "dc:description": "Name of the equipment.",
+            "datatype": "string",
+            "aboutUrl": "http://example.org/info/{item_id}",
+            "propertyUrl": "rdfs:label",
+            "lang": "en",
+            "required": true
+          }
+        ],
+        "primaryKey": "item_id"
+      }
+    },
+    {
+      "@type": "Table",
+      "@id": "https://example.org/data-4.csv-metadata.json",
+      "url": "data-4.csv",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "id",
+            "@type": "Column",
+            "titles": "id",
+            "dc:description": "An identifier for the firearm.",
+            "aboutUrl": "http://example.org/info/{id}",
+            "propertyUrl": "rdf:type",
+            "valueUrl": "http://example.org/vocabulary/Firearm",
+            "datatype": "string",
+            "required": true
+          },
+          {
+            "@type": "Column",
+            "titles": "primary",
+            "dc:description": "Declare whether the weapon is primary.",
+            "aboutUrl": "http://example.org/info/{id}",
+            "propertyUrl": "http://example.org/vocabulary/isPrimary",
+            "datatype": "boolean",
+            "required": true
+          },
+          {
+            "@type": "Column",
+            "titles": "damage",
+            "dc:description": "Base damage dealt with each bullet.",
+            "aboutUrl": "http://example.org/info/{id}",
+            "propertyUrl": "http://example.org/vocabulary/damage",
+            "datatype": "integer",
+            "required": true
+          },
+          {
+            "@type": "Column",
+            "titles": "firerate",
+            "dc:description": "Number of bullets fired per minute.",
+            "aboutUrl": "http://example.org/info/{id}",
+            "propertyUrl": "http://example.org/vocabulary/firerate",
+            "datatype": "integer",
+            "required": true
+          }
+        ],
+        "primaryKey": "id",
+        "foreignKeys": [
+          {
+            "columnReference": "id",
+            "reference": {
+              "resource": "data-3.csv",
+              "columnReference": "item_id"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "https://example.org/data-5.csv-metadata.json",
+      "@type": "Table",
+      "url": "data-5.csv",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "ID",
+            "@type": "Column",
+            "titles": "ID",
+            "dc:description": "A unique identifier for the item.",
+            "aboutUrl": "http://example.org/info/{ID}",
+            "propertyUrl": "rdf:type",
+            "valueUrl": "http://example.org/vocabulary/Knife",
+            "datatype": "string",
+            "required": true
+          },
+          {
+            "@type": "Column",
+            "titles": "Damage",
+            "dc:description": "Damage dealt by this quipment.",
+            "aboutUrl": "http://example.org/info/{ID}",
+            "propertyUrl": "http://example.org/vocabulary/damage",
+            "datatype": "integer",
+            "required": true
+          }
+        ],
+        "primaryKey": "ID",
+        "foreignKeys": [
+          {
+            "columnReference": "ID",
+            "reference": {
+              "resource": "data-3.csv",
+              "columnReference": "item_id"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Table",
+      "@id": "https://example.org/data-6.csv-metadata.json",
+      "url": "data-6.csv",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "skin_id",
+            "@type": "Column",
+            "titles": "skin_id",
+            "dc:description": "An identifier for the skin.",
+            "aboutUrl": "http://example.org/info/skin-{skin_id}",
+            "propertyUrl": "rdf:type",
+            "valueUrl": "http://example.org/vocabulary/Skin",
+            "datatype": "integer",
+            "required": true
+          },
+          {
+            "@type": "Column",
+            "titles": "skinname",
+            "dc:description": "Name of the skin.",
+            "datatype": "string",
+            "aboutUrl": "http://example.org/info/skin-{skin_id}",
+            "propertyUrl": "rdfs:label",
+            "lang": "en",
+            "required": true
+          },
+          {
+            "@type": "Column",
+            "titles": "condition",
+            "dc:description": "Condition (wear) of the skin.",
+            "aboutUrl": "http://example.org/info/skin-{skin_id}",
+            "propertyUrl": "http://example.org/vocabulary/condition",
+            "datatype": "float",
+            "required": true
+          },
+          {
+            "name": "equipment_id",
+            "@type": "Column",
+            "titles": "equipment_id",
+            "aboutUrl": "http://example.org/info/skin-{skin_id}",
+            "propertyUrl": "http://example.org/vocabulary/skinFor",
+            "valueUrl": "http://example.org/info/{equipment_id}",
+            "dc:description": "Foreign key for equipment.",
+            "datatype": "string",
+            "required": true
+          },
+          {
+            "name": "owner",
+            "@type": "Column",
+            "titles": "owner",
+            "dc:description": "Foreign key for the owner of the skin.",
+            "aboutUrl": "http://example.org/players/{owner}",
+            "propertyUrl": "http://vocab.linkeddata.es/vgo/#ownsItem",
+            "valueUrl": "http://example.org/info/skin-{skin_id}",
+            "datatype": "string",
+            "required": true
+          }
+        ],
+        "primaryKey": "skin_id",
+        "foreignKeys": [
+          {
+            "columnReference": "equipment_id",
+            "reference": {
+              "resource": "data-3.csv",
+              "columnReference": "item_id"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "https://example.org/data-7.csv-metadata.json",
+      "@type": "Table",
+      "url": "data-7.csv",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "ID",
+            "@type": "Column",
+            "titles": "ID",
+            "dc:description": "A unique identifier for the item.",
+            "aboutUrl": "http://example.org/info/{ID}",
+            "propertyUrl": "rdf:type",
+            "valueUrl": "http://example.org/vocabulary/Throwable",
+            "datatype": "string",
+            "required": true
+          },
+          {
+            "@type": "Column",
+            "titles": "AoE",
+            "dc:description": "Area of Effect of the explosion and/or a subsequent effect.",
+            "aboutUrl": "http://example.org/info/{ID}",
+            "propertyUrl": "http://example.org/vocabulary/aoe",
+            "datatype": "integer",
+            "required": true
+          },
+          {
+            "@type": "Column",
+            "titles": "Damage",
+            "aboutUrl": "http://example.org/info/{ID}",
+            "propertyUrl": "http://example.org/vocabulary/damage",
+            "dc:description": "Damage dealt by the explosion. Can be 0.",
+            "datatype": "integer",
+            "required": true
+          },
+          {
+            "@type": "Column",
+            "titles": "ThrowableCount",
+            "dc:description": "Limit of throwables of this type carriable at any given moment.",
+            "aboutUrl": "http://example.org/info/{ID}",
+            "propertyUrl": "http://example.org/vocabulary/throwableCount",
+            "datatype": "integer",
+            "required": true
+          }
+        ],
+        "primaryKey": "ID",
+        "foreignKeys": [
+          {
+            "columnReference": "ID",
+            "reference": {
+              "resource": "data-3.csv",
+              "columnReference": "item_id"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "https://example.org/data-8.csv-metadata.json",
+      "@type": "Table",
+      "url": "data-8.csv",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "ID",
+            "@type": "Column",
+            "titles": "ID",
+            "dc:description": "A unique identifier for the item.",
+            "aboutUrl": "http://example.org/info/{ID}",
+            "propertyUrl": "rdf:type",
+            "valueUrl": "http://example.org/vocabulary/Utility",
+            "datatype": "string",
+            "required": true
+          },
+          {
+            "@type": "Column",
+            "titles": "UtilityType",
+            "dc:description": "Type of the utility.",
+            "aboutUrl": "http://example.org/info/{ID}",
+            "propertyUrl": "http://example.org/vocabulary/utilityType",
+            "datatype": "string",
+            "required": true
+          }
+        ],
+        "primaryKey": "ID",
+        "foreignKeys": [
+          {
+            "columnReference": "ID",
+            "reference": {
+              "resource": "data-3.csv",
+              "columnReference": "item_id"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

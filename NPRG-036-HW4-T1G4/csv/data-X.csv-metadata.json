@@ -11,52 +11,17 @@
           "dc:description": "ID of the location.",
           "aboutUrl": "https://example.org/areas/{LocationID}",
           "propertyUrl": "rdf:type",
-          "valueUrl": "schema:GeoShape",
+          "valueUrl": "https://example.org/vocabulary/Cuboid",
           "datatype": "integer",
           "required": true
         },
         {
-          "name": "X1",
-          "titles": "X1",
-          "dc:description": "X value of one of the corners.",
-          "datatype": "integer",
-          "required": true
-        },
-        {
-          "name": "X2",
-          "titles": "X2",
-          "dc:description": "X value of one of the corners.",
-          "datatype": "integer",
-          "required": true
-        },
-        {
-          "name": "Y1",
-          "titles": "Y1",
-          "dc:description": "Y value of one of the corners.",
-          "datatype": "integer",
-          "lang": "en",
-          "required": true
-        },
-        {
-          "name": "Y2",
-          "titles": "Y2",
-          "dc:description": "Y value of one of the corners.",
-          "datatype": "integer",
-          "required": true
-        },
-        {
-          "name": "Z1",
-          "titles": "Z1",
-          "dc:description": "Z value of one of the corners.",
-          "datatype": "integer",
-          "lang": "en",
-          "required": true
-        },
-        {
-          "name": "Z2",
-          "titles": "Z2",
-          "dc:description": "Z value of one of the corners.",
-          "datatype": "integer",
+          "name": "Cuboid",
+          "titles": "Cuboid",
+          "dc:description": "ID of the location.",
+          "aboutUrl": "https://example.org/areas/{LocationID}",
+          "propertyUrl": "https://example.org/vocabulary/location",
+          "datatype": "string",
           "required": true
         }
     ],

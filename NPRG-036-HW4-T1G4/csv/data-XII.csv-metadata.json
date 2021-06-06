@@ -10,14 +10,16 @@
         "titles": "MatchID",
         "dc:description": "An identifier for the match.",
         "datatype": "integer",
-        "propertyUrl": "rdf:ID",
-        "valueUrl": "http://example.org/matches/{MatchID}",
+        "aboutUrl": "http://example.org/matches/{MatchID}",
+        "propertyUrl": "rdf:type",
+        "valueUrl": "http://vocab.linkeddata.es/vgo/#Session",
         "required": true
       },
       {
         "titles": "Date",
         "dc:description": "Date and time of the match start.",
         "datatype": "dateTime",
+        "aboutUrl": "http://example.org/matches/{MatchID}",
         "propertyUrl": "http://vocab.linkeddata.es/vgo/#startTime",
         "required": true
       },
@@ -26,6 +28,7 @@
         "titles": "MapID",
         "dc:description": "Map that the match was played on.",
         "datatype": "string",
+        "aboutUrl": "http://example.org/matches/{MatchID}",
         "propertyUrl": "http://example.org/vocabulary/playedOn",
         "valueUrl": "http://example.org/maps/{MapID}",
         "required": true
@@ -34,73 +37,165 @@
         "name": "Player_1",
         "titles": "Player_1",
         "dc:description": "Player 1 in the match.",
-        "valueUrl": "http://example.org/users/{Player_1}",
+        "aboutUrl": "http://example.org/users/{Player_1}",
+        "propertyUrl": "http://vocab.linkeddata.es/vgo/#isPlayerInSession",
+        "valueUrl": "http://example.org/matches/{MatchID}",
         "datatype": "string"
       },
       {
         "name": "Player_2",
         "titles": "Player_2",
         "dc:description": "Player 2 in the match.",
-        "valueUrl": "http://example.org/users/{Player_2}",
+        "aboutUrl": "http://example.org/users/{Player_2}",
+        "propertyUrl": "http://vocab.linkeddata.es/vgo/#isPlayerInSession",
+        "valueUrl": "http://example.org/matches/{MatchID}",
         "datatype": "string"
       },
       {
         "name": "Player_3",
         "titles": "Player_3",
         "dc:description": "Player 3 in the match.",
-        "valueUrl": "http://example.org/users/{Player_3}",
+        "aboutUrl": "http://example.org/users/{Player_3}",
+        "propertyUrl": "http://vocab.linkeddata.es/vgo/#isPlayerInSession",
+        "valueUrl": "http://example.org/matches/{MatchID}",
         "datatype": "string"
       },
       {
         "name": "Player_4",
         "titles": "Player_4",
         "dc:description": "Player 4 in the match.",
-        "valueUrl": "http://example.org/users/{Player_4}",
+        "aboutUrl": "http://example.org/users/{Player_4}",
+        "propertyUrl": "http://vocab.linkeddata.es/vgo/#isPlayerInSession",
+        "valueUrl": "http://example.org/matches/{MatchID}",
         "datatype": "string"
       },
       {
         "name": "Player_5",
         "titles": "Player_5",
         "dc:description": "Player 5 in the match.",
-        "valueUrl": "http://example.org/users/{Player_5}",
+        "aboutUrl": "http://example.org/users/{Player_5}",
+        "propertyUrl": "http://vocab.linkeddata.es/vgo/#isPlayerInSession",
+        "valueUrl": "http://example.org/matches/{MatchID}",
         "datatype": "string"
       },
       {
         "name": "Player_6",
         "titles": "Player_6",
         "dc:description": "Player 6 in the match.",
-        "valueUrl": "http://example.org/users/{Player_6}",
+        "aboutUrl": "http://example.org/users/{Player_6}",
+        "propertyUrl": "http://vocab.linkeddata.es/vgo/#isPlayerInSession",
+        "valueUrl": "http://example.org/matches/{MatchID}",
         "datatype": "string"
       },
       {
         "name": "Player_7",
         "titles": "Player_7",
         "dc:description": "Player 7 in the match.",
-        "valueUrl": "http://example.org/users/{Player_7}",
+        "aboutUrl": "http://example.org/users/{Player_7}",
+        "propertyUrl": "http://vocab.linkeddata.es/vgo/#isPlayerInSession",
+        "valueUrl": "http://example.org/matches/{MatchID}",
         "datatype": "string"
       },
       {
         "name": "Player_8",
         "titles": "Player_8",
         "dc:description": "Player 8 in the match.",
-        "valueUrl": "http://example.org/users/{Player_8}",
+        "aboutUrl": "http://example.org/users/{Player_8}",
+        "propertyUrl": "http://vocab.linkeddata.es/vgo/#isPlayerInSession",
+        "valueUrl": "http://example.org/matches/{MatchID}",
         "datatype": "string"
       },
       {
         "name": "Player_9",
         "titles": "Player_9",
         "dc:description": "Player 9 in the match.",
-        "valueUrl": "http://example.org/users/{Player_9}",
+        "aboutUrl": "http://example.org/users/{Player_9}",
+        "propertyUrl": "http://vocab.linkeddata.es/vgo/#isPlayerInSession",
+        "valueUrl": "http://example.org/matches/{MatchID}",
         "datatype": "string"
       },
       {
         "name": "Player_10",
         "titles": "Player_10",
         "dc:description": "Player 10 in the match.",
-        "valueUrl": "http://example.org/users/{Player_10}",
+        "aboutUrl": "http://example.org/users/{Player_10}",
+        "propertyUrl": "http://vocab.linkeddata.es/vgo/#isPlayerInSession",
+        "valueUrl": "http://example.org/matches/{MatchID}",
         "datatype": "string"
       }
     ],
-    "primaryKey": "MatchID"
+    "primaryKey": "MatchID",
+    "foreignKeys": [
+      {
+        "columnReference": "Player_1",
+        "reference": {
+          "resource": "data-XV.csv",
+          "columnReference": "UserID"
+        }
+      },
+      {
+        "columnReference": "Player_2",
+        "reference": {
+          "resource": "data-XV.csv",
+          "columnReference": "UserID"
+        }
+      },
+      {
+        "columnReference": "Player_3",
+        "reference": {
+          "resource": "data-XV.csv",
+          "columnReference": "UserID"
+        }
+      },
+      {
+        "columnReference": "Player_4",
+        "reference": {
+          "resource": "data-XV.csv",
+          "columnReference": "UserID"
+        }
+      },
+      {
+        "columnReference": "Player_5",
+        "reference": {
+          "resource": "data-XV.csv",
+          "columnReference": "UserID"
+        }
+      },
+      {
+        "columnReference": "Player_6",
+        "reference": {
+          "resource": "data-XV.csv",
+          "columnReference": "UserID"
+        }
+      },
+      {
+        "columnReference": "Player_7",
+        "reference": {
+          "resource": "data-XV.csv",
+          "columnReference": "UserID"
+        }
+      },
+      {
+        "columnReference": "Player_8",
+        "reference": {
+          "resource": "data-XV.csv",
+          "columnReference": "UserID"
+        }
+      },
+      {
+        "columnReference": "Player_9",
+        "reference": {
+          "resource": "data-XV.csv",
+          "columnReference": "UserID"
+        }
+      },
+      {
+        "columnReference": "Player_10",
+        "reference": {
+          "resource": "data-XV.csv",
+          "columnReference": "UserID"
+        }
+      }
+    ]
   }
 }

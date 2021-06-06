@@ -10,15 +10,29 @@
         "titles": "ID",
         "dc:description": "A unique identifier for the item.",
         "datatype": "string",
+        "aboutUrl": "http://example.org/info/{ID}",
+        "propertyUrl": "rdf:type",
+        "valueUrl": "http://example.org/vocabulary/Armor",
         "required": true
       },
       {
         "titles": "Durability",
         "dc:description": "Amount of damage the item can soak before breaking.",
         "datatype": "integer",
+        "aboutUrl": "http://example.org/info/{ID}",
+        "propertyUrl": "http://example.org/vocabulary/durability",
         "required": true
       }
     ],
-    "primaryKey": "ID"
+    "primaryKey": "ID",
+    "foreignKeys": [
+      {
+        "columnReference": "ID",
+        "reference": {
+          "resource": "equipment.csv",
+          "columnReference": "item_id"
+        }
+      }
+    ]
   }
 }

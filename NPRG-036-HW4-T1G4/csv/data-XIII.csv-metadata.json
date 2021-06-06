@@ -10,13 +10,18 @@
         "titles": "PlayerID",
         "dc:description": "An identifier for the player character.",
         "datatype": "string",
-        "valueUrl": "http://example.org/players/{MatchID}",
+        "aboutUrl": "http://example.org/players/{PlayerID}",
+        "propertyUrl": "rdf:type",
+        "valueUrl": "http://vocab.linkeddata.es/vgo/#Character",
         "required": true
       },
       {
         "name": "UserID", 
         "titles": "UserID",
         "dc:description": "User that controlled the player character.",
+        "aboutUrl": "http://example.org/users/{UserID}",
+        "propertyUrl": "http://vocab.linkeddata.es/vgo/#ownsCharacter",
+        "valueUrl": "http://example.org/players/{PlayerID}",
         "datatype": "string",
         "required": true
       },
@@ -24,26 +29,44 @@
         "name": "Username",
         "titles": "Username",
         "dc:description": "Username that the player used.",
+        "aboutUrl": "http://example.org/players/{PlayerID}",
+        "propertyUrl": "http://vocab.linkeddata.es/vgo/#ownsCharacter",
         "datatype": "string",
         "required": true
       },
       {
         "titles": "IsBot",
         "dc:description": "Whether player was replaced as the bot.",
+        "aboutUrl": "http://example.org/players/{PlayerID}",
+        "propertyUrl": "http://example.org/vocabulary/isBot",
         "datatype": "boolean"
       },
       {
         "titles": "HadKD",
         "dc:description": "The KD of the player at the end of the match.",
+        "aboutUrl": "http://example.org/players/{PlayerID}",
+        "propertyUrl": "http://example.org/vocabulary/hadKD",
         "datatype": "float"
       },
       {
         "name": "TeamID",
         "titles": "TeamID",
         "dc:description": "The ID of the team that the player was on.",
+        "aboutUrl": "http://example.org/players/{PlayerID}",
+        "propertyUrl": "http://example.org/vocabulary/#isOnTeam",
+        "valueUrl": "http://example.org/info/{TeamID}",
         "datatype": "string"
       }
     ],
-    "primaryKey": "PlayerID"
+    "primaryKey": "PlayerID",
+    "foreignKeys": [
+      {
+        "columnReference": "TeamID",
+        "reference": {
+          "resource": "data-XIV.csv",
+          "columnReference": "TeamID"
+        }
+      }
+    ]
   }
 }
