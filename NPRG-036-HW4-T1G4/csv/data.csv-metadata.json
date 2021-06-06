@@ -108,7 +108,7 @@
             "dc:description": "ID of the location.",
             "aboutUrl": "https://example.org/areas/{LocationID}",
             "propertyUrl": "rdf:type",
-            "valueUrl": "https://example.org/vocabulary/Cuboid",
+            "valueUrl": "http://example.org/vocabulary/Cuboid",
             "datatype": "integer",
             "required": true
           },
@@ -118,7 +118,7 @@
             "titles": "Cuboid",
             "dc:description": "ID of the location.",
             "aboutUrl": "https://example.org/areas/{LocationID}",
-            "propertyUrl": "https://example.org/vocabulary/location",
+            "propertyUrl": "http://example.org/vocabulary/location",
             "datatype": "string",
             "required": true
           }
@@ -149,7 +149,7 @@
             "dc:description": "Name of the map.",
             "datatype": "string",
             "aboutUrl": "https://example.org/maps/{MapID}",
-            "propertyUrl": "https://example.org/vocabulary/mapName",
+            "propertyUrl": "http://example.org/vocabulary/mapName",
             "lang": "en",
             "required": true
           },
@@ -159,7 +159,7 @@
             "titles": "PlantLocationA",
             "dc:description": "Location A for bomb-planting.",
             "aboutUrl": "https://example.org/maps/{MapID}",
-            "propertyUrl": "https://example.org/vocabulary/plantArea",
+            "propertyUrl": "http://example.org/vocabulary/plantArea",
             "valueUrl": "https://example.org/areas/{PlantLocationA}",
             "datatype": "integer",
             "required": true
@@ -170,7 +170,7 @@
             "titles": "PlantLocationB",
             "dc:description": "Location B for bomb-planting.",
             "aboutUrl": "https://example.org/maps/{MapID}",
-            "propertyUrl": "https://example.org/vocabulary/plantArea",
+            "propertyUrl": "http://example.org/vocabulary/plantArea",
             "valueUrl": "https://example.org/areas/{PlantLocationB}",
             "datatype": "integer",
             "required": true
@@ -181,7 +181,7 @@
             "titles": "SpawnLocationT",
             "dc:description": "Spawn location for the T team.",
             "aboutUrl": "https://example.org/maps/{MapID}",
-            "propertyUrl": "https://example.org/vocabulary/spawnLocation",
+            "propertyUrl": "http://example.org/vocabulary/spawnLocation",
             "valueUrl": "https://example.org/areas/{SpawnLocationT}",
             "datatype": "integer",
             "required": true
@@ -192,7 +192,7 @@
             "titles": "SpawnLocationCT",
             "dc:description": "Spawn location for the CT team.",
             "aboutUrl": "https://example.org/maps/{MapID}",
-            "propertyUrl": "https://example.org/vocabulary/spawnLocation",
+            "propertyUrl": "http://example.org/vocabulary/spawnLocation",
             "valueUrl": "https://example.org/areas/{SpawnLocationCT}",
             "datatype": "integer",
             "required": true
@@ -504,7 +504,7 @@
             "titles": "TeamID",
             "dc:description": "The ID of the team that the player was on.",
             "aboutUrl": "http://example.org/players/{PlayerID}",
-            "propertyUrl": "http://example.org/vocabulary/#isOnTeam",
+            "propertyUrl": "http://example.org/vocabulary/isOnTeam",
             "valueUrl": "http://example.org/info/{TeamID}",
             "datatype": "string"
           }
