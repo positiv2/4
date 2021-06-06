@@ -604,7 +604,7 @@
               "dc:description": "ID of the user.",
               "aboutUrl": "https://example.org/players/{UserID}",
               "propertyUrl": "rdf:type",
-              "valueUrl": "http://vocab.linkeddata.es/vgo/#PlayingArea",  
+              "valueUrl": "http://vocab.linkeddata.es/vgo/#Player",  
               "datatype": "string",
               "required": true
             },
