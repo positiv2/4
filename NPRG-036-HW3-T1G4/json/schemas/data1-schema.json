@@ -8,6 +8,9 @@
         {
           "type": "object",
           "properties": {
+            "userid": {
+              "type": "string"
+            },
             "usernames": {
               "type": "array",
               "items": [
@@ -55,6 +58,7 @@
                     }
                   },
                   "required": [
+                    "userid",
                     "vgo:username",
                     "color",
                     "isbot",

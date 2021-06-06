@@ -1,10 +1,10 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ns0: <http://vocab.linkeddata.es/vgo/#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix ns1: <http://example.org/vocabulary/> .
 @prefix schema: <http://schema.org/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <http://example.org/vocabulary/users/Jimmy>
   a <http://vocab.linkeddata.es/vgo/#Player> ;
@@ -12,6 +12,7 @@
   ns0:isPlayerInSession <http://example.org/vocabulary/matches/222> ;
   ns0:ownsCharacter <http://example.org/vocabulary/players/234567-2> ;
   ns0:username "FaZe Jimmy"@en ;
+  rdfs:label "Jimmy"@en ;
   vcard:hasEmail "jimmer@tfwno.gf"^^xsd:anyUri .
 
 <http://example.org/vocabulary/matches/222>
@@ -36,6 +37,7 @@
   ns0:isPlayerInSession <http://example.org/vocabulary/matches/333> ;
   ns0:ownsCharacter <http://example.org/vocabulary/players/238767-3> ;
   ns0:username "Albert"@en ;
+  rdfs:label "a1b2c3"@en ;
   vcard:hasEmail "cheese@gmail.com"^^xsd:anyUri .
 
 <http://example.org/vocabulary/matches/333>
@@ -61,6 +63,7 @@
   ns0:ownsCharacter <http://example.org/vocabulary/players/111111-3>, <http://example.org/vocabulary/players/111111-4> ;
   ns0:ownsItem <http://example.org/vocabulary/skins/730_2_14091390121>, <http://example.org/vocabulary/skins/730_2_14091390122>, <http://example.org/vocabulary/skins/730_2_14091390123>, <http://example.org/vocabulary/skins/730_2_14091390124>, <http://example.org/vocabulary/skins/730_2_14091390125>, <http://example.org/vocabulary/skins/730_2_14091390126> ;
   ns0:username "GabeN"@en ;
+  rdfs:label "gaben"@en ;
   vcard:hasEmail "gaben@valvesoftware.com"^^xsd:anyUri .
 
 <http://example.org/vocabulary/matches/11111>

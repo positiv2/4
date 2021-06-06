@@ -11,6 +11,7 @@
         "schema": "http://schema.org/",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "@language": "en",
+        "userid": "rdfs:label",
         "color": "schema:color",
         "teamname": "rdfs:label",
         "startdate": {
@@ -64,6 +65,7 @@
         {
             "@id": "csgo:users/Jimmy",
             "@type": "vgo:Player",
+            "userid": "Jimmy",
             "usernames": [
                 "FaZe Jimmy"
             ],
@@ -95,6 +97,7 @@
         {
             "@id": "csgo:users/a1b2c3",
             "@type": "vgo:Player",
+            "userid": "a1b2c3",
             "usernames": [
                 "Albert"
             ],
@@ -126,6 +129,7 @@
         {
             "@id": "csgo:users/gaben",
             "@type": "vgo:Player",
+            "userid": "gaben",
             "usernames": [
                 "GabeN"
             ],
