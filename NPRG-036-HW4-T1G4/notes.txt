@@ -1,0 +1,13 @@
+Použití schema:GeoShape se retrospektivně jeví jako špatně zvolený datový typ;
+oblast je schopný popisovat pouze dvojrozměrně. Všemi validátory to prošlo
+i tak, zjistili jsme to tedy až teď.
+
+Zadefinujme si tedy
+csgo:Cuboid a owl:Class;
+  rdfs:comment "A cuboid section of a map."@en .
+
+Stejně si zadefinujme
+csgo:location a rdf:Property;
+  rdfs:domain csgo:Cuboid;
+  rdfs:range rdfs:Literal;
+  rdfs:comment "Comma-separated list of coordinates in the order X, Y, Z."@en .

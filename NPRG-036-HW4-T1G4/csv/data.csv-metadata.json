@@ -7,12 +7,6 @@
   ],
   "@id": "https://example.org/data.csv-metadata.json",
   "@type": "TableGroup",
-  "notes": {
-    "Note 1": "Použití schema:GeoShape se retrospektivně jeví jako špatně zvolený datový typ; oblast je schopný popisovat pouze dvojrozměrně. W3C validátoru to ovšem v HW2 nevadilo 🤷‍",
-    "Note 2": "Zadefinujme si 'csgo:Cuboid a owl:Class; rdfs:comment \"A cuboid section of a map.\"@en.' a (imaginárně—koneckonců jinak to nejde) ho přidejme do http://example.org/vocabulary/.",
-    "Note 3": "Stejně si zadefinujme 'csgo:location a rdf:Property; rdfs:domain csgo:Cuboid; rdfs:range rdfs:Literal; rdfs:comment \"Comma-separated list of coordinates in the order X, Y, Z.\"@en'.",
-    "Note 4": "Nepodařilo se mi to nechat v několika souborech; gem crashoval s nicneříkající chybovou hláškou i při použití gitu na hosting."
-  },
   "tables": [
     {
       "@id": "https://example.org/data-1.csv-metadata.json",

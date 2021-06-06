@@ -14,90 +14,90 @@
     <Note 4> "Nepodařilo se mi to nechat v několika souborech; gem crashoval s nicneříkající chybovou hláškou i při použití gitu na hosting."@cs
   ];
   csvw:table <https://example.org/data-8.csv-metadata.json>,
+    <https://example.org/data-4.csv-metadata.json>,
+    <https://example.org/data-13.csv-metadata.json>,
+    <https://example.org/data-10.csv-metadata.json>,
+    <https://example.org/data-5.csv-metadata.json>,
+    <https://example.org/data-7.csv-metadata.json>,
+    <https://example.org/data-15.csv-metadata.json>,
     <https://example.org/data-2.csv-metadata.json>,
     <https://example.org/data-9.csv-metadata.json>,
-    <https://example.org/data-15.csv-metadata.json>,
-    <https://example.org/data-1.csv-metadata.json>,
-    <https://example.org/data-11.csv-metadata.json>, [
+    <https://example.org/data-11.csv-metadata.json>,
+    <https://example.org/data-1.csv-metadata.json>, [
     a csvw:Table;
     csvw:row [
       a csvw:Row;
-      csvw:describes <http://example.org/info/weapon_hkp2000>;
-      csvw:rownum 8;
-      csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-3.csv#row=9>
+      csvw:describes <http://example.org/info/weapon_c4>;
+      csvw:rownum 3;
+      csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-3.csv#row=4>
     ], [
       a csvw:Row;
       csvw:describes <http://example.org/info/weapon_hegrenade>;
       csvw:rownum 2;
-      csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-3.csv#row=3>
-    ], [
-      a csvw:Row;
-      csvw:describes <http://example.org/info/item_kevlar>;
-      csvw:rownum 5;
-      csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-3.csv#row=6>
-    ], [
-      a csvw:Row;
-      csvw:describes <http://example.org/info/weapon_m4a1_silencer>;
-      csvw:rownum 6;
-      csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-3.csv#row=7>
-    ], [
-      a csvw:Row;
-      csvw:describes <http://example.org/info/weapon_c4>;
-      csvw:rownum 3;
-      csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-3.csv#row=4>
+      csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-3.csv#row=3>
     ], [
       a csvw:Row;
       csvw:describes <http://example.org/info/weapon_knife>;
       csvw:rownum 1;
-      csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-3.csv#row=2>
+      csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-3.csv#row=2>
     ], [
       a csvw:Row;
-      csvw:describes <http://example.org/info/defuser>;
-      csvw:rownum 4;
-      csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-3.csv#row=5>
+      csvw:describes <http://example.org/info/weapon_m4a1_silencer>;
+      csvw:rownum 6;
+      csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-3.csv#row=7>
+    ], [
+      a csvw:Row;
+      csvw:describes <http://example.org/info/item_kevlar>;
+      csvw:rownum 5;
+      csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-3.csv#row=6>
     ], [
       a csvw:Row;
       csvw:describes <http://example.org/info/weapon_mp5sd>;
       csvw:rownum 7;
-      csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-3.csv#row=8>
+      csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-3.csv#row=8>
+    ], [
+      a csvw:Row;
+      csvw:describes <http://example.org/info/weapon_hkp2000>;
+      csvw:rownum 8;
+      csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-3.csv#row=9>
+    ], [
+      a csvw:Row;
+      csvw:describes <http://example.org/info/defuser>;
+      csvw:rownum 4;
+      csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-3.csv#row=5>
     ];
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-3.csv>
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-3.csv>
   ],
     <https://example.org/data-6.csv-metadata.json>,
-    <https://example.org/data-13.csv-metadata.json>,
-    <https://example.org/data-5.csv-metadata.json>,
-    <https://example.org/data-14.csv-metadata.json>,
-    <https://example.org/data-10.csv-metadata.json>,
     <https://example.org/data-12.csv-metadata.json>,
-    <https://example.org/data-4.csv-metadata.json>,
-    <https://example.org/data-7.csv-metadata.json>;
+    <https://example.org/data-14.csv-metadata.json>;
   prov:wasGeneratedBy [
     a prov:Activity;
-    prov:endedAtTime "2021-06-06T05:27:32.835+02:00"^^xsd:dateTime;
+    prov:endedAtTime "2021-06-06T05:31:15.150+02:00"^^xsd:dateTime;
     prov:qualifiedUsage [
       a prov:Usage;
-      prov:entity <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-8.csv>,
-        <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-1.csv>,
-        <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-12.csv>,
-        <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-3.csv>,
-        <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-10.csv>,
-        <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-5.csv>,
-        <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-9.csv>,
-        <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-7.csv>,
-        <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-13.csv>,
-        <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-6.csv>,
-        <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-14.csv>,
-        <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-4.csv>,
-        <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-2.csv>,
-        <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-15.csv>,
-        <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-11.csv>;
+      prov:entity <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-5.csv>,
+        <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-14.csv>,
+        <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-2.csv>,
+        <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-11.csv>,
+        <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-1.csv>,
+        <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-7.csv>,
+        <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-15.csv>,
+        <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-3.csv>,
+        <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-10.csv>,
+        <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-6.csv>,
+        <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-4.csv>,
+        <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-13.csv>,
+        <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-12.csv>,
+        <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-8.csv>,
+        <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-9.csv>;
       prov:hadRole csvw:csvEncodedTabularData
     ], [
       a prov:Usage;
-      prov:entity <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data.csv-metadata.json>;
+      prov:entity <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data.csv-metadata.json>;
       prov:hadRole csvw:tabularMetadata
     ];
-    prov:startedAtTime "2021-06-06T05:27:32.460+02:00"^^xsd:dateTime;
+    prov:startedAtTime "2021-06-06T05:31:10.984+02:00"^^xsd:dateTime;
     prov:wasAssociatedWith <https://rubygems.org/gems/rdf-tabular>
   ] .
 
@@ -126,270 +126,270 @@
     a csvw:Row;
     csvw:describes <http://example.org/info/item_kevlar>;
     csvw:rownum 1;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-1.csv#row=2>
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-1.csv#row=2>
   ];
-  csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-1.csv> .
+  csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-1.csv> .
 
 <https://example.org/data-10.csv-metadata.json> a csvw:Table;
   csvw:row [
     a csvw:Row;
     csvw:describes <https://example.org/areas/2>;
     csvw:rownum 2;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-10.csv#row=3>
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-10.csv#row=3>
   ], [
     a csvw:Row;
     csvw:describes <https://example.org/areas/3>;
     csvw:rownum 3;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-10.csv#row=4>
-  ], [
-    a csvw:Row;
-    csvw:describes <https://example.org/areas/4>;
-    csvw:rownum 4;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-10.csv#row=5>
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-10.csv#row=4>
   ], [
     a csvw:Row;
     csvw:describes <https://example.org/areas/1>;
     csvw:rownum 1;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-10.csv#row=2>
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-10.csv#row=2>
+  ], [
+    a csvw:Row;
+    csvw:describes <https://example.org/areas/4>;
+    csvw:rownum 4;
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-10.csv#row=5>
   ];
-  csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-10.csv> .
+  csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-10.csv> .
 
 <https://example.org/data-11.csv-metadata.json> a csvw:Table;
   csvw:row [
     a csvw:Row;
-    csvw:describes <https://example.org/maps/de_inferno>;
-    csvw:rownum 1;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-11.csv#row=2>
+    csvw:describes <https://example.org/maps/de_dust>;
+    csvw:rownum 3;
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-11.csv#row=4>
   ], [
     a csvw:Row;
     csvw:describes <https://example.org/maps/de_nuke>;
     csvw:rownum 2;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-11.csv#row=3>
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-11.csv#row=3>
   ], [
     a csvw:Row;
-    csvw:describes <https://example.org/maps/de_dust>;
-    csvw:rownum 3;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-11.csv#row=4>
+    csvw:describes <https://example.org/maps/de_inferno>;
+    csvw:rownum 1;
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-11.csv#row=2>
   ];
-  csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-11.csv> .
+  csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-11.csv> .
 
 <https://example.org/data-12.csv-metadata.json> a csvw:Table;
   csvw:row [
     a csvw:Row;
-    csvw:describes <http://example.org/users/kp7UU>,
-      <http://example.org/users/hAzT7>,
-      <http://example.org/users/a1b2c3>,
+    csvw:describes <http://example.org/users/aK9YL>,
+      <http://example.org/users/BDSEo>,
       <http://example.org/matches/123456>,
+      <http://example.org/users/a1b2c3>,
       <http://example.org/users/oScuf>,
+      <http://example.org/users/jimmy>,
+      <http://example.org/users/kp7UU>,
+      <http://example.org/users/hAzT7>,
       <http://example.org/users/8IN53>,
       <http://example.org/users/UZpv7>,
-      <http://example.org/users/QbolC>,
-      <http://example.org/users/aK9YL>,
-      <http://example.org/users/BDSEo>,
-      <http://example.org/users/jimmy>;
+      <http://example.org/users/QbolC>;
     csvw:rownum 1;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-12.csv#row=2>
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-12.csv#row=2>
+  ], [
+    a csvw:Row;
+    csvw:describes <http://example.org/users/>,
+      <http://example.org/users/jimmy>,
+      <http://example.org/matches/234567>;
+    csvw:rownum 2;
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-12.csv#row=3>
   ], [
     a csvw:Row;
     csvw:describes <http://example.org/matches/111111>,
       <http://example.org/users/>,
       <http://example.org/users/gaben>;
     csvw:rownum 3;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-12.csv#row=4>
-  ], [
-    a csvw:Row;
-    csvw:describes <http://example.org/matches/234567>,
-      <http://example.org/users/jimmy>,
-      <http://example.org/users/>;
-    csvw:rownum 2;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-12.csv#row=3>
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-12.csv#row=4>
   ];
-  csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-12.csv> .
+  csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-12.csv> .
 
 <https://example.org/data-13.csv-metadata.json> a csvw:Table;
   csvw:row [
     a csvw:Row;
+    csvw:describes <http://example.org/users/gaben>,
+      <http://example.org/players/111111-3>;
+    csvw:rownum 4;
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-13.csv#row=5>
+  ], [
+    a csvw:Row;
     csvw:describes <http://example.org/users/a1b2c3>,
       <http://example.org/players/123456-1>;
     csvw:rownum 1;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-13.csv#row=2>
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-13.csv#row=2>
   ], [
     a csvw:Row;
-    csvw:describes <http://example.org/users/jimmy>,
-      <http://example.org/players/123456-2>;
-    csvw:rownum 2;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-13.csv#row=3>
-  ], [
-    a csvw:Row;
-    csvw:describes <http://example.org/players/111111-3>,
-      <http://example.org/users/gaben>;
-    csvw:rownum 4;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-13.csv#row=5>
-  ], [
-    a csvw:Row;
-    csvw:describes <http://example.org/users/jimmy>,
-      <http://example.org/players/234567-1>;
+    csvw:describes <http://example.org/players/234567-1>,
+      <http://example.org/users/jimmy>;
     csvw:rownum 3;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-13.csv#row=4>
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-13.csv#row=4>
+  ], [
+    a csvw:Row;
+    csvw:describes <http://example.org/players/123456-2>,
+      <http://example.org/users/jimmy>;
+    csvw:rownum 2;
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-13.csv#row=3>
   ];
-  csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-13.csv> .
+  csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-13.csv> .
 
 <https://example.org/data-14.csv-metadata.json> a csvw:Table;
   csvw:row [
     a csvw:Row;
-    csvw:describes <http://example.org/info/123456-CT>;
-    csvw:rownum 2;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-14.csv#row=3>
+    csvw:describes <http://example.org/info/111111-T>;
+    csvw:rownum 4;
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-14.csv#row=5>
   ], [
     a csvw:Row;
-    csvw:describes <http://example.org/info/123456-T>;
-    csvw:rownum 1;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-14.csv#row=2>
+    csvw:describes <http://example.org/info/123456-CT>;
+    csvw:rownum 2;
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-14.csv#row=3>
   ], [
     a csvw:Row;
     csvw:describes <http://example.org/info/234567-T>;
     csvw:rownum 3;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-14.csv#row=4>
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-14.csv#row=4>
   ], [
     a csvw:Row;
-    csvw:describes <http://example.org/info/111111-T>;
-    csvw:rownum 4;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-14.csv#row=5>
+    csvw:describes <http://example.org/info/123456-T>;
+    csvw:rownum 1;
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-14.csv#row=2>
   ];
-  csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-14.csv> .
+  csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-14.csv> .
 
 <https://example.org/data-15.csv-metadata.json> a csvw:Table;
   csvw:row [
     a csvw:Row;
     csvw:describes <http://example.org/players/jimmy>;
     csvw:rownum 2;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-15.csv#row=3>
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-15.csv#row=3>
   ], [
     a csvw:Row;
     csvw:describes <http://example.org/players/a1b2c3>;
     csvw:rownum 1;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-15.csv#row=2>
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-15.csv#row=2>
   ], [
     a csvw:Row;
     csvw:describes <http://example.org/players/gaben>;
     csvw:rownum 3;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-15.csv#row=4>
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-15.csv#row=4>
   ];
-  csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-15.csv> .
+  csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-15.csv> .
 
 <https://example.org/data-2.csv-metadata.json> a csvw:Table;
   csvw:row [
     a csvw:Row;
     csvw:describes <http://example.org/info/weapon_c4>;
     csvw:rownum 1;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-2.csv#row=2>
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-2.csv#row=2>
   ];
-  csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-2.csv> .
+  csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-2.csv> .
 
 <https://example.org/data-4.csv-metadata.json> a csvw:Table;
   csvw:row [
     a csvw:Row;
-    csvw:describes <http://example.org/info/weapon_hkp2000>;
-    csvw:rownum 3;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-4.csv#row=4>
+    csvw:describes <http://example.org/info/weapon_mp5sd>;
+    csvw:rownum 2;
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-4.csv#row=3>
   ], [
     a csvw:Row;
     csvw:describes <http://example.org/info/weapon_m4a1_silencer>;
     csvw:rownum 1;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-4.csv#row=2>
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-4.csv#row=2>
   ], [
     a csvw:Row;
-    csvw:describes <http://example.org/info/weapon_mp5sd>;
-    csvw:rownum 2;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-4.csv#row=3>
+    csvw:describes <http://example.org/info/weapon_hkp2000>;
+    csvw:rownum 3;
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-4.csv#row=4>
   ];
-  csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-4.csv> .
+  csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-4.csv> .
 
 <https://example.org/data-5.csv-metadata.json> a csvw:Table;
   csvw:row [
     a csvw:Row;
     csvw:describes <http://example.org/info/weapon_knife>;
     csvw:rownum 1;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-5.csv#row=2>
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-5.csv#row=2>
   ];
-  csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-5.csv> .
+  csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-5.csv> .
 
 <https://example.org/data-6.csv-metadata.json> a csvw:Table;
   csvw:row [
     a csvw:Row;
     csvw:describes <http://example.org/players/gaben>,
-      <http://example.org/info/skin-5>;
-    csvw:rownum 5;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-6.csv#row=6>
+      <http://example.org/info/skin-2>;
+    csvw:rownum 2;
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-6.csv#row=3>
   ], [
     a csvw:Row;
-    csvw:describes <http://example.org/info/skin-1>,
-      <http://example.org/players/gaben>;
+    csvw:describes <http://example.org/players/gaben>,
+      <http://example.org/info/skin-1>;
     csvw:rownum 1;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-6.csv#row=2>
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-6.csv#row=2>
+  ], [
+    a csvw:Row;
+    csvw:describes <http://example.org/players/gaben>,
+      <http://example.org/info/skin-5>;
+    csvw:rownum 5;
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-6.csv#row=6>
   ], [
     a csvw:Row;
     csvw:describes <http://example.org/players/gaben>,
       <http://example.org/info/skin-3>;
     csvw:rownum 3;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-6.csv#row=4>
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-6.csv#row=4>
   ], [
     a csvw:Row;
     csvw:describes <http://example.org/players/gaben>,
       <http://example.org/info/skin-6>;
     csvw:rownum 6;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-6.csv#row=7>
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-6.csv#row=7>
   ], [
     a csvw:Row;
-    csvw:describes <http://example.org/players/gaben>,
-      <http://example.org/info/skin-2>;
-    csvw:rownum 2;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-6.csv#row=3>
-  ], [
-    a csvw:Row;
-    csvw:describes <http://example.org/info/skin-4>,
-      <http://example.org/players/a1b2c3>;
+    csvw:describes <http://example.org/players/a1b2c3>,
+      <http://example.org/info/skin-4>;
     csvw:rownum 4;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-6.csv#row=5>
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-6.csv#row=5>
   ];
-  csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-6.csv> .
+  csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-6.csv> .
 
 <https://example.org/data-7.csv-metadata.json> a csvw:Table;
   csvw:row [
     a csvw:Row;
     csvw:describes <http://example.org/info/weapon_hegrenade>;
     csvw:rownum 1;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-7.csv#row=2>
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-7.csv#row=2>
   ];
-  csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-7.csv> .
+  csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-7.csv> .
 
 <https://example.org/data-8.csv-metadata.json> a csvw:Table;
   csvw:row [
     a csvw:Row;
     csvw:describes <http://example.org/info/defuser>;
     csvw:rownum 1;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-8.csv#row=2>
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-8.csv#row=2>
   ];
-  csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-8.csv> .
+  csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-8.csv> .
 
 <https://example.org/data-9.csv-metadata.json> a csvw:Table;
   csvw:row [
     a csvw:Row;
     csvw:describes <https://example.org/players/gaben>;
     csvw:rownum 3;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-9.csv#row=4>
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-9.csv#row=4>
   ], [
     a csvw:Row;
     csvw:describes <https://example.org/players/jimmy>;
     csvw:rownum 2;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-9.csv#row=3>
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-9.csv#row=3>
   ], [
     a csvw:Row;
     csvw:describes <https://example.org/players/a1b2c3>;
     csvw:rownum 1;
-    csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-9.csv#row=2>
+    csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-9.csv#row=2>
   ];
-  csvw:url <file://mnt/s/DataFormats/git/NPRG-036-HW4-T1G4/csv/data-9.csv> .
+  csvw:url <https://raw.githubusercontent.com/positiv2/NPRG_036/master/NPRG-036-HW4-T1G4/csv/data-9.csv> .
 
 <https://example.org/maps/de_dust> a <http://vocab.linkeddata.es/vgo#PlayingArea>;
   <https://example.org/vocabulary/mapName> "Dust"@en;
@@ -400,17 +400,17 @@
 
 <https://example.org/maps/de_inferno> a <http://vocab.linkeddata.es/vgo#PlayingArea>;
   <https://example.org/vocabulary/mapName> "Inferno"@en;
-  <https://example.org/vocabulary/plantArea> <https://example.org/areas/2>,
-    <https://example.org/areas/1>;
-  <https://example.org/vocabulary/spawnLocation> <https://example.org/areas/4>,
-    <https://example.org/areas/3> .
+  <https://example.org/vocabulary/plantArea> <https://example.org/areas/1>,
+    <https://example.org/areas/2>;
+  <https://example.org/vocabulary/spawnLocation> <https://example.org/areas/3>,
+    <https://example.org/areas/4> .
 
 <https://example.org/maps/de_nuke> a <http://vocab.linkeddata.es/vgo#PlayingArea>;
   <https://example.org/vocabulary/mapName> "Nuke"@en;
-  <https://example.org/vocabulary/plantArea> <https://example.org/areas/2>,
-    <https://example.org/areas/1>;
-  <https://example.org/vocabulary/spawnLocation> <https://example.org/areas/4>,
-    <https://example.org/areas/3> .
+  <https://example.org/vocabulary/plantArea> <https://example.org/areas/1>,
+    <https://example.org/areas/2>;
+  <https://example.org/vocabulary/spawnLocation> <https://example.org/areas/3>,
+    <https://example.org/areas/4> .
 
 <https://example.org/players/a1b2c3> a <http://vocab.linkeddata.es/vgo/#PlayingArea>;
   vcard:nickname "Albert" .
@@ -522,20 +522,20 @@
 <http://example.org/users/gaben> <http://vocab.linkeddata.es/vgo/#isPlayerInSession> <http://example.org/matches/111111>;
   <http://vocab.linkeddata.es/vgo/#ownsCharacter> <http://example.org/players/111111-3> .
 
-<http://example.org/info/defuser> a <http://vocab.linkeddata.es/vgo/#Item>,
-    <http://example.org/vocabulary/Utility>;
+<http://example.org/info/defuser> a <http://example.org/vocabulary/Utility>,
+    <http://vocab.linkeddata.es/vgo/#Item>;
   rdfs:label "Defuse Kit"@en;
   <http://example.org/vocabulary/cost> 400;
   <http://example.org/vocabulary/utilityType> "Equipment" .
 
-<http://example.org/info/item_kevlar> a <http://vocab.linkeddata.es/vgo/#Item>,
-    <http://example.org/vocabulary/Armor>;
+<http://example.org/info/item_kevlar> a <http://example.org/vocabulary/Armor>,
+    <http://vocab.linkeddata.es/vgo/#Item>;
   rdfs:label "Kevlar vest"@en;
   <http://example.org/vocabulary/cost> 650;
   <http://example.org/vocabulary/durability> 70 .
 
-<http://example.org/info/weapon_c4> a <http://vocab.linkeddata.es/vgo/#Item>,
-    <http://example.org/vocabulary/Bomb>;
+<http://example.org/info/weapon_c4> a <http://example.org/vocabulary/Bomb>,
+    <http://vocab.linkeddata.es/vgo/#Item>;
   rdfs:label "The Bomb"@en;
   <http://example.org/vocabulary/aoe> 3;
   <http://example.org/vocabulary/cost> 0;
@@ -549,8 +549,8 @@
   <http://example.org/vocabulary/damage> 85;
   <http://example.org/vocabulary/throwableCount> 1 .
 
-<http://example.org/info/weapon_knife> a <http://vocab.linkeddata.es/vgo/#Item>,
-    <http://example.org/vocabulary/Knife>;
+<http://example.org/info/weapon_knife> a <http://example.org/vocabulary/Knife>,
+    <http://vocab.linkeddata.es/vgo/#Item>;
   rdfs:label "Combat knife"@en;
   <http://example.org/vocabulary/cost> 0;
   <http://example.org/vocabulary/damage> 55 .
@@ -563,10 +563,10 @@
   <http://example.org/vocabulary/firerate> 600;
   <http://example.org/vocabulary/isPrimary> true .
 
-<http://example.org/users/jimmy> <http://vocab.linkeddata.es/vgo/#isPlayerInSession> <http://example.org/matches/234567>,
-    <http://example.org/matches/123456>;
-  <http://vocab.linkeddata.es/vgo/#ownsCharacter> <http://example.org/players/234567-1>,
-    <http://example.org/players/123456-2> .
+<http://example.org/users/jimmy> <http://vocab.linkeddata.es/vgo/#isPlayerInSession> <http://example.org/matches/123456>,
+    <http://example.org/matches/234567>;
+  <http://vocab.linkeddata.es/vgo/#ownsCharacter> <http://example.org/players/123456-2>,
+    <http://example.org/players/234567-1> .
 
 <https://example.org/areas/1> a <https://example.org/vocabulary/Cuboid>;
   <https://example.org/vocabulary/location> "300,310,100,94,10,10" .
@@ -582,10 +582,10 @@
 
 <http://example.org/players/gaben> a <http://vocab.linkeddata.es/vgo/#Player>;
   dc:created "2003-11-12T12:00:00"^^xsd:dateTime;
-  <http://vocab.linkeddata.es/vgo/#ownsItem> <http://example.org/info/skin-1>,
-    <http://example.org/info/skin-2>,
-    <http://example.org/info/skin-6>,
+  <http://vocab.linkeddata.es/vgo/#ownsItem> <http://example.org/info/skin-2>,
+    <http://example.org/info/skin-1>,
     <http://example.org/info/skin-5>,
+    <http://example.org/info/skin-6>,
     <http://example.org/info/skin-3>;
   vcard:hasEmail "mailto:gaben@valvesoftware.com"^^xsd:anyURI .
 
