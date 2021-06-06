@@ -1,84 +1,90 @@
-@prefix ns0: <http://vocab.linkeddata.es/vgo/#> .
 @prefix dc: <http://purl.org/dc/terms/> .
-@prefix schema: <http://schema.org/> .
-@prefix ns1: <http://example.org/vocabulary/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ns0: <http://vocab.linkeddata.es/vgo/#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix ns1: <http://example.org/vocabulary/> .
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-[] ns0:User [
-    dc:created "2020-04-20T12:00:00Z"@en ;
-    schema:email "jimmer@tfwno.gf"@en ;
-    ns0:Character [
-      ns1:Team [ rdfs:label "Terrorists"@en ] ;
-      ns1:isbot true ;
-      schema:color "Orange"@en ;
-      ns0:username "FaZe Jimmy"@en ;
-      rdfs:label "234567-2"@en ;
-      xsd:float 3.000000e-1
-    ] ;
-    ns0:Session [
-      ns0:startTime "2018-03-07T21:00:44"@en ;
-      rdfs:label 222
-    ] ;
-    ns0:username "FaZe Jimmy"@en ;
-    rdfs:label "jimmy"@en
-  ], [
-    dc:created "2020-04-21T12:00:00Z"@en ;
-    schema:email "cheese@gmail.com"@en ;
-    ns0:Character [
-      ns1:Team [ rdfs:label "Counter-Terrorists"@en ] ;
-      ns1:isbot false ;
-      schema:color "Orange"@en ;
-      ns0:username "Albert"@en ;
-      rdfs:label "238767-3"@en ;
-      xsd:float 1.670000e+0
-    ] ;
-    ns0:Session [
-      ns0:startTime "2018-03-08T15:07:01"@en ;
-      rdfs:label 333
-    ] ;
-    ns0:username "Albert"@en ;
-    rdfs:label "a1b2c3"@en
-  ], [
-    ns1:skin [
-      rdfs:label "730_2_14091390121"@en, "M4A1-S | Prinstream"@en ;
-      xsd:double 3.800000e-1
-    ], [
-      rdfs:label "730_2_14091390122"@en, "Sparkles"@en ;
-      xsd:double 9.900000e-1
-    ], [
-      rdfs:label "730_2_14091390123"@en, "Beenade"@en ;
-      xsd:double 4.500000e-1
-    ], [
-      rdfs:label "730_2_14091390124"@en, "Nomad | Fade"@en ;
-      xsd:double 3.300000e-1
-    ], [
-      rdfs:label "730_2_14091390125"@en, "Pink Defuser"@en ;
-      xsd:double 6.800000e-1
-    ], [
-      rdfs:label "730_2_14091390126"@en, "Reflex Vest"@en ;
-      xsd:double 1.300000e-1
-    ] ;
-    dc:created "2003-11-12T12:00:00Z"@en ;
-    schema:email "gaben@valvesoftware.com"@en ;
-    ns0:Character [
-      ns1:Team [ rdfs:label "Terrorists"@en ] ;
-      ns1:isbot false ;
-      schema:color "Black"@en ;
-      ns0:username "GabeN"@en ;
-      rdfs:label "111111-3"@en ;
-      xsd:float 19
-    ], [
-      ns1:Team [ rdfs:label "CTs"@en ] ;
-      ns1:isbot false ;
-      schema:color "Yellow"@en ;
-      ns0:username "GabeN2"@en ;
-      xsd:float 20
-    ] ;
-    ns0:Session [
-      ns0:startTime "2018-03-06T13:06:59Z"@en ;
-      rdfs:label 11111
-    ] ;
-    ns0:username "GabeN"@en ;
-    rdfs:label "gaben"@en
-  ] .
+<http://example.org/vocabulary/users/Jimmy>
+  dc:created "2020-04-20T12:00:00Z"^^xsd:dateTime ;
+  ns0:Character <http://example.org/vocabulary/players/234567-2> ;
+  ns0:Session <http://example.org/vocabulary/matches/222> ;
+  ns0:username "FaZe Jimmy"@en ;
+  vcard:hasEmail "jimmer@tfwno.gf"^^xsd:anyUri .
+
+<http://example.org/vocabulary/players/234567-2>
+  ns1:KD "3.0E-1"^^xsd:float ;
+  ns1:Team <http://example.org/vocabulary/teams/234567-CT> ;
+  ns1:isbot true ;
+  schema:color "Orange"@en ;
+  ns0:username "FaZe Jimmy"@en .
+
+<http://example.org/vocabulary/teams/234567-CT> rdfs:label "Terrorists"@en .
+<http://example.org/vocabulary/matches/222> ns0:startTime "2018-03-07T21:00:44Z"^^xsd:dateTime .
+<http://example.org/vocabulary/users/a1b2c3>
+  dc:created "2020-04-21T12:00:00Z"^^xsd:dateTime ;
+  ns0:Character <http://example.org/vocabulary/players/238767-3> ;
+  ns0:Session <http://example.org/vocabulary/matches/333> ;
+  ns0:username "Albert"@en ;
+  vcard:hasEmail "cheese@gmail.com"^^xsd:anyUri .
+
+<http://example.org/vocabulary/players/238767-3>
+  ns1:KD "1.67E0"^^xsd:float ;
+  ns1:Team <http://example.org/vocabulary/teams/235867-CT> ;
+  ns1:isbot false ;
+  schema:color "Orange"@en ;
+  ns0:username "Albert"@en .
+
+<http://example.org/vocabulary/teams/235867-CT> rdfs:label "Counter-Terrorists"@en .
+<http://example.org/vocabulary/matches/333> ns0:startTime "2018-03-08T15:07:01"^^xsd:dateTime .
+<http://example.org/vocabulary/users/gaben>
+  ns1:skin <http://example.org/vocabulary/skins/730_2_14091390121>, <http://example.org/vocabulary/skins/730_2_14091390122>, <http://example.org/vocabulary/skins/730_2_14091390123>, <http://example.org/vocabulary/skins/730_2_14091390124>, <http://example.org/vocabulary/skins/730_2_14091390125>, <http://example.org/vocabulary/skins/730_2_14091390126> ;
+  dc:created "2003-11-12T12:00:00Z"^^xsd:dateTime ;
+  ns0:Character <http://example.org/vocabulary/players/111111-3>, <http://example.org/vocabulary/players/111111-4> ;
+  ns0:Session <http://example.org/vocabulary/matches/11111> ;
+  ns0:username "GabeN"@en ;
+  vcard:hasEmail "gaben@valvesoftware.com"^^xsd:anyUri .
+
+<http://example.org/vocabulary/skins/730_2_14091390121>
+  ns1:Condition 3.800000e-1 ;
+  rdfs:label "M4A1-S | Prinstream"@en .
+
+<http://example.org/vocabulary/skins/730_2_14091390122>
+  ns1:Condition 9.900000e-1 ;
+  rdfs:label "Sparkles"@en .
+
+<http://example.org/vocabulary/skins/730_2_14091390123>
+  ns1:Condition 4.500000e-1 ;
+  rdfs:label "Beenade"@en .
+
+<http://example.org/vocabulary/skins/730_2_14091390124>
+  ns1:Condition 3.300000e-1 ;
+  rdfs:label "Nomad | Fade"@en .
+
+<http://example.org/vocabulary/skins/730_2_14091390125>
+  ns1:Condition 6.800000e-1 ;
+  rdfs:label "Pink Defuser"@en .
+
+<http://example.org/vocabulary/skins/730_2_14091390126>
+  ns1:Condition 1.300000e-1 ;
+  rdfs:label "Reflex Vest"@en .
+
+<http://example.org/vocabulary/players/111111-3>
+  ns1:KD "19"^^xsd:float ;
+  ns1:Team <http://example.org/vocabulary/teams/111111-T> ;
+  ns1:isbot false ;
+  schema:color "Black"@en ;
+  ns0:username "GabeN"@en .
+
+<http://example.org/vocabulary/teams/111111-T> rdfs:label "Terrorists"@en .
+<http://example.org/vocabulary/players/111111-4>
+  ns1:KD "20"^^xsd:float ;
+  ns1:Team <http://example.org/vocabulary/teams/111111-CT> ;
+  ns1:isbot false ;
+  schema:color "Yellow"@en ;
+  ns0:username "GabeN2"@en .
+
+<http://example.org/vocabulary/teams/111111-CT> rdfs:label "CTs"@en .
+<http://example.org/vocabulary/matches/11111> ns0:startTime "2018-03-06T13:06:59Z"^^xsd:dateTime .
+[] ns0:User <http://example.org/vocabulary/users/Jimmy>, <http://example.org/vocabulary/users/a1b2c3>, <http://example.org/vocabulary/users/gaben> .

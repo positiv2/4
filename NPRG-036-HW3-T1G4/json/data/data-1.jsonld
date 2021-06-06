@@ -13,18 +13,32 @@
         "@language": "en",
         "color": "schema:color",
         "teamname": "rdfs:label",
-        "matchid": "rdfs:label",
-        "userid": "rdfs:label",
-        "characterid": "rdfs:label",
-        "startdate": "vgo:startTime",
-        "created": "dcterms:created",
+        "startdate": {
+            "@id": "vgo:startTime",
+            "@type": "xsd:dateTime"
+        },
+        "created": {
+            "@id": "dcterms:created",
+            "@type": "xsd:dateTime"
+        },
         "team": "csgo:Team",
-        "kd": "xsd:float",
-        "isbot": "csgo:isbot",
-        "email": "schema:email",
-        "skinid": "rdfs:label",
+        "kd": {
+            "@id": "csgo:KD",
+            "@type": "xsd:float"
+        },
+        "isbot": {
+            "@id": "csgo:isbot",
+            "@type": "xsd:boolean"
+        },
+        "email": {
+            "@id": "vcard:hasEmail",
+            "@type": "xsd:anyUri"
+        },
         "skinname": "rdfs:label",
-        "condition": "xsd:double",
+        "condition": {
+            "@id": "csgo:Condition",
+            "@type": "xsd:double"
+        },
         "users": {
             "@id": "vgo:User",
             "@container": "@set"
@@ -46,31 +60,9 @@
             "@container": "@set"
         }
     },
-    "$defs": {
-        "skin": {
-            "$id": "#skin",
-            "type": "object",
-            "properties": {
-                "skinid": {
-                    "type": "rdfs:label"
-                },
-                "skinname": {
-                    "type": "rdfs:label"
-                },
-                "condition": {
-                    "type": "xsd:double"
-                }
-            },
-            "required": [
-                "skinid",
-                "skinname",
-                "condition"
-            ]
-        }
-    },
     "users": [
         {
-            "userid": "jimmy",
+            "@id": "csgo:users/Jimmy",
             "usernames": [
                 "FaZe Jimmy"
             ],
@@ -78,26 +70,26 @@
             "created": "2020-04-20T12:00:00Z",
             "players": [
                 {
-                    "characterid": "234567-2",
+                    "@id": "csgo:players/234567-2",
                     "vgo:username": "FaZe Jimmy",
                     "color": "Orange",
                     "isbot": true,
                     "kd": 0.3,
                     "team": {
-                        "teamid": "234567-CT",
+                        "@id": "csgo:teams/234567-CT",
                         "teamname": "Terrorists"
                     }
                 }
             ],
             "matches": [
                 {
-                    "matchid": 222,
+                    "@id": "csgo:matches/222",
                     "startdate": "2018-03-07T21:00:44Z"
                 }
             ]
         },
         {
-            "userid": "a1b2c3",
+            "@id": "csgo:users/a1b2c3",
             "usernames": [
                 "Albert"
             ],
@@ -105,26 +97,26 @@
             "created": "2020-04-21T12:00:00Z",
             "players": [
                 {
-                    "characterid": "238767-3",
+                    "@id": "csgo:players/238767-3",
                     "vgo:username": "Albert",
                     "color": "Orange",
                     "isbot": false,
                     "kd": 1.67,
                     "team": {
-                        "teamid": "235867-CT",
+                        "@id": "csgo:teams/235867-CT",
                         "teamname": "Counter-Terrorists"
                     }
                 }
             ],
             "matches": [
                 {
-                    "matchid": 333,
+                    "@id": "csgo:matches/333",
                     "startdate": "2018-03-08T15:07:01"
                 }
             ]
         },
         {
-            "userid": "gaben",
+            "@id": "csgo:users/gaben",
             "usernames": [
                 "GabeN"
             ],
@@ -132,61 +124,62 @@
             "created": "2003-11-12T12:00:00Z",
             "players": [
                 {
-                    "characterid": "111111-3",
+                    "@id": "csgo:players/111111-3",
                     "vgo:username": "GabeN",
                     "color": "Black",
                     "isbot": false,
                     "kd": 19,
                     "team": {
-                        "teamid": "111111-T",
+                        "@id": "csgo:teams/111111-T",
                         "teamname": "Terrorists"
                     }
                 },
                 {
+                    "@id": "csgo:players/111111-4",
                     "vgo:username": "GabeN2",
                     "color": "Yellow",
                     "isbot": false,
                     "kd": 20,
                     "team": {
-                        "teamid": "111111-CT",
+                        "@id": "csgo:teams/111111-CT",
                         "teamname": "CTs"
                     }
                 }
             ],
             "matches": [
                 {
-                    "matchid": 11111,
+                    "@id": "csgo:matches/11111",
                     "startdate": "2018-03-06T13:06:59Z"
                 }
             ],
             "skins": [
                 {
-                    "skinid": "730_2_14091390121",
+                    "@id": "csgo:skins/730_2_14091390121",
                     "skinname": "M4A1-S | Prinstream",
                     "condition": 0.38
                 },
                 {
-                    "skinid": "730_2_14091390122",
+                    "@id": "csgo:skins/730_2_14091390122",
                     "skinname": "Sparkles",
                     "condition": 0.99
                 },
                 {
-                    "skinid": "730_2_14091390123",
+                    "@id": "csgo:skins/730_2_14091390123",
                     "skinname": "Beenade",
                     "condition": 0.45
                 },
                 {
-                    "skinid": "730_2_14091390124",
+                    "@id": "csgo:skins/730_2_14091390124",
                     "skinname": "Nomad | Fade",
                     "condition": 0.33
                 },
                 {
-                    "skinid": "730_2_14091390125",
+                    "@id": "csgo:skins/730_2_14091390125",
                     "skinname": "Pink Defuser",
                     "condition": 0.68
                 },
                 {
-                    "skinid": "730_2_14091390126",
+                    "@id": "csgo:skins/730_2_14091390126",
                     "skinname": "Reflex Vest",
                     "condition": 0.13
                 }
