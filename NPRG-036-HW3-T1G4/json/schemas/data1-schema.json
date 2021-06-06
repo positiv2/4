@@ -8,9 +8,6 @@
         {
           "type": "object",
           "properties": {
-            "userid": {
-              "type": "string"
-            },
             "usernames": {
               "type": "array",
               "items": [
@@ -33,9 +30,6 @@
                 {
                   "type": "object",
                   "properties": {
-                    "characterid": {
-                      "type": "string"
-                    },
                     "vgo:username": {
                       "type": "string"
                     },
@@ -51,21 +45,16 @@
                     "team": {
                       "type": "object",
                       "properties": {
-                        "teamid": {
-                          "type": "string"
-                        },
                         "teamname": {
                           "type": "string"
                         }
                       },
                       "required": [
-                        "teamid",
                         "teamname"
                       ]
                     }
                   },
                   "required": [
-                    "characterid",
                     "vgo:username",
                     "color",
                     "isbot",
@@ -81,15 +70,11 @@
                 {
                   "type": "object",
                   "properties": {
-                    "matchid": {
-                      "type": "integer"
-                    },
                     "startdate": {
                       "type": "string"
                     }
                   },
                   "required": [
-                    "matchid",
                     "startdate"
                   ]
                 }
@@ -101,9 +86,6 @@
                 {
                   "type": "object",
                   "properties": {
-                    "skinid": {
-                      "type": "string"
-                    },
                     "skinname": {
                       "type": "string"
                     },
@@ -112,7 +94,6 @@
                     }
                   },
                   "required": [
-                    "skinid",
                     "skinname",
                     "condition"
                   ]
@@ -121,7 +102,6 @@
             }
           },
           "required": [
-            "userid",
             "usernames",
             "email",
             "created",

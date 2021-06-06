@@ -8,9 +8,6 @@
         {
           "type": "object",
           "properties": {
-            "mapid": {
-              "type": "string"
-            },
             "mapname": {
               "type": "string"
             },
@@ -94,15 +91,11 @@
                 {
                   "type": "object",
                   "properties": {
-                    "matchid": {
-                      "type": "integer"
-                    },
                     "startdate": {
                       "type": "string"
                     }
                   },
                   "required": [
-                    "matchid",
                     "startdate"
                   ]
                 }
@@ -110,7 +103,6 @@
             }
           },
           "required": [
-            "mapid",
             "mapname",
             "spawnlocations",
             "plantlocations",
