@@ -1,137 +1,134 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "object",
-  "properties": {
-    "users": {
-      "type": "array",
-      "items": [
-        {
-          "type": "object",
-          "properties": {
-            "userid": {
-              "type": "string"
-            },
-            "usernames": {
-              "type": "array",
-              "items": [
-                {
-                  "type": "string"
+    "$schema": "http://json-schema.org/schema",
+    "$id": "data1-schema",
+    "type": "object",
+    "title": "The root schema",
+    "description": "Schema for CSGO players.",
+    "$defs": {
+        "skin": {
+            "$id": "#skin",
+            "type": "object",
+            "properties": {
+                "skinname": {
+                    "type": "string"
+                },
+                "condition": {
+                    "type": "number"
                 }
-              ]
             },
-            "email": {
-              "type": "string"
+            "required": [
+                "skinname",
+                "condition"
+            ]
+        },
+        "match": {
+            "$id": "#match",
+            "type": "object",
+            "properties": {
+                "startdate": {
+                    "type": "string"
+                }
             },
-            "created": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "players": {
-              "type": "array",
-              "minItems": 1,
-              "items": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "characterid": {
-                      "type": "string"
-                    },
-                    "vgo:username": {
-                      "type": "string"
-                    },
-                    "color": {
-                      "type": "string"
-                    },
-                    "isbot": {
-                      "type": "boolean"
-                    },
-                    "kd": {
-                      "type": "number"
-                    },
-                    "team": {
-                      "type": "object",
-                      "properties": {
-                        "teamid": {
-                          "type": "string"
-                        },
+            "required": [
+                "startdate"
+            ]
+        },
+        "player": {
+            "$id": "#player",
+            "type": "object",
+            "properties": {
+                "vgo:username": {
+                    "type": "string"
+                },
+                "color": {
+                    "type": "string"
+                },
+                "isbot": {
+                    "type": "boolean"
+                },
+                "kd": {
+                    "type": "number"
+                },
+                "team": {
+                    "type": "object",
+                    "properties": {
                         "teamname": {
-                          "type": "string"
+                            "type": "string"
                         }
-                      },
-                      "required": [
-                        "teamid",
+                    },
+                    "required": [
                         "teamname"
-                      ]
-                    }
-                  },
-                  "required": [
-                    "characterid",
-                    "vgo:username",
-                    "color",
-                    "isbot",
-                    "kd",
-                    "team"
-                  ]
+                    ]
                 }
-              ]
             },
-            "matches": {
-              "type": "array",
-              "items": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "matchid": {
-                      "type": "integer"
-                    },
-                    "startdate": {
-                      "type": "string"
+            "required": [
+                "vgo:username",
+                "color",
+                "isbot",
+                "kd",
+                "team"
+            ]
+        },
+        "user": {
+            "$id": "#user",
+            "type": "object",
+            "properties": {
+                "userid": {
+                    "type": "string"
+                },
+                "usernames": {
+                    "type": "array",
+                    "items": [
+                        {
+                            "type": "string"
+                        }
+                    ]
+                },
+                "email": {
+                    "type": "string"
+                },
+                "created": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "players": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                        "$ref": "#player"
                     }
-                  },
-                  "required": [
-                    "matchid",
-                    "startdate"
-                  ]
+                },
+                "matches": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#match"
+                    }
+                },
+                "skins": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#skin"
+                    }
                 }
-              ]
             },
-            "skins": {
-              "type": "array",
-              "items": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "skinid": {
-                      "type": "string"
-                    },
-                    "skinname": {
-                      "type": "string"
-                    },
-                    "condition": {
-                      "type": "number"
-                    }
-                  },
-                  "required": [
-                    "skinid",
-                    "skinname",
-                    "condition"
-                  ]
-                }
-              ]
-            }
-          },
-          "required": [
-            "userid",
-            "usernames",
-            "email",
-            "created",
-            "players"
-          ]
+            "required": [
+                "userid",
+                "usernames",
+                "email",
+                "created",
+                "players"
+            ]
         }
-      ]
-    }
-  },
-  "required": [
-    "users"
-  ]
+    },
+    "properties": {
+        "users": {
+            "type": "array",
+            "items": {
+                "$ref": "#user"
+            }
+        }
+    },
+    "required": [
+        "users"
+    ]
 }

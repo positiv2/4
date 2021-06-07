@@ -11,160 +11,152 @@
         "schema": "http://schema.org/",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "@language": "en",
-        "itemid": "xsd:integer",
-        "itemname": "rdfs:label",
-        "damage": "csgo:damage",
-        "cost": "csgo:cost",
-        "aoe": "csgo:aoe",
-        "throwablecount": "csgo:throwablecount",
-        "utilitytype": "csgo:utilitytype",
-        "durability": "csgo:durability",
-        "primary": "csgo:isPrimary",
-        "firerate": "csgo:firerate",
-        "items": "csgo:item",
-        "skinid": "rdfs:label",
-        "skinname": "rdfs:label",
-        "condition": "xsd:double",
-        "knives": {
-            "@id": "csgo:Knife",
+        "itemname": {
+            "@id": "rdfs:label"
+        },
+        "damage": {
+            "@id": "csgo:damage",
+            "@type": "xsd:integer"
+        },
+        "cost": {
+            "@id": "csgo:cost",
+            "@type": "xsd:integer"
+        },
+        "aoe": {
+            "@id": "csgo:aoe",
+            "@type": "xsd:integer"
+        },
+        "throwablecount": {
+            "@id": "csgo:throwablecount",
+            "@type": "xsd:integer"
+        },
+        "utilitytype": {
+            "@id": "rdfs:label"
+        },
+        "durability": {
+            "@id": "csgo:durability",
+            "@type": "xsd:integer"
+        },
+        "primary": {
+            "@id": "csgo:isPrimary",
+            "@type": "xsd:boolean"
+        },
+        "firerate": {
+            "@id": "csgo:firerate",
+            "@type": "xsd:integer"
+        },
+        "items": {
+            "@id": "vgo:Item",
             "@container": "@set"
         },
-        "throwables": {
-            "@id": "csgo:Throwable",
-            "@container": "@set"
+        "skinname": {
+            "@id": "rdfs:label"
         },
-        "bombs": {
-            "@id": "csgo:Bomb",
-            "@container": "@set"
-        },
-        "utilities": {
-            "@id": "csgo:Utility",
-            "@container": "@set"
-        },
-        "armors": {
-            "@id": "csgo:Armor",
-            "@container": "@set"
-        },
-        "firearms": {
-            "@id": "csgo:Firearm",
-            "@container": "@set"
+        "condition": {
+            "@id": "csgo:condition",
+            "@type": "xsd:double"
         },
         "skins": {
             "@id": "csgo:skin",
             "@container": "@set"
         }
     },
-    "items": {
-        "knives": [
-            {
-                "item_id": 1,
-                "itemname": "Combat knife",
-                "damage": 55,
-                "cost": 0,
-                "skins": [
-                    {
-                        "skinid": 1,
-                        "skinname": "Nomad | Fade",
-                        "condition": 0.33
-                    }
-                ]
-            }
-        ],
-        "throwables": [
-            {
-                "item_id": 2,
-                "itemname": "HE Grenade",
-                "aoe": 15,
-                "damage": 98,
-                "throwablecount": 1,
-                "cost": 300,
-                "skins": [
-                    {
-                        "skinid": 2,
-                        "skinname": "Beenade",
-                        "condition": 0.45
-                    }
-                ]
-            }
-        ],
-        "bombs": [
-            {
-                "item_id": 3,
-                "itemname": "The Bomb",
-                "aoe": 2,
-                "damage": 15,
-                "cost": 0,
-                "skins": [
-                    {
-                        "skinid": 3,
-                        "skinname": "Sparkles",
-                        "condition": 0.99
-                    }
-                ]
-            }
-        ],
-        "utilities": [
-            {
-                "item_id": 4,
-                "itemname": "Defuse Kit",
-                "utilitytype": "Equipment",
-                "cost": 400,
-                "skins": [
-                    {
-                        "skinid": 4,
-                        "skinname": "Pink Defuser",
-                        "condition": 0.68
-                    }
-                ]
-            }
-        ],
-        "armors": [
-            {
-                "item_id": 5,
-                "itemname": "Kevlar Vest",
-                "durability": 70,
-                "cost": 650,
-                "skins": [
-                    {
-                        "skinid": 5,
-                        "skinname": "Reflex Vest",
-                        "condition": 0.13
-                    }
-                ]
-            }
-        ],
-        "firearms": [
-            {
-                "item_id": 6,
-                "itemname": "M4A1-S",
-                "primary": true,
-                "damage": 33,
-                "firerate": 600,
-                "cost": 2900,
-                "skins": [
-                    {
-                        "skinid": 6,
-                        "skinname": "M4A1-S | Prinstream",
-                        "condition": 0.38
-                    }
-                ]
-            },
-            {
-                "item_id": 7,
-                "itemname": "MP5",
-                "primary": true,
-                "damage": 17,
-                "firerate": 1200,
-                "cost": 1450
-            },
-            {
-                "item_id": 8,
-                "itemname": "P2000",
-                "primary": false,
-                "damage": 17,
-                "firerate": 300,
-                "cost": 200
-            }
-        ]
-    }
+    "items": [
+        {
+            "@id": "csgo:knife_01",
+            "@type": "csgo:Knife",
+            "itemname": "Combat knife",
+            "damage": 55,
+            "cost": 0,
+            "skins": [
+                {
+                    "@id": "csgo:skin_01",
+                    "@type": "csgo:Skin",
+                    "skinname": "Nomad | Fade",
+                    "condition": 0.33
+                }
+            ]
+        },
+        {
+            "@id": "csgo:bomb",
+            "@type": "csgo:Bomb",
+            "itemname": "The Bomb",
+            "aoe": 2,
+            "damage": 15,
+            "cost": 0,
+            "skins": [
+                {
+                    "@id": "csgo:skin_03",
+                    "@type": "csgo:Skin",
+                    "skinname": "Sparkles",
+                    "condition": 0.99
+                }
+            ]
+        },
+        {
+            "@id": "csgo:defuseKit",
+            "@type": "csgo:Utility",
+            "itemname": "Defuse Kit",
+            "utilitytype": "Equipment",
+            "cost": 400,
+            "skins": [
+                {
+                    "@id": "csgo:skin_04",
+                    "@type": "csgo:Skin",
+                    "skinname": "Pink Defuser",
+                    "condition": 0.68
+                }
+            ]
+        },
+        {
+            "@id": "csgo:kevlarVest",
+            "@type": "csgo:Armor",
+            "itemname": "Kevlar Vest",
+            "durability": 70,
+            "cost": 650,
+            "skins": [
+                {
+                    "@id": "csgo:skin_05",
+                    "@type": "csgo:Skin",
+                    "skinname": "Reflex Vest",
+                    "condition": 0.13
+                }
+            ]
+        },
+        {
+            "@id": "csgo:M4A1-S",
+            "@type": "csgo:Firearm",
+            "itemname": "M4A1-S",
+            "primary": true,
+            "damage": 33,
+            "firerate": 600,
+            "cost": 2900,
+            "skins": [
+                {
+                    "@id": "csgo:skin_06",
+                    "@type": "csgo:Skin",
+                    "skinname": "M4A1-S | Prinstream",
+                    "condition": 0.38
+                }
+            ]
+        },
+        {
+            "@id": "csgo:MP5",
+            "@type": "csgo:Firearm",
+            "itemname": "MP5",
+            "primary": true,
+            "damage": 17,
+            "firerate": 1200,
+            "cost": 1450
+        },
+        {
+            "@id": "csgo:P2000",
+            "@type": "csgo:Firearm",
+            "itemname": "P2000",
+            "primary": false,
+            "damage": 17,
+            "firerate": 300,
+            "cost": 200
+        }
+    ]
 }

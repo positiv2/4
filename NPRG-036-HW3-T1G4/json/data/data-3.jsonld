@@ -11,10 +11,11 @@
         "schema": "http://schema.org/",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "@language": "en",
-        "mapid": "rdfs:label",
         "mapname": "rdfs:label",
-        "matchid": "rdfs:label",
-        "startdate": "vgo:startTime",
+        "startdate": {
+            "@id": "vgo:startTime",
+            "@type": "xsd:dateTime"
+        },
         "x": "xsd:integer",
         "y": "xsd:integer",
         "z": "xsd:integer",
@@ -25,7 +26,11 @@
         "z1": "xsd:integer",
         "z2": "xsd:integer",
         "maps": {
-            "@id": "vgo:PlayingArea",
+            "@id": "csgo:maps",
+            "@container": "@set"
+        },
+        "matches": {
+            "@id": "csgo:playedInMatches",
             "@container": "@set"
         },
         "spawnlocations": {
@@ -39,7 +44,8 @@
     },
     "maps": [
         {
-            "mapid": "de_inferno",
+            "@id": "csgo:maps/Inferno",
+            "@type": "vgo:PlayingArea",
             "mapname": "Inferno",
             "spawnlocations": [
                 {
@@ -79,13 +85,15 @@
             ],
             "matches": [
                 {
-                    "matchid": 123456,
+                    "@id": "csgo:matches/123456",
+                    "@type": "vgo:Session",
                     "startdate": "2020-05-02T15:55:55Z"
                 }
             ]
         },
         {
-            "mapid": "de_nuke",
+            "@id": "csgo:maps/Nuke",
+            "@type": "vgo:PlayingArea",
             "mapname": "Nuke",
             "spawnlocations": [
                 {
@@ -125,13 +133,15 @@
             ],
             "matches": [
                 {
-                    "matchid": 234567,
+                    "@id": "csgo:matches/234567",
+                    "@type": "vgo:Session",
                     "startdate": "2020-05-02T15:55:55Z"
                 }
             ]
         },
         {
-            "mapid": "de_dust",
+            "@id": "csgo:maps/Dust",
+            "@type": "vgo:PlayingArea",
             "mapname": "Dust",
             "spawnlocations": [
                 {
@@ -171,7 +181,8 @@
             ],
             "matches": [
                 {
-                    "matchid": 111111,
+                    "@id": "csgo:matches/111111",
+                    "@type": "vgo:Session",
                     "startdate": "2018-03-06T13:06:59Z"
                 }
             ]

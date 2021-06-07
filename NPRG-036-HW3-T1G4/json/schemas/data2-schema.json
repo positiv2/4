@@ -1,367 +1,172 @@
 {
-    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$schema": "http://json-schema.org/schema",
+    "$id": "data2-schema",
     "type": "object",
+    "title": "The root schema",
+    "description": "Schema for CSGO items.",
+    "default": {},
+    "additionalProperties": true,
+    "required": [
+        "items"
+    ],
+    "$defs": {
+        "skins": {
+            "$id": "#skins",
+            "type": "array",
+            "items": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "skinname": {
+                            "type": "string"
+                        },
+                        "condition": {
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "skinname",
+                        "condition"
+                    ]
+                }
+            ]
+        }
+    },
     "properties": {
         "items": {
-            "type": "object",
+            "$id": "#/properties/items",
+            "type": "array",
+            "title": "The items schema",
+            "description": "List of CSGO items.",
+            "default": [],
+            "additionalItems": true,
             "items": {
-                "type": "object",
-                "properties": {
-                    "knives": {
-                        "type": "array",
-                        "items": [
-                            {
-                                "type": "object",
-                                "properties": {
-                                    "id": {
-                                        "type": "string"
-                                    },
-                                    "name": {
-                                        "type": "string"
-                                    },
-                                    "damage": {
-                                        "type": "integer"
-                                    },
-                                    "cost": {
-                                        "type": "integer"
-                                    },
-                                    "skins": {
-                                        "type": "array",
-                                        "items": [
-                                            {
-                                                "type": "object",
-                                                "properties": {
-                                                    "id": {
-                                                        "type": "string"
-                                                    },
-                                                    "name": {
-                                                        "type": "string"
-                                                    },
-                                                    "condition": {
-                                                        "type": "number"
-                                                    }
-                                                },
-                                                "required": [
-                                                    "id",
-                                                    "name",
-                                                    "condition"
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                },
-                                "required": [
-                                    "id",
-                                    "name",
-                                    "damage",
-                                    "cost",
-                                    "skins"
-                                ]
+                "$id": "#/properties/items/items",
+                "anyOf": [
+                    {
+                        "type": "object",
+                        "properties": {
+                            "itemname": {
+                                "type": "string"
+                            },
+                            "primary": {
+                                "type": "boolean"
+                            },
+                            "damage": {
+                                "type": "integer"
+                            },
+                            "firerate": {
+                                "type": "integer"
+                            },
+                            "cost": {
+                                "type": "integer"
+                            },
+                            "skins": {
+                                "$ref": "#skins"
                             }
+                        },
+                        "required": [
+                            "itemname",
+                            "primary",
+                            "damage",
+                            "firerate",
+                            "cost"
                         ]
                     },
-                    "throwables": {
-                        "type": "array",
-                        "items": [
-                            {
-                                "type": "object",
-                                "properties": {
-                                    "id": {
-                                        "type": "string"
-                                    },
-                                    "aoe": {
-                                        "type": "integer"
-                                    },
-                                    "damage": {
-                                        "type": "integer"
-                                    },
-                                    "throwablecount": {
-                                        "type": "integer"
-                                    },
-                                    "utilitytype": {
-                                        "type": "string"
-                                    },
-                                    "cost": {
-                                        "type": "integer"
-                                    },
-                                    "name": {
-                                        "type": "string"
-                                    },
-                                    "skins": {
-                                        "type": "array",
-                                        "items": [
-                                            {
-                                                "type": "object",
-                                                "properties": {
-                                                    "id": {
-                                                        "type": "string"
-                                                    },
-                                                    "name": {
-                                                        "type": "string"
-                                                    },
-                                                    "condition": {
-                                                        "type": "number"
-                                                    }
-                                                },
-                                                "required": [
-                                                    "id",
-                                                    "name",
-                                                    "condition"
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                },
-                                "required": [
-                                    "id",
-                                    "aoe",
-                                    "damage",
-                                    "throwablecount",
-                                    "utilitytype",
-                                    "cost",
-                                    "name",
-                                    "skins"
-                                ]
+                    {
+                        "type": "object",
+                        "properties": {
+                            "itemname": {
+                                "type": "string"
+                            },
+                            "durability": {
+                                "type": "integer"
+                            },
+                            "cost": {
+                                "type": "integer"
+                            },
+                            "skins": {
+                                "$ref": "#skins"
                             }
+                        },
+                        "required": [
+                            "itemname",
+                            "durability",
+                            "cost"
                         ]
                     },
-                    "bombs": {
-                        "type": "array",
-                        "items": [
-                            {
-                                "type": "object",
-                                "properties": {
-                                    "id": {
-                                        "type": "string"
-                                    },
-                                    "aoe": {
-                                        "type": "integer"
-                                    },
-                                    "damage": {
-                                        "type": "integer"
-                                    },
-                                    "cost": {
-                                        "type": "integer"
-                                    },
-                                    "name": {
-                                        "type": "string"
-                                    },
-                                    "skins": {
-                                        "type": "array",
-                                        "items": [
-                                            {
-                                                "type": "object",
-                                                "properties": {
-                                                    "id": {
-                                                        "type": "string"
-                                                    },
-                                                    "name": {
-                                                        "type": "string"
-                                                    },
-                                                    "condition": {
-                                                        "type": "number"
-                                                    }
-                                                },
-                                                "required": [
-                                                    "id",
-                                                    "name",
-                                                    "condition"
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                },
-                                "required": [
-                                    "id",
-                                    "aoe",
-                                    "damage",
-                                    "cost",
-                                    "name",
-                                    "skins"
-                                ]
+                    {
+                        "type": "object",
+                        "properties": {
+                            "itemname": {
+                                "type": "string"
+                            },
+                            "utilitytype": {
+                                "type": "string"
+                            },
+                            "cost": {
+                                "type": "integer"
+                            },
+                            "skins": {
+                                "$ref": "#skins"
                             }
+                        },
+                        "required": [
+                            "itemname",
+                            "utilitytype",
+                            "cost"
                         ]
                     },
-                    "utilities": {
-                        "type": "array",
-                        "items": [
-                            {
-                                "type": "object",
-                                "properties": {
-                                    "id": {
-                                        "type": "string"
-                                    },
-                                    "type": {
-                                        "type": "string"
-                                    },
-                                    "name": {
-                                        "type": "string"
-                                    },
-                                    "cost": {
-                                        "type": "integer"
-                                    },
-                                    "skins": {
-                                        "type": "array",
-                                        "items": [
-                                            {
-                                                "type": "object",
-                                                "properties": {
-                                                    "id": {
-                                                        "type": "string"
-                                                    },
-                                                    "name": {
-                                                        "type": "string"
-                                                    },
-                                                    "condition": {
-                                                        "type": "number"
-                                                    }
-                                                },
-                                                "required": [
-                                                    "id",
-                                                    "name",
-                                                    "condition"
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                },
-                                "required": [
-                                    "id",
-                                    "type",
-                                    "name",
-                                    "cost",
-                                    "skins"
-                                ]
+                    {
+                        "type": "object",
+                        "properties": {
+                            "itemname": {
+                                "type": "string"
+                            },
+                            "damage": {
+                                "type": "integer"
+                            },
+                            "cost": {
+                                "type": "integer"
+                            },
+                            "skins": {
+                                "$ref": "#skins"
                             }
+                        },
+                        "required": [
+                            "itemname",
+                            "damage",
+                            "cost"
                         ]
                     },
-                    "armors": {
-                        "type": "array",
-                        "items": [
-                            {
-                                "type": "object",
-                                "properties": {
-                                    "id": {
-                                        "type": "string"
-                                    },
-                                    "durability": {
-                                        "type": "string"
-                                    },
-                                    "name": {
-                                        "type": "string"
-                                    },
-                                    "Cost": {
-                                        "type": "integer"
-                                    },
-                                    "skins": {
-                                        "type": "array",
-                                        "items": [
-                                            {
-                                                "type": "object",
-                                                "properties": {
-                                                    "id": {
-                                                        "type": "string"
-                                                    },
-                                                    "name": {
-                                                        "type": "string"
-                                                    },
-                                                    "condition": {
-                                                        "type": "number"
-                                                    }
-                                                },
-                                                "required": [
-                                                    "id",
-                                                    "name",
-                                                    "condition"
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                },
-                                "required": [
-                                    "id",
-                                    "durability",
-                                    "name",
-                                    "Cost",
-                                    "skins"
-                                ]
+                    {
+                        "type": "object",
+                        "properties": {
+                            "itemname": {
+                                "type": "string"
+                            },
+                            "aoe": {
+                                "type": "integer"
+                            },
+                            "damage": {
+                                "type": "integer"
+                            },
+                            "cost": {
+                                "type": "integer"
+                            },
+                            "skins": {
+                                "$ref": "#skins"
                             }
-                        ]
-                    },
-                    "firearms": {
-                        "type": "array",
-                        "items": [
-                            {
-                                "type": "object",
-                                "properties": {
-                                    "id": {
-                                        "type": "string"
-                                    },
-                                    "primary": {
-                                        "type": "string"
-                                    },
-                                    "damage": {
-                                        "type": "integer"
-                                    },
-                                    "firerate": {
-                                        "type": "integer"
-                                    },
-                                    "cost": {
-                                        "type": "integer"
-                                    },
-                                    "name": {
-                                        "type": "string"
-                                    },
-                                    "skins": {
-                                        "type": "array",
-                                        "items": [
-                                            {
-                                                "type": "object",
-                                                "properties": {
-                                                    "id": {
-                                                        "type": "string"
-                                                    },
-                                                    "name": {
-                                                        "type": "string"
-                                                    },
-                                                    "condition": {
-                                                        "type": "number"
-                                                    }
-                                                },
-                                                "required": [
-                                                    "id",
-                                                    "name",
-                                                    "condition"
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                },
-                                "required": [
-                                    "id",
-                                    "primary",
-                                    "damage",
-                                    "firerate",
-                                    "cost",
-                                    "name",
-                                    "skins"
-                                ]
-                            }
+                        },
+                        "required": [
+                            "itemname",
+                            "aoe",
+                            "damage",
+                            "cost"
                         ]
                     }
-                },
-                "required": [
-                    "knives",
-                    "throwables",
-                    "bombs",
-                    "utilities",
-                    "armors",
-                    "firearms"
                 ]
             }
         }
-    },
-    "required": [
-        "items"
-    ]
+    }
 }

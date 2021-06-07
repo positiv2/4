@@ -1,127 +1,100 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "object",
-  "properties": {
-    "maps": {
-      "type": "array",
-      "items": [
-        {
-          "type": "object",
-          "properties": {
-            "mapid": {
-              "type": "string"
-            },
-            "mapname": {
-              "type": "string"
-            },
-            "spawnlocations": {
-              "type": "array",
-              "minItems": 2,
-              "items": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "x1": {
-                      "type": "integer"
-                    },
-                    "x2": {
-                      "type": "integer"
-                    },
-                    "y1": {
-                      "type": "integer"
-                    },
-                    "y2": {
-                      "type": "integer"
-                    },
-                    "z1": {
-                      "type": "integer"
-                    },
-                    "z2": {
-                      "type": "integer"
-                    }
-                  },
-                  "required": [
-                    "x1",
-                    "x2",
-                    "y1",
-                    "y2",
-                    "z1",
-                    "z2"
-                  ]
+    "$schema": "http://json-schema.org/schema",
+    "$id": "data3-schema",
+    "type": "object",
+    "title": "The root schema",
+    "description": "Schema for CSGO maps.",
+    "$defs": {
+        "location": {
+            "$id": "#location",
+            "type": "object",
+            "properties": {
+                "x1": {
+                    "type": "integer"
+                },
+                "x2": {
+                    "type": "integer"
+                },
+                "y1": {
+                    "type": "integer"
+                },
+                "y2": {
+                    "type": "integer"
+                },
+                "z1": {
+                    "type": "integer"
+                },
+                "z2": {
+                    "type": "integer"
                 }
-              ]
             },
-            "plantlocations": {
-              "type": "array",
-              "minItems": 2,
-              "items": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "x1": {
-                      "type": "integer"
-                    },
-                    "x2": {
-                      "type": "integer"
-                    },
-                    "y1": {
-                      "type": "integer"
-                    },
-                    "y2": {
-                      "type": "integer"
-                    },
-                    "z1": {
-                      "type": "integer"
-                    },
-                    "z2": {
-                      "type": "integer"
-                    }
-                  },
-                  "required": [
-                    "x1",
-                    "x2",
-                    "y1",
-                    "y2",
-                    "z1",
-                    "z2"
-                  ]
+            "required": [
+                "x1",
+                "x2",
+                "y1",
+                "y2",
+                "z1",
+                "z2"
+            ]
+        },
+        "match": {
+            "$id": "#match",
+            "type": "object",
+            "properties": {
+                "startdate": {
+                    "type": "string"
                 }
-              ]
             },
-            "matches": {
-              "type": "array",
-              "items": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "matchid": {
-                      "type": "integer"
-                    },
-                    "startdate": {
-                      "type": "string"
+            "required": [
+                "startdate"
+            ]
+        },
+        "map": {
+            "$id": "#map",
+            "type": "object",
+            "properties": {
+                "mapname": {
+                    "type": "string"
+                },
+                "spawnlocations": {
+                  "type": "array",
+                  "minItems": 2,
+                  "items": {
+                      "$ref": "#location"
+                  }
+                },
+                "plantlocations": {
+                  "type": "array",
+                  "minItems": 2,
+                  "items": {
+                      "$ref": "#location"
+                  }
+                },
+                "matches": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#match"
                     }
-                  },
-                  "required": [
-                    "matchid",
-                    "startdate"
-                  ]
                 }
-              ]
-            }
-          },
-          "required": [
-            "mapid",
-            "mapname",
-            "spawnlocations",
-            "plantlocations",
-            "matches"
-          ]
+            },
+            "required": [
+                "mapname",
+                "spawnlocations",
+                "plantlocations",
+                "matches"
+            ]
         }
-      ]
-    }
-  },
-  "required": [
-    "maps"
-  ]
+    },
+    "properties": {
+        "maps": {
+            "type": "array",
+            "items": {
+                "$ref": "#map"
+            },
+            "default": []
+        }
+    },
+    "required": [
+        "maps"
+    ]
 }
-
